@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  19 MAY 2015 15:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  19 MAY 2015 17:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -560,19 +560,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--114
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
 
-(./royden.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
+ (./royden.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
 Package rerunfilecheck Info: File `royden.out' has not changed.
 (rerunfilecheck)             Checksum: 646E3CE5D91FAC70451723075CB62DCB;44.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 10625 strings out of 493315
- 157178 string characters out of 6137904
+ 10626 strings out of 493315
+ 157184 string characters out of 6137904
  256625 words of memory out of 5000000
  13932 multiletter control sequences out of 15000+600000
  15823 words of font info for 40 fonts, out of 8000000 for 9000
@@ -587,10 +588,10 @@ ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 13/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb>
-Output written on royden.pdf (1 page, 76470 bytes).
+Output written on royden.pdf (2 pages, 81603 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 55 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
