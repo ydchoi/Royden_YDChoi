@@ -96,7 +96,7 @@ Hence, we have shown that the given set function $m$ has the monotonicity
 property.
 \end{solution}
 
-\smallskip
+\bigskip
 
 \Qb[Royden 2.1-2]
 \Qe
@@ -129,7 +129,17 @@ whcih $m(A) < \infty$, then $m( \emptyset ) = 0$.
 
 \bigskip
 
-\Qb[Royden 2.1-6]
+\Qb[Royden 2.1-5 (A Countable Set Has Outer Measure Zero)]
+\Qe
+\begin{solution}
+We know that any countable set has outer measure zero.
+Using the fact that the outer measure of an interval is its length yields $m^{*}( [0,1] ) = 1$.
+Therefore, $[0,1]$ cannot countable.
+\end{solution}
+
+\bigskip
+
+\Qb[: Royden 2.1-6]
 \Qe
 \begin{solution}
 Let $Q$ and $A$ denote the set of rationals and irrationals in the interval $[0,1]$
@@ -155,9 +165,34 @@ m^{*}(A) & \leq & 1,
 thereby showing that $m^{*}(A) = 1$. 
 \end{solution}
 
+\bigskip
+
+\Qb[: Royden 2.3-Proposition 4] 
+\Qe
+\begin{solution}
+We want to show that any set of outer measure zero is measurable, which further implies that
+any countable set is measurable. Let the set $E$ to have outer measure zero, $m^{*}(E) = 0$.
+Let $A$ be any set. Since
+\eQb
+A \cap E \subseteq E \> \text{ and } \> A \cap E^c \subseteq A,
+\eQe
+by the monotonicity of outer measure, we obtain
+\eQb
+m^{*}(A \cap E) \leq m^{*}(E) = 0 \> \text{ and } \> m^{*}(A \cap E^c) \leq m^{*}(A).
+\eQe
+It is important to note that it suffices to show the above statement to show that the set $E$
+is measurable, as the inequality,
+\eQb
+m^{*} \leq m^{*}(A \cap E) + m^{*}( A \cap E^c),
+\eQe
+trivially holds with the finite subadditive property of outer measure.
+\end{solution}
+
+\bigskip
+
 \section{Chapter I}
 
-\Qb[1. Royden 1.1-1 (Distributive Property of Multiplicative Inverse in Reals)]
+\Qb[: Royden 1.1-1 (Distributive Property of Multiplicative Inverse in Reals)]
 \Qe
 \Sb
 Assume that $a \neq 0$ and $b \neq 0$. From the multiplicative identity axiom,
