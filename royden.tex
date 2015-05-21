@@ -68,63 +68,7 @@ New York University \\
 This work contains the solutions to Royden's Real Variables.
 \end{abstract}
 
-\section{Solutions}
-
-\Qb[1. Royden 1.1-1 (Distributive Property of Multiplicative Inverse in Reals)]
-\Qe
-\Sb
-Assume that $a \neq 0$ and $b \neq 0$. From the multiplicative identity axiom,
-we have that a multiplicative inverse exists for $a$ and $b$ individually, which we denote as
-$a^{-1}$ and $b^{-1}$ respectively.
-Now, consider the expression $(ab)(a^{-1}b^{-1})$, where $ab$ denotes the 
-product of $a$ and $b$, and $a^{-1}b^{-1}$ denotes the product of $a^{-1}$ and $b^{-1}$.
-From the commutativity of multiplication,
-we obtain
-\eQb
-(ab)(a^{-1}b^{-1}) = (ab)(b^{-1}a^{-1}).
-\eQe
-Using the associativity of multiplication and iteratively substituting $bb^{-1} = 1$ and $aa^{-1} = 1$,
-we have
-\eQb
-(ab)(a^{-1}b^{-1}) = 1,
-\eQe
-where $1$ denotes the identity as usual. Hence, the product, $a^{-1}b^{-1}$ satisfies definition
-of multiplicative inverse with respect to the $ab$ term whose multiplicative inverse can be denoted
-as $(ab)^{-1}$ by convention. Therefore, we obtain that
-\eQb
-(ab)^{-1} = a^{-1}b^{-1},
-\eQe
-as desired.
-\Se
-
-\bigskip
-
-\Qb[Royden 1.1-3]
-\Qe
-\begin{solution}
-Let $E$ be a nonemepty set of real numbers.\\ 
-$\mathbf{( \Leftarrow )}$ Assume that 
-$E$ consists of a single point, which we denote as $x$. We claim that
-$\text{inf}E = x$ and $\text{sup}E = x$. As we have $x \leq x$, we see that $x$ is an upper bound
-for $E$. Suppose that there exists an upper bound for $E$, $a$, that is smaller than $x$, namely 
-$a < x$. This is a contradiction to the fact that $a$ is an upper bound as it is required to have
-$x \leq a$ with $x \in E$. Hence, there does not exists any upper bound for $E$ that is smaller than
-$x$. By definition of supremum, we have that $\text{sup}E = x$. By symmtry, we can see that
-$\text{inf}E = x$ as well. Therefore, $\text{inf}E = \text{sup}E$. \\ 
-
-\smallskip
-
-$\mathbf{( \Rightarrow )}$ Assume that $\text{inf} E = \text{sup} E$. 
-Given the assumption, let us denote the infimum and supremum for $E$ as a
-single real number $a$. Then, by definition of infimum, any $x$ in $E$, we have
-$a \leq x$. Furthermore, by definition of supremum, any $x$ in $E$, we have $x \leq a$.
-The only real number that can satisfy the two given equality is $a$ itself. We also know
-that $a$ must be in $E$ as $E$ is a nonempty set of reals. Therefore, 
-we have shown that $E = \{ a \}$, and that $E$ consists of a single point.
-\end{solution}
-
-\pagebreak
-
+\section{Chapter II}
 \Qb[Royden 2.1-1]
 \Qe
 \begin{solution}
@@ -180,6 +124,93 @@ whcih $m(A) < \infty$, then $m( \emptyset ) = 0$.
 \Qb[Royden 2.1-3]
 \Qe
 \begin{solution}
+
 \end{solution}
+
+\bigskip
+
+\Qb[Royden 2.1-6]
+\Qe
+\begin{solution}
+Let $Q$ and $A$ denote the set of rationals and irrationals in the interval $[0,1]$
+respectively. Consider a countable collection of sets $\{ Q, A \}$.
+Since outer measure is countably subadditive, we have 
+\eQb
+m^{*}( Q \cup A) & \leq & m^*(Q) + m^{*}(A).
+\eQe
+As $Q$ is a countable set whose outer measure is zero 
+and $Q \cup A = [0,1]$ by construction, we obtain
+\eQb
+m^{*}([0,1]) & \leq & m^{*}(A).
+\eQe
+As the outer measure of an interval is its length, we have
+\eQb
+1 & \leq & m^{*}(A).
+\eQe
+Using the monotonicity property of outer measure with $I \subset [0,1]$,
+we also see
+\eQb
+m^{*}(A) & \leq & 1,
+\eQe
+thereby showing that $m^{*}(A) = 1$. 
+\end{solution}
+
+\section{Chapter I}
+
+\Qb[1. Royden 1.1-1 (Distributive Property of Multiplicative Inverse in Reals)]
+\Qe
+\Sb
+Assume that $a \neq 0$ and $b \neq 0$. From the multiplicative identity axiom,
+we have that a multiplicative inverse exists for $a$ and $b$ individually, which we denote as
+$a^{-1}$ and $b^{-1}$ respectively.
+Now, consider the expression $(ab)(a^{-1}b^{-1})$, where $ab$ denotes the 
+product of $a$ and $b$, and $a^{-1}b^{-1}$ denotes the product of $a^{-1}$ and $b^{-1}$.
+From the commutativity of multiplication,
+we obtain
+\eQb
+(ab)(a^{-1}b^{-1}) = (ab)(b^{-1}a^{-1}).
+\eQe
+Using the associativity of multiplication and iteratively substituting $bb^{-1} = 1$ and $aa^{-1} = 1$,
+we have
+\eQb
+(ab)(a^{-1}b^{-1}) = 1,
+\eQe
+where $1$ denotes the identity as usual. Hence, the product, $a^{-1}b^{-1}$ satisfies definition
+of multiplicative inverse with respect to the $ab$ term whose multiplicative inverse can be denoted
+as $(ab)^{-1}$ by convention. Therefore, we obtain that
+\eQb
+(ab)^{-1} = a^{-1}b^{-1},
+\eQe
+as desired.
+\Se
+
+\bigskip
+
+\Qb[Royden 1.1-3]
+\Qe
+\begin{solution}
+Let $E$ be a nonemepty set of real numbers.\\ 
+$\mathbf{( \Leftarrow )}$ Assume that 
+$E$ consists of a single point, which we denote as $x$. We claim that
+$\text{inf}E = x$ and $\text{sup}E = x$. As we have $x \leq x$, we see that $x$ is an upper bound
+for $E$. Suppose that there exists an upper bound for $E$, $a$, that is smaller than $x$, namely 
+$a < x$. This is a contradiction to the fact that $a$ is an upper bound as it is required to have
+$x \leq a$ with $x \in E$. Hence, there does not exists any upper bound for $E$ that is smaller than
+$x$. By definition of supremum, we have that $\text{sup}E = x$. By symmtry, we can see that
+$\text{inf}E = x$ as well. Therefore, $\text{inf}E = \text{sup}E$. \\ 
+
+\smallskip
+
+$\mathbf{( \Rightarrow )}$ Assume that $\text{inf} E = \text{sup} E$. 
+Given the assumption, let us denote the infimum and supremum for $E$ as a
+single real number $a$. Then, by definition of infimum, any $x$ in $E$, we have
+$a \leq x$. Furthermore, by definition of supremum, any $x$ in $E$, we have $x \leq a$.
+The only real number that can satisfy the two given equality is $a$ itself. We also know
+that $a$ must be in $E$ as $E$ is a nonempty set of reals. Therefore, 
+we have shown that $E = \{ a \}$, and that $E$ consists of a single point.
+\end{solution}
+
+
+
 
 \end{document}
