@@ -29,6 +29,7 @@
 \newtheorem*{definition}{Definition}
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{question}{Question}
+\newtheorem*{preposition}{Preposition}
 \newtheorem*{exercise}{Exercise}
 \newtheorem*{challengeproblem}{Challenge Problem}
 \newtheorem*{solution}{Solution}
@@ -189,6 +190,25 @@ trivially holds with the finite subadditive property of outer measure.
 \end{solution}
 
 \bigskip
+
+\begin{preposition}
+Algebra is closed with respect to the formation of finite intersection.
+\end{preposition}
+\begin{proof}
+Let $\mathcal{A}$ be an algebra and $\{ A_k \}_{k=1}^{n}$ be a finite collection of
+sets in $\mathcal{A}$. We want to show that $\cap_{k=1}^{n} A_k$ is in $\mathcal{A}$.
+Since algebra is closed with respect to the formation of finite union
+and complements, we have 
+\eQb
+\cup_{k=1}^{n} A_k^{C} \> \text{ is in} \> \mathcal{A}. 
+\eQe
+By applying De Morgan's identity and closedness of complements iteratively, we see that
+\eQb
+{(\cap_{k=1}^{n} A_k)}^{C} \> \text{ is in} \> \mathcal{A} \>\> \text{ and } \>\>
+\cap_{k=1}^{n} A_k \> \text{ is in} \> \mathcal{A}, 
+\eQe
+thereby showing that an algebra is closed with respect to the formation of finite intersection.
+\end{proof}
 
 \section{Chapter I}
 
