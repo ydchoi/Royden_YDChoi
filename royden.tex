@@ -158,7 +158,7 @@ As the outer measure of an interval is its length, we have
 \eQb
 1 & \leq & m^{*}(A).
 \eQe
-Using the monotonicity property of outer measure with $I \subset [0,1]$,
+Using the monotonicity property of outer measure with $A \subset [0,1]$,
 we also see
 \eQb
 m^{*}(A) & \leq & 1,
@@ -307,7 +307,7 @@ that $a$ must be in $E$ as $E$ is a nonempty set of reals. Therefore,
 we have shown that $E = \{ a \}$, and that $E$ consists of a single point.
 \end{solution}
 
-\begin{preposition}[1-8]
+\begin{preposition}[1-8 Variant]
 The intersection of any finite collection of open sets is open; and the union of any finite
 collection of closed sets is closed.
 \end{preposition}
@@ -332,7 +332,103 @@ equivalent to $(\cup_{k=1}^{n} B_k)^{C}$ being open. By DeMorgan's identity, we 
 Notice that as $B_k$ is closed, ${B_k}^{C}$ is open. Then, 
 the RHS expression gives us that the set under consideration is indeed a finite
 intersection of open sets, which we have shown to be open. Therefore, the union 
-of any finite collection of closed sets is closed.
+of any finite collection of closed sets is closed. \\
+
+\smallskip
+
+Note that the result does not hold true for the countable collection of open sets. The minimum can
+converge $0$, breaking the above proof by having $r^*$ no longer well defined. For example,
+let $A_k$ be an open interval $(-\dfrac{1}{k}, \dfrac{1}{k})$. Taking the intersection of $A_k$s 
+indexed by naturals, we have 
+\eQb
+\cap_{k=1}^{\infty} A_k &=& \{ 0 \},
+\eQe
+thereby yielding an intersection that is not-open as a singleton-set is not open in reals.
+Later on, we will see that the intersection of any countable of open sets is
+measurable, but this result
+tells us that the intersection might not necessarily open.
 \end{proof}
+
+\section{Results: Chapter III}
+\begin{definition}
+All the functions considered in this chapter take values in the 
+extended real numbers, that is, the set $\mathbb{R} \cup \{ \pm \infty \}$.
+A property is said to hold \textbf{almost everywhere} (abbreviated a.e.) on
+a measurable set $E$ provided it holds on $E \sim E_0$, where $E_0$ is a subset
+of $E$ for which $m(E_0)= 0$.
+\end{definition}
+
+\bigskip
+
+\begin{preposition}[3.1 : Definition of Measurable functions] ~\\
+Let the function $f$ have a measurable domain $E$. Then, the following
+statements are equivalent: \\
+\begin{center}
+\textit{(i)} For each real number $c$, the set $\{ x \in E | f(x) > c \}$ is measurable. \\
+\textit{(ii)} For each real number $c$, the set $\{ x \in E | f(x) \geq c \}$ is measurable. \\
+\textit{(iii)} For each real number $c$, the set $\{ x \in E | f(x) < c \}$ is measurable. \\
+\textit{(iv)} For each real number $c$, the set $\{ x \in E | f(x) \leq c \}$ is measurable.\\
+\end{center}
+\end{preposition}
+
+\bigskip
+
+\begin{definition}
+An extended real-valued function $f$ is defined on $E$ is said to be \textbf{Lebesgue measurable},
+or simply \textbf{measurable}, provided its domain $E$ is measurable and it satisfies one of the
+four statements of Preposition $3.1$.
+\end{definition}
+
+\bigskip
+
+\begin{preposition}[3.2 : The Inverse Image of Open is Measurable Implies $f$ Measurable] ~\\ 
+Let the function $f$ be defined on a measurable set $E$. Then $f$ is measurable if and only if
+for each open set $\mathcal{O}$, the inverse image of $\mathcal{O}$ under $f$, $f^{-1}(\mathcal{O})
+= \{ x \in E | f(x) \in \mathcal{O} \}$, is measurable.
+\end{preposition}
+
+\bigskip 
+
+\begin{preposition}[3.3 : Continuity and Measurability] ~\\ 
+A real-valued function that is continuous on its measurable domain is measurable.
+\end{preposition}
+
+\bigskip
+
+\begin{preposition}[3.4] ~\\
+A monotone function that is defined on an interval is measurable.
+\end{preposition}
+
+\bigskip
+
+\begin{preposition}[3.5 : ] ~\\
+Let $f$ be an extended real-valued function on $E$. \\
+\begin{center}
+\textit{(i)} If $f$ is measurable on $E$ and $f = g$ a.e. on $E$, then $g$ is 
+measurable on $E$. \\
+\textit{(ii)} For a measurable subset $D$ of $E$, $f$ is measurable on $E$, if and only if
+the restrictions of $f$ to $D$ and $E \sim D$ are measurable.
+\end{center}
+\end{preposition}
+
+\bigskip
+
+\begin{theorem}
+\end{theorem}
+
+\bigskip
+
+\begin{remark}
+Many of the properties of functions considered in elementary analysis, including continuity and 
+differentiability, are preserved under the operation of composition of functions. However,
+the composition of measurable functions may not be measurable.
+\end{remark}
+
+\bigskip
+
+\begin{preposition}
+ddd
+\end{preposition}
+
 
 \end{document}
