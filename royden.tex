@@ -28,6 +28,7 @@
 \theoremstyle{quest}
 \newtheorem*{definition}{Definition}
 \newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
 \newtheorem*{question}{Question}
 \newtheorem*{preposition}{Preposition}
 \newtheorem*{exercise}{Exercise}
@@ -403,17 +404,24 @@ A monotone function that is defined on an interval is measurable.
 
 \begin{preposition}[3.5 : ] ~\\
 Let $f$ be an extended real-valued function on $E$. \\
-\begin{center}
 \textit{(i)} If $f$ is measurable on $E$ and $f = g$ a.e. on $E$, then $g$ is 
 measurable on $E$. \\
 \textit{(ii)} For a measurable subset $D$ of $E$, $f$ is measurable on $E$, if and only if
 the restrictions of $f$ to $D$ and $E \sim D$ are measurable.
-\end{center}
 \end{preposition}
 
 \bigskip
 
-\begin{theorem}
+\begin{theorem}[3.6]
+Let $f$ and $g$ be measurable functions on $E$ that are finite a.e. on $E$. \\
+\textit{(Linearity)} For any $\alpha$ and $\beta$,
+\eQb
+\alpha f + \beta g \> \> \text{is measurable on} E.
+\eQe
+\textit{(Product)} 
+\eQb
+fg \> \> \text{is measurable on} E.
+\eQe
 \end{theorem}
 
 \bigskip
@@ -426,9 +434,83 @@ the composition of measurable functions may not be measurable.
 
 \bigskip
 
-\begin{preposition}
-ddd
+\begin{preposition}[3.7 : Composition and Measurability] ~\\
+Let $g$ be a measurable real-valued function defined on $E$ and $f$ a continuous
+real-valued function defined on all of $\mathbb{R}$. Then the composition $f \circ g$ is a 
+measurable function on $E$.
 \end{preposition}
+
+\bigskip
+
+\begin{preposition}
+For a finite family $\{ f_k \}_{k=1}^{n}$ of measurable functions with common domain $E$,
+the functions max$\{ f_1 , ..., f_n \}$ and min$\{ f_1 , ..., f_n \}$ also are measurable.
+\end{preposition}
+
+\bigskip
+
+\begin{remark}
+For a function $f$ defined on $E$, we have the associated functions $|f|, f^{+}, f^{-}$ defined
+on $E$ by 
+\eQb
+|f|(x) = max \{ f(x), -f(x) \} , f^{+}(x) = max \{ f(x), 0 \}, f^{-}(x) = max \{ -f(x), 0 \} .
+\eQe
+If $f$ is measurable on $E$, then, by the preceding proposition, so are the functions $|f|$, 
+$f^{+}$, and $f^{-}$. This will be important when we study integration since the expression of $f$
+as the difference of two nonnegative functions,
+\eQb
+f &=& f^{+} - f^{-} \> \text{on } E,
+\eQe
+plays an important part in defining the Lebesgue integral.
+\end{remark}
+
+\bigskip
+
+\begin{preposition}
+Let $\{ f_n \} $ be a sequence of measurable functions on $E$ that converges pointwise 
+a.e. on $E$ to the function $f$. Then, $f$ is measurable.
+\end{preposition}
+
+\bigskip
+
+\begin{definition}
+If $A$ is any set, the \textbf{characteristic function} of $A$, $\mathcal{X}_{A}$,
+is the function on $\mathbb{R}$ defined by 
+\eQb
+\mathcal{X}_{A} &=& 1,
+\eQe
+It is clear that the function $\mathcal{X}_{A}$ is measurable if and only if the set $A$
+is measurable. Thus, the existence of a non-measurable set implies the existence of
+a non-measurable function. Linear combinations of characteristic functions of measurable sets
+play a role in Lebesgue integration similar to that played by step functions in Riemann
+integration, and so we name these functions.
+\end{definition}
+
+\bigskip
+
+\begin{definition}
+A real-valued function $\varphi$ defined on a measurable set $E$ is called \textbf{simple} 
+provided it is measurable and takes only a finite number of values. \\
+\\
+We emphasize that a simple function only takes real values. Linear combinations and
+products of simple functions are simple since each of them takes on only a finite
+number of values. If $\varphi$ is simple, has domain $E$ and takes the distinct values
+$c_1, .., c_n$, then 
+\eQb
+\varphi &=& \sum_{k=1}^{n} c_k \cdot \mathcal{X}_{E_k} \> \text{on} \> E, 
+\> \text{where} \> E_k = \{ x \in E | \varphi(x) = c_k \} .
+\eQe
+This particular expression of $\varphi$ as a linear combination of characteristic functions
+is called the \textbf{canonical representation of the simple function} $\varphi$.
+\end{definition}
+
+\bigskip
+
+\begin{lemma}[ : The Simple Approximation Lemma]
+Let $f$ be a measurable real-valued function on $E$. Assume $f$ is bounded on $E$,
+that is, there is an $M \geq 0$ for which $|f| \leq M$ on $E$. Then, for each
+
+\end{lemma}
 
 
 \end{document}
