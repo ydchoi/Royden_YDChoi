@@ -191,6 +191,16 @@ trivially holds with the finite subadditive property of outer measure.
 
 \bigskip
 
+\begin{definition}
+A collection of subsets of $\mathbb{R}$ is an algebra, provided that it 
+contains $\mathbb{R}$ and is closed with respect to the formation of complements 
+and finite unions. A collection of subsets of $\mathbb{R}$ is an $\sigma$-algebra,
+provided that it contains $\mathbb{R}$ and is closed with respect to the formation
+of complements and countable unions.
+\end{definition}
+
+\bigskip
+
 \begin{preposition}
 Algebra is closed with respect to the formation of finite intersection.
 \end{preposition}
@@ -209,6 +219,38 @@ By applying De Morgan's identity and closedness of complements iteratively, we s
 \eQe
 thereby showing that an algebra is closed with respect to the formation of finite intersection.
 \end{proof}
+
+\bigskip
+
+\begin{preposition}
+The collection of measurable sets is an algebra. The union of a countable collection of measurable sets
+is also the union of a countable disjoint collection of measurable sets. 
+\end{preposition}
+\begin{proof} Since we know that the union of a finite collection of measurable sets is measurable 
+and the complement of a measurable set is measurable, we immediately see that the collection of
+measurable sets is an algebra. Now, consider the union of a countable collection of measurable sets,
+denoted as $\cup_{i=1}^{\infty}E_i$. Define a new countable collection of sets 
+$\{ A_i \}_{i=1}^{\infty} $
+by
+\eQb
+A_i \triangleq E_i \sim \cup_{k \neq i}^{\infty} E_k , 
+\eQe
+where each $A_i$ is disjoint and 
+indeed in the measurable sets as the construction of it respects the algebra.
+Furthermore, the union of $\{ A_i \}$ collection is precisely 
+the union of $E_i$ as well. Therefore, we have 
+proven the preposition.
+\end{proof}
+
+\bigskip
+
+\begin{preposition}
+The union of a countable collection of measurable sets is measurable. Thus,
+the collection of measurable sets is an $\sigma$-algebra.
+\end{preposition}
+\begin{proof}
+\end{proof}
+\bigskip
 
 \section{Chapter I}
 
@@ -265,7 +307,32 @@ that $a$ must be in $E$ as $E$ is a nonempty set of reals. Therefore,
 we have shown that $E = \{ a \}$, and that $E$ consists of a single point.
 \end{solution}
 
+\begin{preposition}[1-8]
+The intersection of any finite collection of open sets is open; and the union of any finite
+collection of closed sets is closed.
+\end{preposition}
+\begin{proof} Let $\{ A_k \}_{k=1}^{n}$ be a finite collection of open sets. We want to show
+that $\cap_{k=1}^{n} A_k$ is open. Consider $x \in \cap_{k=1}^{n} A_k$. Since each $A_k$ is open, 
+there exist $r_k$ for $1 \leq k \leq n$ such that $B(x,r_k) \subseteq A_k$. Let $r^* = 
+\underset{1 \leq k 
+\leq n}{\text{min}}( A_k )$. Then, $B(x,r^*) \in A_k$ for $1 \leq k \leq n$. Hence,
+$B(x,r^*) \subseteq \cap_{k=1}^{n} A_k$. Therefore, there exists $r > 0$ such that
+$B(x,r)$ for all points in $\cap_{k=1}^{n} A_k$ and by definition of open sets,
+$\cap_{k=1}^{n} A_k$ is open. 
+We have shown that the intersection of any finite collection of open sets is open. \\
 
+\smallskip
 
+Let $\{ B_k \}_{k=1}^{n}$ be a finite
+collection of closed sets. We want to show that $\cup_{k=1}^{n} B_k$ is closed, which is 
+equivalent to $(\cup_{k=1}^{n} B_k)^{C}$ being open. By DeMorgan's identity, we have that
+\eQb
+(\cup_{k=1}^{n} B_k)^{C} &=& \cap_{k=1}^{n} {B_k}^{C}.
+\eQe
+Notice that as $B_k$ is closed, ${B_k}^{C}$ is open. Then, 
+the RHS expression gives us that the set under consideration is indeed a finite
+intersection of open sets, which we have shown to be open. Therefore, the union 
+of any finite collection of closed sets is closed.
+\end{proof}
 
 \end{document}
