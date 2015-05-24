@@ -251,7 +251,34 @@ the collection of measurable sets is an $\sigma$-algebra.
 \end{preposition}
 \begin{proof}
 \end{proof}
+
 \bigskip
+
+\Qb[2.6-29: Equivalence relation]
+\Qe
+\begin{solution}
+\textbf{(i)} We want to show that the rational equivalence defines an equivalence 
+relation on any set. Let $A$ be a set and $R$ be a relation set induced by 
+the rational equivalence. For $x \in A$, $x - x = 0$ is clearly a rational.
+Hence, the relation is reflexive. For $(x,y) \in R$, we have that $x-y$ is a rational.
+As a negation of a rational is a rational, $(y,x) \in R$. Thus, the relation is symmetric.
+For $(x,y), (y,z) \in R$, we have that $x-y$ and $y-z$ are rationals. Notice that
+negating $y-z$ term and subtracting it from $x-y$ gives $x-z$. Since rationals are closed
+under subtraction, we have that $x-z$ is a rational and $(x,z) \in R$. Therefore, the relation
+is transitive, thereby showing that the rational equivalence defines an equivalence relation 
+on any set. \\
+
+\smallskip
+
+\textbf{(ii)} 
+
+\smallskip
+
+\textbf{(iii)} The irrationally equivalent as a relation fails to be reflexive on both 
+$\mathbb{R}$ and $\mathbb{Q}$, as $0$ is not a irrational number.
+
+\end{solution}
+
 
 \section{Chapter I}
 
@@ -294,7 +321,7 @@ $\text{inf}E = x$ and $\text{sup}E = x$. As we have $x \leq x$, we see that $x$ 
 for $E$. Suppose that there exists an upper bound for $E$, $a$, that is smaller than $x$, namely 
 $a < x$. This is a contradiction to the fact that $a$ is an upper bound as it is required to have
 $x \leq a$ with $x \in E$. Hence, there does not exists any upper bound for $E$ that is smaller than
-$x$. By definition of supremum, we have that $\text{sup}E = x$. By symmtry, we can see that
+$x$. By definition of supremum, we have that $\text{sup}E = x$. By symmetry, we can see that
 $\text{inf}E = x$ as well. Therefore, $\text{inf}E = \text{sup}E$. \\ 
 
 \smallskip
@@ -307,6 +334,8 @@ The only real number that can satisfy the two given equality is $a$ itself. We a
 that $a$ must be in $E$ as $E$ is a nonempty set of reals. Therefore, 
 we have shown that $E = \{ a \}$, and that $E$ consists of a single point.
 \end{solution}
+
+\bigskip
 
 \begin{preposition}[1-8 Variant]
 The intersection of any finite collection of open sets is open; and the union of any finite

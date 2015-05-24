@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  23 MAY 2015 16:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  24 MAY 2015 08:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -555,49 +555,53 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
  [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 290--299
+Underfull \hbox (badness 10000) in paragraph at lines 260--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--324
+Underfull \hbox (badness 10000) in paragraph at lines 317--326
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 332--337
+Underfull \hbox (badness 10000) in paragraph at lines 344--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--367
+Underfull \hbox (badness 10000) in paragraph at lines 361--366
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 492--502
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
 
  []
 
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 521--531
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 545.
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 545.
  (./royden.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 516.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 516.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 545.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 545.
 Package rerunfilecheck Info: File `royden.out' has not changed.
 (rerunfilecheck)             Checksum: 0E51C172BF371C9D352788754E672A2A;144.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 516.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 545.
  ) 
 Here is how much of TeX's memory you used:
  10641 strings out of 493315
  157315 string characters out of 6137904
- 260662 words of memory out of 5000000
+ 259662 words of memory out of 5000000
  13939 multiletter control sequences out of 15000+600000
  17507 words of font info for 42 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,8n,39p,252b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,252b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -613,7 +617,7 @@ xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/201
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on royden.pdf (6 pages, 144601 bytes).
+Output written on royden.pdf (6 pages, 148441 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  82 compressed objects within 1 object stream
