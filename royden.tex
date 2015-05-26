@@ -383,6 +383,34 @@ measurable, but this result
 tells us that the intersection might not necessarily open.
 \end{proof}
 
+\bigskip
+
+\begin{theorem}[1-15 The Monotone Convergence Criterion for Real Sequences]
+\end{theorem}
+\begin{proof}
+Let $\{ a_n \}$ be an increasing sequence. Assume that the sequence is convergent. Then, 
+we have shown that the sequence is bounded previously. Assume that the sequence is
+bounded. Consider a set $S = \{ a_n | n \in \mathbb{R} \}$. Since $S$ is bounded, by the 
+completeness axion, there exists a supremum of $S$, which we denote as $a$.
+Now, we claim that
+\eQb
+\underset{n \to \infty }{\text{lim}} a_n &=& a.
+\eQe
+Let $\epsilon > 0$. Then, as $a$ is the supremum of $S$, $a - \epsilon$ is not an upper
+bound of $S$. Hence, there exists an index $n^*$ such that $a - a_{n^*} < \epsilon$. As
+the sequence is increasing, for $m \geq n^*$, we have $a - a_{m} < \epsilon$. Therefore,
+we have shown that for any $\epsilon > 0$, there exists an index $n$ such that for $m \geq n$,
+$|a - a_m| < \epsilon$, which is precisely the definition of convergence given. 
+The decreasing sequence case can also be proven in a similar vein.
+Hence, we have shown that if a sequence is bounded and monotone, then it is also convergent. 
+\end{proof}
+
+\begin{theorem}[1-16 The Bolzano-Weiestrass Theorem]
+\end{theorem}
+\begin{proof}
+\end{proof}
+
+
 \section{Results: Chapter III}
 \begin{definition}
 All the functions considered in this chapter take values in the 
