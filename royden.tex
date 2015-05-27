@@ -385,6 +385,41 @@ tells us that the intersection might not necessarily open.
 
 \bigskip
 
+\begin{theorem}[The Heine-Borel Theorem]
+\end{theorem}
+\begin{proof}
+\end{proof}
+
+\bigskip
+
+\begin{theorem}[The Nested Set Theorem]
+\end{theorem}
+\begin{proof} Granted the Heine-Borel Theorem, we prove the nested set theorem. Let
+$\{ F_n \}_{n=1}^{\infty}$ be a descending countable collection of nonempty, bounded and closed sets.
+Suppose for sake of contradiction that $\cap_{i=1}^{\infty} F_i = \emptyset$. 
+Taking the complements and applying DeMorgan's identity
+to both sides, we obtain
+\eQb
+\cup_{i=1}^{\infty} {F_i}^{C} = \mathbb{R}.
+\eQe
+As each ${F_i}^{C}$ is an open set, by the Heine-Borel Theorem, we have 
+\eQb
+\cup_{n \in N} {F_i}^{C} = \mathbb{R},
+\eQe
+where $N$ denotes a finite index set. As $\{ F_n \}$ is descending, and $N$ is finite,
+we have
+\eQb
+F_{n^*}^{C} = \mathbb{R},
+\eQe
+where $n^*$ denotes the maximum index from the index set $N$. Taking complements on both sides,
+we get $F_{n^*} = \emptyset$, which contradicts the fact that $\{ F_n \}$ is a collection of
+nonempty sets. Therefore, $\cap_{i=1}^{\infty} {F_i} \neq \emptyset$.
+Hence, we have proven that the intersection of descending countable collection 
+of nonempty, bounded, closed sets is nonempty.
+\end{proof}
+
+\bigskip
+
 \begin{theorem}[1-15 The Monotone Convergence Criterion for Real Sequences]
 \end{theorem}
 \begin{proof}
@@ -405,9 +440,12 @@ The decreasing sequence case can also be proven in a similar vein.
 Hence, we have shown that if a sequence is bounded and monotone, then it is also convergent. 
 \end{proof}
 
+\bigskip
+
 \begin{theorem}[1-16 The Bolzano-Weiestrass Theorem]
 \end{theorem}
 \begin{proof}
+Let $\{ a_n \}$ be a sequence of real numbers. Assume that the sequence is bounded. 
 \end{proof}
 
 
