@@ -385,14 +385,24 @@ tells us that the intersection might not necessarily open.
 
 \bigskip
 
-\begin{theorem}[The Heine-Borel Theorem]
+\begin{theorem}[ : The Heine-Borel Theorem]
 \end{theorem}
-\begin{proof}
+\begin{proof} We first consider the case of a closed and bounded interval. Let $F$ be
+a closed, bounded set, denoted as $[a,b]$, and $\mathcal{F}$ be an open cover of $F$.
+Now, define a set $E$ as follows:
+\eQb
+\{ x \in F | [a,x] \> \text{ can be covered by a finite collection of sets in} \> \mathcal{F}  \}.
+\eQe
+Note that $a \in E$, as $\mathcal{F}$ is an open cover, there exists an open set in 
+$\mathcal{F}$ that
+contains $a$ and the open set itself forms a finite cover for $[a,a]$. Therefore,
+we have that $E$ is non-empty, bounded set of reals, which grants us an existence of supremum
+by the completeness of the reals; define $c = \text{sup}E$.
 \end{proof}
 
 \bigskip
 
-\begin{theorem}[The Nested Set Theorem]
+\begin{theorem}[ : The Nested Set Theorem]
 \end{theorem}
 \begin{proof} Granted the Heine-Borel Theorem, we prove the nested set theorem. Let
 $\{ F_n \}_{n=1}^{\infty}$ be a descending countable collection of nonempty, bounded and closed sets.
@@ -423,10 +433,10 @@ of nonempty, bounded, closed sets is nonempty.
 \begin{theorem}[1-15 The Monotone Convergence Criterion for Real Sequences]
 \end{theorem}
 \begin{proof}
-Let $\{ a_n \}$ be an increasing sequence. Assume that the sequence is convergent. Then, 
-we have shown that the sequence is bounded previously. Assume that the sequence is
-bounded. Consider a set $S = \{ a_n | n \in \mathbb{R} \}$. Since $S$ is bounded, by the 
-completeness axion, there exists a supremum of $S$, which we denote as $a$.
+Let $\{ a_n \}$ be an increasing sequence.
+Assume that the sequence is
+bounded as well. Consider a set $S = \{ a_n | n \in \mathbb{R} \}$. Since $S$ is bounded, by the 
+completeness axiom, there exists a supremum of $S$, which we denote as $a$.
 Now, we claim that
 \eQb
 \underset{n \to \infty }{\text{lim}} a_n &=& a.
