@@ -70,6 +70,31 @@ New York University \\
 This work contains the solutions to Royden's Real Variables.
 \end{abstract}
 
+
+\section{Chapter X}
+\begin{theorem}[10.3 The Banach Contraction Principle]
+Let $(X,\rho)$ be a complete metric space, and the mapping $T: X \to X$ be a contraction.
+Then, $T:X \to X$ has exactly one fixed point.
+\end{theorem}
+\begin{proof}
+We first show that there exists a fixed point. The proof of the uniqueness 
+of the fixed point will follow in the second part. 
+Let $x_0 \in X$, and set $x_{n} = T(x_{n-1})$ for $n \geq 1$, thereby defining 
+$\{ x_n\}$ sequence. We first claim that $\{ x_n \}$ is cauchy. As the
+metric space is complete, the sequence will be proven to be convergent, if the claim holds.
+From the construction of the $\{ x_n \}$ sequence, and as $T$ is a contraction, we have
+\[
+\rho(x_{n+1},x_n) = \rho(T(x_{n+1}),T(x_n)) \leq c\rho(x_n, x_{n-1}),
+\]
+for $n \geq 1$, and
+where $c$ is a Lipschitz constant $0 \leq c < 1$. Inductively applying the above
+inequality, we obtain
+\[
+\rho(x_{n+1},x_n) \leq c^{n} \rho(x_{1}, x_0) 
+\]
+for $n \geq 1$.
+\end{proof}
+
 \section{Chapter III}
 \begin{theorem}[3. Egoroff's Theorem]
 \end{theorem}
