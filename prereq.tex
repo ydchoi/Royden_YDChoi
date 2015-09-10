@@ -141,22 +141,58 @@ $E^{C}$ is in $A_{\lambda}$ for all $\lambda \in \Lambda$.
 
 \end{solution}
 
+\bigskip
 
-\begin{question}
+\begin{question}[1.5. Further subsequence]
+\end{question}
+\begin{solution}
+Suppose for sake of contradiction that $\{ x_n \}$ does not converge to $x$. Then, for some $\epsilon > 0$,
+for all $N \in \mathbb{N}$, there exists $x_n$ with $n \geq N$, such that $|x_n - x| \geq \epsilon$. Then,
+for each $N \in \mathbb{N}$, pick an element that satisfies $|x_N - x| \geq \epsilon$; this is a 
+subsequence of $\{ x_n \}$, which we denote as $\{ x_{n_k} \}$. We now have that 
+$|x_{n_k} - x| \geq \epsilon $ for all $k$. Hence, this particular subsequence of $\{ x_n \}$ cannot
+have a further subsequence that converges to $x$, which is a contradiction. Hence, $\{ x_n \} \to x$.
+$\qed$
+\end{solution}
+
+\bigskip
+
+\begin{question}[1.4. $\limsup$ is $\sup C$]
 \end{question}
 \begin{solution}
 Let $\{ a_n \}$ be a sequence of
-real numbers, $X$ be a set of cluster points of $\{ a_n \}$. 
+real numbers, $C$ be a set of cluster points of $\{ a_n \}$. 
 First, 
 we simply denote $\limsup \{ a_n \}$ as $s$, which can be written as
 \[
 s = 
 \underset{n \to \infty}{\lim} [ \> \sup \{ a_k \>\> | \>\> k \geq n \} \> ].
 \]
-We first show that $\limsup \{ a_n \} \in X$.
+We first show that $s \in C$. We have two cases. First, assume $|s| = \infty$. Then, the sequence 
+is divergent, and any subsequence of the sequence converges to either $\infty$ or $-\infty$, 
+depending on the situation. Hence, $s$ is a cluster point. Second, assume that $|s| < \infty$.
+We would like to construct a subsequence $\{a_{n_k} \}$, which converges to $s$. 
+Let $s_n = \sup \{ a_k \>\> | \>\> k \geq n \}$. By the approximation property of supremum, 
+there exists an index $n_1$, such that $s_1 - \dfrac{1}{2} < a_{n_1} < s_1$ holds.
+Now, consider an inductive selection process, where given the choice of $a_{n_k}$, by using
+the approximation property of supremum, we pick
+$a_{n_{k+1}}$ such that 
+\[
+s_{a_{n_k}+1} - \dfrac{1}{2^{a_{n_k}+1}} < a_{n_{k+1}} < s_{a_{n_k}+1},
+\]
+holds. Now, the sequences on the right hand side and the left hand side both converge to $s$,
+and by squeeze theorem, the constructed sequence $\{ a_{n_k} \}$ converges to $s$. Hence,
+$\limsup \{ a_n \}$ is a cluster point.
+\\
+\\
+Now, we show that $\limsup \{ a_n \}$ is the
+largest cluster point. When $\limsup \{ a_n \}$ is unbounded, it trivially holds. Assume that
+$\limsup \{ a_n \}$ is a real number.
 Let $x$ be any cluster point of $\{ a_n \}$. By the definition of a cluster point,
-we have a subsequence $\{ a_{n_k} \} $ such that converges to $x$. Then, for any $\epsilon > 0$,
-we have $N$ such that for $n_k \geq N$, $x - a_{n_k} < \epsilon$ holds. Hence, $s \geq x$. We have
+we have a subsequence $\{ a_{n_k} \} $ such that converges to $x$. Notice that, by the definition of 
+$\limsup$, we have $ a_{n_k} \leq s_{n_k}$ for all $k$, as $a_{n_k}$ is an element of the set considered
+for the $s_{n_k}$ term. As $\{ s_{n_k} \}$ is a subsequence of $\{s_n \}$, it also converges to $s$ and
+hence, $s \geq x$. We have
 shown that $\limsup \{ a_n \}$ is the largest cluster point.
 \end{solution}
 
@@ -165,9 +201,10 @@ shown that $\limsup \{ a_n \}$ is the largest cluster point.
 \begin{question}[$\limsup$]
 \end{question}
 \begin{solution}
-
+Let $\{ a_n \}$, and $\{ b_n \}$ be real valued sequences.
 \end{solution}
 
+\bigskip
 
 \begin{question}[2. Continous functions]
 \end{question}
@@ -183,7 +220,9 @@ $\qed$
 
 \begin{question}
 \end{question}
-
+\begin{solution}
+Let $f:\mathbb{R} \to \mathbb{R}$ be a function. Assume that $f$ is continuous.  
+\end{solution}
 
 \end{document}
 
