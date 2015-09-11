@@ -99,14 +99,147 @@ for the case under consideration. Now, assume that $c(E_k) < \infty$ for all $k$
 
 \end{solution}
 
-\bigskip
+\pagebreak
 
-\begin{question}[2. Royden 2.8]
+\begin{question}[2. Royden 2.8. Closure of Finite Union]
 \end{question}
 \begin{solution}
 Let $B$ be a set of rational numbers in the interval $[0,1]$, and let $\{ I_k \}_{k=1}^{n}$ be a 
 finite collection of open intervals that cover $B$.
+As $B \subseteq \cup_{k=1}^{n} I_k$, we have $\overline{B} \subseteq 
+\overline{\cup_{k=1}^{n}I_k}$. Furthermore, with $n$ 
+being finite, we obtain that $\overline{\cup_{k=1}^{n} I_k} =
+\cup_{k=1}^{n} \overline{I_k}$. Then, it follows from the monotonicity, and finite sub-additivity
+property that 
+\begin{equation}
+m^{*}(\overline{B}) \leq m^{*}( \cup_{k=1}^{n} \overline{ I_k } ) \leq \sum_{k=1}^{n} 
+m^{*}(\overline{I_k}).
+\end{equation}
+In particular, we have $m^{*}(\overline{B}) = 1$, as $B = [0,1]$, and 
+$\sum_{i=1}^{n} m^{*}(\overline{I_k}) = \sum_{i=1}^{n} m^{*}(I_k)$, as the outer measure
+of an open interval and corresponding closed interval are equal. Substituting the two
+equalities into the (1) inequality, we obtain
+\eQb
+\sum_{i=1}^{n} m^{*}(I_k) \geq 1,
+\eQe
+as desired. $\qed$
+\end{solution}
+
+\bigskip
+
+\begin{question}[3. Royden 2.14]
+\end{question}
+\begin{solution}
+Let $m^{*}(E) > 0$. We wish to find a subset $X$ of $E$ such that $m^{*}(X) > 0$. 
+Consider the countable collection of sets $\{ (-M,M) \}_{M=1}^{\infty}$. Notice that,
+as $(-M,M)$ is bounded for some fixed $M$,
+$E \cap (-M,M)$ is a bounded subset of $E$. Furthermore,
+$ E = \cup_{M=1}^{\infty} E\cap (-M,M)$.
+Then, by the countable sub-additivity of outer measure, we have
+\eQb
+\sum_{M=1}^{\infty} m^{*}(E \cap (-M,M)) \geq m^{*}(E).
+\eQe
+If $m^{*}(E \cap (-M,M)) = 0$ for all $M$, then we have the sum on the LHS equals $0$, and obtain
+$0 > 0$, as $m^{*}(E) > 0$. This is a contradiction. Hence, there exists a $M$ such that
+$m^{*}(E \cap (-M,M)) > 0$, and $E \cap (-M,M)$ is precisely the bounded subset of $E$ with
+positive outer measure. We have shown that if a set $E$ has positive outer measure,
+then there is a bounded subset of $E$ that also has positive outer measure. $\qed$
+
+\end{solution}
+
+\bigskip
+
+
+\begin{question}[3. Royden 2.15]
+\end{question}
+\begin{solution}
+Let $m(E) < \infty$ and $\epsilon > 0$. We wish to show that $E$ is the disjoint
+union of a finite number of measurable sets, each of which has measure at most $\epsilon$.
+\end{solution}
+
+\bigskip
+
+\begin{question}[5. Royden 2.17]
+\end{question}
+\begin{solution}
+Let $E$ be a measurable set. Fix $\epsilon > 0$. Then, from inner approximation by closed sets,
+and outer approximation by open sets, there exists a closed set $F$ and an open set $O$, such that
+\eQb
+E \subseteq O \>\> \text{with } \>\> m^{*} (O \setminus E) < \dfrac{\epsilon}{2} 
+\>\> \text{and} \>\>
+F \subseteq E \>\>  \text{with} \>\> m^{*} (E \setminus F) < \dfrac{\epsilon}{2}. 
+\eQe
+Applying the sub-additivity property of outer measure with $O\setminus E$ and $E \setminus F$,
+we have
+\eQb
+m^{*}( O \setminus F) < m^{*}(O \setminus E) + m^{*}(E \setminus F) < \epsilon.
+\eQe
+Hence, if $E$ is measurable, then there exists an open set $O$ and a closed set $F$ for which
+$F \subseteq E \subseteq O$ and $m^{*}(E \setminus f) < \epsilon$.
+\end{solution}
+
+\bigskip
+
+\begin{question}[6. Royden 2.28]
+\end{question}
+\begin{solution}
+Let $\{ E_k \}_{k=1}^{\infty}$ be a countable, disjoint collection of measurable sets.
+By the finite additivity property, we have 
+\[
+m( \cup_{k=1}^{N} E_k ) = \sum_{k=1}^{N} m(E_k),
+\]
+for all $N$. Notice that 
+$\{ \cup_{k=1}^{N} E_k \}_{N=1}^{\infty}$ forms
+an ascending collection of measurable sets. 
+Hence, by applying the continuity of measure to the ascending collection,
+$\{ \cup_{k=1}^{N} E_k \}_{N=1}^{\infty}$, we have
+\eQb
+m( \cup_{N=1}^{\infty} \cup_{k=1}^{N} E_k ) &=& \underset{N \to \infty}{\lim} 
+m(\cup_{k=1}^{N}E_k).
+\eQe
+Simplifying the LHS and applying the finite additivity property to the RHS, we obtain
+\eQb
+m(\cup_{k=1}^{\infty} E_k) = \sum_{k=1}^{\infty} m(E_k).
+\eQe
+Since $\{E_k \}_{k=1}^{\infty}$
+was chosen to be an arbitrary countable, disjoint collection of measurable sets, we have
+shown that finite additivty and continuity of measure implies countable additivity. $\qed$ 
+
+\bigskip
+
+\begin{question}[7. Extra Problem. ]
+\end{question}
+\begin{solution}
+
+\end{solution}
+
 \end{solution}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
+
+
+
+
+
+
+
+
