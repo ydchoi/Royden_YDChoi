@@ -80,7 +80,7 @@ We wish to show that the counting measure, $c: \mathcal{P}(\mathbb{R})
 \to [0,\infty]$, where $\mathcal{P}(\mathbb{R})$ denotes the power set of $\mathbb{R}$, is
 countably additive and translation invariant. \\ 
 
-First, we prove that it is countably additive. Let $\{ E_k \}_{k=1}^{\infty}$ be a countable,
+We first prove that it is countably additive. Let $\{ E_k \}_{k=1}^{\infty}$ be a countable,
 disjoint collection of subsets of $\mathbb{R}$. 
 If one of the set in the collection has infinite cardinality, then 
 we have  
@@ -94,16 +94,44 @@ $c(\cup_{k=1}^{\infty}E_k) = \infty$. Therefore, we have
 \begin{eqnarray*}
 c(\cup_{k=1}^{\infty}E_k) = \sum_{k=1}^{\infty} c(E_k),
 \end{eqnarray*}
-for the case under consideration. Now, assume that $c(E_k) < \infty$ for all $k$.
-
-
-\end{solution}
+for the case under consideration. Now, assume that $c(E_k) < \infty$ for all $k$. There are
+two sub-cases now. First, assume that the series $\sum_{k=1}^{\infty} c(E_k )$ converges. 
+In particular, we have that $\underset{k \to \infty}{\lim} c(E_k ) = 0$. For some 
+$\epsilon < 1$,
+we have an $N$ such that $c(E_k ) < \epsilon$ for all $k \geq N$. As the counting measure only
+takes an integer value or $\infty$, we obtain that $c(E_k) = 0$ and $E_k = \emptyset$
+for all $k \geq N$. Furthermore, we get that  
+\begin{eqnarray*}
+c(\cup_{k=1}^{\infty} E_k) &=& c(\cup_{k=1}^{N}E_k), \\ 
+\sum_{k=1}^{\infty} c(E_k) &=& \sum_{k=1}^{N} c(E_k).
+\end{eqnarray*}
 
 \pagebreak
+
+As the finite additivity of counting measure trivially holds, 
+$c(\cup_{k=1}^{N} E_k) = \sum_{k=1}^{N} c(E_k)$ holds, and thus we conclude that
+\eQb
+c(\cup_{k=1}^{\infty} E_k) &=& \sum_{k=1}^{\infty} c(E_k).
+\eQe
+Now, for the last case, assume that $\sum_{k=1}^{\infty} c(E_k ) = \infty$.
+\end{solution}
+
+\bigskip
 
 \begin{question}[2. Royden 2.8. Closure of Finite Union]
 \end{question}
 \begin{solution}
+Before we proceeding to the main part of the proof, we first prove the following lemma.
+\begin{lemma}
+Let $\{ X_k \}_{k=1}^{n}$ be a finite collection of sets of real numbers. Then, we have that
+\[
+\overline{\cup_{k=1}^{n} X_k } = \cup_{k=1}^{n} \overline{X_k},
+\]
+where $\overline{X_k}$ denotes a closure of the set $X_k$.
+\end{lemma}
+\begin{proof}
+\end{proof}
+
 Let $B$ be a set of rational numbers in the interval $[0,1]$, and let $\{ I_k \}_{k=1}^{n}$ be a 
 finite collection of open intervals that cover $B$.
 As $B \subseteq \cup_{k=1}^{n} I_k$, we have $\overline{B} \subseteq 
@@ -147,14 +175,50 @@ then there is a bounded subset of $E$ that also has positive outer measure. $\qe
 
 \end{solution}
 
-\bigskip
+\pagebreak
 
-
-\begin{question}[3. Royden 2.15]
+\begin{question}[4. Royden 2.15]
 \end{question}
 \begin{solution}
 Let $m(E) < \infty$ and $\epsilon > 0$. We wish to show that $E$ is the disjoint
 union of a finite number of measurable sets, each of which has measure at most $\epsilon$.
+First, assume that $E$ is bounded.
+Then, there exists an interval $[-M,M]$ such that
+$E \subseteq [-M,M]$. By the Archimedean principle, there exists $N \in \mathbb{N}$ such that
+$\dfrac{2M}{N} < \epsilon$. Now, consider the following finite disjoint collection of sets:
+\eQb
+\{ [-M+\dfrac{2M}{N}(n-1),-M + \dfrac{2M}{N}n) \cap E \}_{n=1}^{N+1}.
+\eQe
+Notice that $E = \cup_{n=1}^{N+1}
+[-M+\dfrac{2M}{N}(n-1), -M+\dfrac{2M}{N}n) \cap E$. Furthermore, as every interval is measurable
+and intersection of two measurable sets is measurable,
+each set in the collection is measurable. By the monotonicity property of measure,
+we have 
+\eQb
+m([-M+\dfrac{2M}{N}(n-1),-M+\dfrac{2M}{N}n) \cap E) &\leq & 
+m([-M+\dfrac{2M}{N}(n-1),-M+\dfrac{2M}{N}n)) \\
+&=& \dfrac{2M}{N} \\ 
+&<& \epsilon.
+\eQe
+Hence,
+we have found a finite disjoint collection of measurable sets, each of which has measure at
+most $\epsilon$, whose union equals $E$.
+Hence, we have proven that if $m(E) < \infty$, and $\epsilon > 0$,
+then $E$ is the disjoint union of a finite number of measurable sets, each of which has measure
+at most $\epsilon$ for the $E$ bounded case. \\
+
+\smallskip
+
+Now assume that $E$ is unbounded. Consider the following disjoint collection of sets:
+\eQb
+\{ [M-1,M) \cap E \}_{M = -\infty}^{\infty}. 
+\eQe
+Notice that $E = \cup_{M = -\infty}^{\infty} [M-1,M) \cap E$. Furthermore, from the same reasoning
+as above, each set in the collection is measurable. By the countable additivity, we have
+\eQb
+m(E) &=& \sum_{M = -\infty}^{\infty} m([M-1, M) \cap E).
+\eQe
+
 \end{solution}
 
 \bigskip
@@ -206,12 +270,6 @@ was chosen to be an arbitrary countable, disjoint collection of measurable sets,
 shown that finite additivty and continuity of measure implies countable additivity. $\qed$ 
 
 \bigskip
-
-\begin{question}[7. Extra Problem. ]
-\end{question}
-\begin{solution}
-
-\end{solution}
 
 \end{solution}
 
