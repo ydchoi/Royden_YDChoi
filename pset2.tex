@@ -74,5 +74,49 @@ This work contains the solutions to the first problem set of Real Variables 2015
 
 \section{Solutions}
 
+\begin{question}[4. Royden 3.5]
+\end{question}
+\begin{solution}
+Assume that the function $f$ is defined on a measurable domain $E$ and has a property that
+$\{ x \in E \> | \> f(x) > c \}$ is measurable for each rational number $c$. Let $r \in \mathbb{R} 
+\setminus \mathbb{Q}$. Consider the set $\{ x \in E \> | \> f(x) > r \}$. Notice that
+\eQb
+\{ x \in E \> | \> f(x) > c\} &=& \bigcup_{k=1}^{\infty}
+\{ x \in E \> | \> f(x) \geq c + \dfrac{1}{k} \}.
+\eQe
+By the density of the rationals, we can choose a sequence of rationals,
+$\{ c_k \}$ such that for each $k$, we have $c_k \in \mathbb{Q}$ and 
+$c_k \in (c, c + \dfrac{1}{k})$. In particular, we have that 
+\eQb
+\{ x \in E \> | \> f(x) > c \}
+&=& \bigcup_{k=1}^{\infty} \{ x \in E \> | \> f(x) \geq c_k \}.
+\eQe
+As $\{ c_k \}$ is a rational sequence, 
+$\{ x \in E \> | \> f(x) \geq c_k \}$ is measurable for all $k$, and 
+$\{ x \in E \> | \> f(x) > c \}$ is measurable, as a countable union of measurable sets is measurable.
+Since $r$ is an arbitrary irrational, we have shown that 
+$\{ x \in E \> | \> f(x) > a \}$ is measurable for any $a \in \mathbb{R}$. Therefore, $f$ is 
+measurable. $\qed$
 
+\end{solution}
+
+\bigskip
+
+
+\begin{question}[5. Royden 3.7]
+\end{question}
+\begin{solution}
+dd
+\end{solution}
+
+\bigskip
+
+\begin{question}[6. Royden 3.9]
+\end{question}
+\begin{solution}
+dd
+\end{solution}
+
+
+\bigskip
 \end{document}
