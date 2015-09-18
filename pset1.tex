@@ -108,17 +108,43 @@ c(\cup_{k=1}^{\infty} E_k) &=& c(\cup_{k=1}^{N}E_k), \\
 
 \pagebreak
 
-As the finite additivity of counting measure trivially holds, 
+As the finite additivity of counting measure trivially holds (can be shown
+with a simple inductive argument),
 $c(\cup_{k=1}^{N} E_k) = \sum_{k=1}^{N} c(E_k)$ holds, and thus we conclude that
 \eQb
 c(\cup_{k=1}^{\infty} E_k) &=& \sum_{k=1}^{\infty} c(E_k).
 \eQe
-Now, for the last case, assume that $\sum_{k=1}^{\infty} c(E_k ) = \infty$.
+Now, for the last case, assume that $\sum_{k=1}^{\infty} c(E_k ) = \infty$. This gives that
+for any $N$, there exists $N' > N$, such that $c(E_{N'}) > 0$. Hence, there exists a subsequence
+of $\{ E_k \}_{k \in \lambda}$, 
+which only consists of disjoint nonempty subsets. 
+Therefore, $\cup_{k=1}^{\infty} E_k$ contains a countably infinite
+sub-collection of nonempty disjoint sets. Hence,  
+the set $\cup_{k=1}^{\infty} E_k$ must contain infinitely many members. Therefore, we have
+$c(\cup_{k=1}^{\infty} E_k) = \infty$, thus,
+\[
+c(\cup_{k=1}^{\infty} E_k) = \sum_{k=1}^{\infty} c(E_k).
+\]
+As we covered all possible cases, this completes the proof for the countable additivity of 
+counting measure. $\qed$
+\\
+\smallskip
+
+We now prove the translation invariant property of counting measure. Consider a set $E$ and its 
+translation defined by $E+y = \{ x + y | x \in E \}$. Notice that 
+a map, $\phi:\mathbb{R} \to \mathbb{R}$ where $\phi(x) = x+y$, establishes a bijection
+between $E$ and $E+y$. Hence, the cardinality
+of $E$ and $E+y$ are equal. As the equal cardinality is a sufficient condition(in fact, strictly more) 
+for the equal counting measure, we have shown that the counting measure
+is translation invariant. $\qed$
+
+
 \end{solution}
+
 
 \bigskip
 
-\begin{question}[2. Royden 2.8. Closure of Finite Union]
+\begin{question}[2. Royden 2.8]
 \end{question}
 \begin{solution}
 Before we proceeding to the main part of the proof, we first prove the following lemma.
@@ -130,8 +156,28 @@ Let $\{ X_k \}_{k=1}^{n}$ be a finite collection of sets of real numbers. Then, 
 where $\overline{X_k}$ denotes a closure of the set $X_k$.
 \end{lemma}
 \begin{proof}
+Let $X_1$ and $X_2$ be sets of real numbers. Then,
+we have $X_1 \subseteq X_1 \cup X_2$ and $X_2 \subseteq X_1 \cup X_2$. Consequently, we have
+$\overline{X_1} \subseteq \overline{X_1 \cup X_2}$ and $\overline{X_2} \subseteq \overline{X_1 \cup X_2}$.
+Hence, we have $\overline{X_1} \cup \overline{X_2} = \overline{X_1 \cup X_2}$. 
+This can be trivially extended
+to any finite $n$ with an induction using set union, i.e. take $\cup_{k=1}^{n-1} X_k$ with $X_n$.
+Therefore, $\cup_{k=1}^{n} \overline{X_k} \subseteq \overline{\cup_{k=1}^{n} X_k}$. \\
+
+Now, notice that $\overline{X_1} \cup \overline{X_2}$ is closed, as it is a finite union of closed sets.
+Since $X_1 \subseteq \overline{X_1}$ and $X_2 \subseteq \overline{X_2}$, we have $X_1
+\cup X_2 \subseteq \overline{X_1} \cup \overline{X_2}$. As $\overline{X_1} \cup \overline{X_2}$ is
+closed, we obtain $\overline{X_1 \cup X_2} \subseteq \overline{X_1} \cup \overline{X_2}$. Again,
+this argument can be extended inductively for a finite $n$, by taking $\cup_{k=1}^{n-1} X_k$ and
+$X_n$. Therefore, $\overline{\cup_{k=1}^{n} X_k} \subseteq \cup_{k=1}^{n} \overline{X_k}$.
+This concludes
+that $\cup_{k=1}^{n} \overline{X_k} = \overline{\cup_{k=1}^{n} X_k}$ for $n$ finite.
+One should note that this argument fails with $n$ infinite, as we no longer can leverage the fact
+that finite union of closed sets is closed.
 \end{proof}
 
+
+We now proceed to the main part of the proof. 
 Let $B$ be a set of rational numbers in the interval $[0,1]$, and let $\{ I_k \}_{k=1}^{n}$ be a 
 finite collection of open intervals that cover $B$.
 As $B \subseteq \cup_{k=1}^{n} I_k$, we have $\overline{B} \subseteq 
@@ -153,7 +199,7 @@ equalities into the (1) inequality, we obtain
 as desired. $\qed$
 \end{solution}
 
-\bigskip
+\pagebreak
 
 \begin{question}[3. Royden 2.14]
 \end{question}
@@ -175,7 +221,7 @@ then there is a bounded subset of $E$ that also has positive outer measure. $\qe
 
 \end{solution}
 
-\pagebreak
+\bigskip
 
 \begin{question}[4. Royden 2.15]
 \end{question}
@@ -203,31 +249,46 @@ m([-M+\dfrac{2M}{N}(n-1),-M+\dfrac{2M}{N}n)) \\
 Hence,
 we have found a finite disjoint collection of measurable sets, each of which has measure at
 most $\epsilon$, whose union equals $E$.
-Hence, we have proven that if $m(E) < \infty$, and $\epsilon > 0$,
-then $E$ is the disjoint union of a finite number of measurable sets, each of which has measure
-at most $\epsilon$ for the $E$ bounded case. \\
+We have proven the statement for the $E$ bounded case.
 
 \smallskip
 
-Now assume that $E$ is unbounded. Consider the following disjoint collection of sets:
+Now assume that $E$ is unbounded. 
+Notice that $E =\cup_{M=1}^{\infty} E \cap [-M,M]$. As $\{ E \cap [-M,M] \}_{M=1}^{\infty}$
+forms an ascending
+collection of measurable sets, by the continuity of measure, we have
 \eQb
-\{ [M-1,M) \cap E \}_{M = -\infty}^{\infty}. 
+m(E) &=& \underset{M \to \infty}{\lim} m(E \cap [-M,M]).
 \eQe
-Notice that $E = \cup_{M = -\infty}^{\infty} [M-1,M) \cap E$. Furthermore, from the same reasoning
-as above, each set in the collection is measurable. By the countable additivity, we have
-\eQb
-m(E) &=& \sum_{M = -\infty}^{\infty} m([M-1, M) \cap E).
-\eQe
-
+As $m(E) < \infty$, there exists an $N$ such that
+\eQnb
+m(E) - \epsilon < m(E \cap [-N,N]) \leq m(E).
+\eQne
+Note that, by the finite additivity of measure, we have
+\eQnb
+m(E \cap [-N,N]) + m(E \setminus [-N,N] = m(E). 
+\eQne
+Combining $(2)$ and $(3)$, we obtain that $m(E \setminus [-N,N]) \leq \epsilon$.
+Now, as $E \cap [-N,N]$ is bounded,
+there exists a finite collection of measurable sets $\{E_i \}_{i=1}^{K}$
+such that $m(E_i) \leq \epsilon$ for $1 \leq i \leq k$, and $\cup_{i=1}^{K} E_i = E \cap [-N,N]$.
+Notice that $E = \cup_{i=1}^{K} E_i \cup (E \setminus [-N,N])$. In particular, the 
+collection
+$\{ \{E_i\}_{i=1}^{K}, E \setminus [-N,N] \}$ is a finite disjoint 
+collection of measurable sets, whose union equals $E$, 
+each of which has measure at most $\epsilon$. This proves the statement
+for the $E$ unbounded case, and we have completed the proof. $\qed$
 \end{solution}
 
-\bigskip
+\pagebreak
 
 \begin{question}[5. Royden 2.17]
 \end{question}
 \begin{solution}
-Let $E$ be a measurable set. Fix $\epsilon > 0$. Then, from inner approximation by closed sets,
-and outer approximation by open sets, there exists a closed set $F$ and an open set $O$, such that
+From the inner approximation by closed sets,
+and outer approximation by open sets, 
+we have that $E$ is measurable if and only if, for any $\epsilon > 0$,
+there exists a closed set $F$ and an open set $O$, such that
 \eQb
 E \subseteq O \>\> \text{with } \>\> m^{*} (O \setminus E) < \dfrac{\epsilon}{2} 
 \>\> \text{and} \>\>
@@ -238,8 +299,8 @@ we have
 \eQb
 m^{*}( O \setminus F) < m^{*}(O \setminus E) + m^{*}(E \setminus F) < \epsilon.
 \eQe
-Hence, if $E$ is measurable, then there exists an open set $O$ and a closed set $F$ for which
-$F \subseteq E \subseteq O$ and $m^{*}(E \setminus f) < \epsilon$.
+Hence, $E$ is measurable, if and only if, there exists an open set $O$ and a closed set $F$ for which
+$F \subseteq E \subseteq O$ and $m^{*}(O \setminus F) < \epsilon$. $\qed$
 \end{solution}
 
 \bigskip
