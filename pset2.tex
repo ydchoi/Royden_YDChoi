@@ -10,6 +10,7 @@
 \usepackage[noend]{algpseudocode}
 %\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
 
+\usepackage{mathrsfs}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -69,10 +70,65 @@ New York University \\
 \maketitle
 
 \begin{abstract}
-This work contains the solutions to the first problem set of Real Variables 2015.
+This work contains solutions to the problem set II of Real Variables 2015 at NYU.
 \end{abstract}
 
 \section{Solutions}
+
+\begin{question}[3. Royden 2.29]
+\end{question}
+\begin{solution}
+Let $X$ be any set of real numbers. For $x \in X$, $x - x = 0$, thus it is rationally equivalent.
+Hence, it is reflextive.
+\end{solution}
+
+\bigskip
+
+\begin{question}[3. Royden 2.38]
+\end{question}
+\begin{solution}
+Let $f:[a,b] \to \mathbb{R}$ be Lipschitz with the associated Lipschitz constant $c$,
+and let $E_0 \in [a,b]$ such that $\mathrm{m}(E_0) = 0$.
+Fix $\epsilon > 0$. As $\mathrm{m}(E_0) = 0$, we have a countable collection of disjoint 
+open intervals $\{ I_k \}_{k=1}^{\infty}$ such that $E \subseteq 
+\cup_{k=1}^{\infty} I_k$ and $\sum_{k=1}^{\infty}
+\mathrm{m}(I_k) < \dfrac{\epsilon}{c}$. Since $E \subseteq \cup_{k=1}^{\infty} 
+I_k$, we have $f(E_0) \subseteq \cup_{k=1}^{\infty} f(I_k)$. By the monotonicity
+of measure, and Lipshitz property of $f$, we obtain
+\eQb
+\mathrm{m}(f(E_0)) \leq \sum_{k=1}^{\infty} \mathrm{m}(f(I_k)) 
+\leq c\sum_{k=1}^{\infty} \mathrm{m}(I_k) = \epsilon.
+\eQe
+Since $\epsilon$ is arbitrary, we have $\mathrm{m}(f(E_0)) = 0$. Therefore, we have shown that
+a Lipschitz function maps a set of zero measure on to a set of measure zero. 
+\end{solution}
+
+\bigskip
+
+\begin{question}[3. Royden 3.1]
+\end{question}
+\begin{solution}
+Let $f$ and $g$ are continuous functions on $[a,b]$. Assume that $f=g$ a.e. In other words,
+$f=g$ on $[a,b] \setminus E_0$, where $\mathrm{m}(E_0) = 0$. Let $x \in E_0$, and
+fix $\epsilon > 0$. By the continuity of $f$ and $g$, we have
+$\delta_f$ and $\delta_g$ such that
+\eQnb
+|x - x^{\prime}| < \delta_f &\implies& |f(x) - f(x^{\prime})| < \dfrac{\epsilon}{2} \nonumber \\
+|x - x^{\prime}| < \delta_g &\implies& |g(x) - g(x^{\prime})| < \dfrac{\epsilon}{2}
+\eQne
+Now, consider the set $B(x,\min(\delta_f,\delta_g)) \cap [a,b]$, where $B$ denotes a ball with a center
+and radius. As $E_0$ is a zero measure set, there exists $x^{*}$ in $B(x, \min(\delta_f, \delta_g)) \cap
+[a,b]$ such that $f(x^{*}) = g(x^{*})$. Furthermore, by $(1)$, we have that 
+$|f(x) - f(x^{*})| < \dfrac{\epsilon}{2}$ and $|g(x) - g(x^{*})| < \dfrac{\epsilon}{2}$.
+Consequently, by the trinagle inequality, we have 
+\eQb
+|f(x) - g(x)| &\leq& |f(x) - f(x^{*})| + |g(x) - g(x^{*})| + |f(x^{*}) - g(x^{*})| = \epsilon.
+\eQe
+Since $\epsilon$ is arbitrary, we have shown that for $x \in E_0$, we have $f(x) = g(x)$. Therefore,
+$f=g$ on $[a,b]$ holds. $\qed$
+\end{solution}
+
+\pagebreak
 
 \begin{question}[4. Royden 3.5]
 \end{question}
@@ -102,11 +158,28 @@ measurable. $\qed$
 
 \bigskip
 
-
 \begin{question}[5. Royden 3.7]
 \end{question}
 \begin{solution}
-dd
+Let $f$ be a function defined on a measurable set $E$. We wish to show that $f$
+is measurable if and only if an inverse image of any Borel set is measurable. We
+denote the Borel $\sigma$-algebra as $\mathscr{B}$.\\
+
+Assume that an inverse image of any borel set is measurable. Then, as 
+the $(c,\infty)$ is a borel set for any $c$, we have that $f^{-1}((c,\infty))$,
+which can be re-written as $\{ x \in E \> | \> f(x) > c \}$, is measurable
+for any $c$. This is precisely the definition of a measurable function. Hence, $f$
+is measurable. 
+
+\smallskip
+
+Assume that $f$ is measurable. Then, by the definition of a measurable function,
+we have that, for any $c$, 
+$f^{-1}((c,\infty))$,  is measurable. Observe that $f^{-1}((a,b))$ is measurable for any $a,b 
+\in \mathbb{R}$, by taking $f^{-1}((a,\infty)) \cap f^{-1}(,$
+$\mathscr{B}$ Hence, $f^{-1}(B)$ is measurable for $B \in \mathscr{B}$. 
+
+
 \end{solution}
 
 \bigskip
@@ -114,7 +187,26 @@ dd
 \begin{question}[6. Royden 3.9]
 \end{question}
 \begin{solution}
-dd
+Let $\{ f_n \}$ be a sequence of measurable functions defined on a measurable set $E$.
+Let $E_0 = \{ x \in E \> | \> \{ f_{n}(x) \} \text{ converges}\}$. 
+By the Cauchy Criterion of real sequences, we can re-characterize $E_0$ as follows:  
+\eQb
+E_0 &=& \{ x \in E \> | \> \forall K \in \mathbb{N}, \exists N \in \mathbb{N}
+\text{ such that } |f_{n}(x) - f_{m}(x)| < \dfrac{1}{K} \text{ for } 
+n,m \geq N \} \\
+&=& \bigcap_{K = 1}^{\infty} \bigcup_{N=1}^{\infty} \{ x \in E \> | \>
+|f_{n}(x) - f_m(x)| < \dfrac{1}{K}
+\text{ for } n,m \geq N \}.
+\eQe
+
+We have that for a measurable function $f$ and $g$,  
+$|f-g|$ is measurable. Hence,  $|f_n - f_m |$ is measurable. Consequently,
+$\{ x \in E \> | \> | f_{n}(x) - f_{m}(x) | < \dfrac{1}{K} \text{ for }
+n,m \geq N \}$ is a measurable set for all $K$ and $N$. Then, $E_0$ is 
+a countable intersection of countable union of measurable sets, and thus
+is measurable. We have shown that $E_0$ is measurable. $\qed$
+
+
 \end{solution}
 
 
