@@ -78,8 +78,29 @@ This work contains solutions to the problem set II of Real Variables 2015 at NYU
 \begin{question}[3. Royden 2.29]
 \end{question}
 \begin{solution}
-Let $X$ be any set of real numbers. For $x \in X$, $x - x = 0$, thus it is rationally equivalent.
-Hence, it is reflextive.
+\textbf{(i)} 
+Let $X$ be any set of real numbers, and $R$ be the relation defined by the rational
+equivalence. For $x \in X$, we have $x - x = 0$. Hence, the rational equivalence is reflexive.
+Let $(x,y) \in R$, then we have $x - y \in \mathbb{Q}$. As a negative of a rational number
+is rational, we have $y-x \in \mathbb{Q}$ and $(y,x) \in R$. Hence, the rational equivalence is
+symmetric. Let $(x,y), (y,z) \in R$. As a sum of two rationals is rational, we have
+$x - y + y - z$, which is $x-z$, is rational, and $(x,z) \in R$. Hence, the rational equivalence
+is transitive. Therefore, the rational equivalence is an equivalence relation.
+
+\smallskip
+
+\textbf{(ii)} The partition of $\mathbb{Q}$, induced by the rational equivalence, is simply
+$\{ \mathbb{Q} \}$. Hence, $\{ 0 \}$ is a set that consists of exactly one member of each
+equivalence class. Therefore, $\{ 0 \}$ is an explicit choice set of the rational equivalence.
+
+\smallskip
+
+\textbf{(iii)} We define two numbers to be irrationally equivalent provided their difference
+is irrational. Let $x \in \mathbb{R}$. As $x - x = 0$ and $0$ is a rational number, the relation
+defined fails to be reflexive. Hence, The relation is not an equivalence relation on 
+$\mathbb{R}$. The same 
+argument holds with $x \in \mathbb{Q}$, and the relation is not an equivalence relation on 
+$\mathbb{Q}$ as well. $\qed$
 \end{solution}
 
 \bigskip
@@ -124,11 +145,12 @@ Consequently, by the trinagle inequality, we have
 \eQb
 |f(x) - g(x)| &\leq& |f(x) - f(x^{*})| + |g(x) - g(x^{*})| + |f(x^{*}) - g(x^{*})| = \epsilon.
 \eQe
-Since $\epsilon$ is arbitrary, we have shown that for $x \in E_0$, we have $f(x) = g(x)$. Therefore,
+Since $\epsilon$ was arbitrary, we have shown that for $x \in E_0$, we have $f(x) = g(x)$. Therefore,
 $f=g$ on $[a,b]$ holds. $\qed$
 \end{solution}
 
-\pagebreak
+\bigskip
+
 
 \begin{question}[4. Royden 3.5]
 \end{question}
@@ -173,11 +195,12 @@ is measurable.
 
 \smallskip
 
-Assume that $f$ is measurable. Then, by the definition of a measurable function,
-we have that, for any $c$, 
-$f^{-1}((c,\infty))$,  is measurable. Observe that $f^{-1}((a,b))$ is measurable for any $a,b 
-\in \mathbb{R}$, by taking $f^{-1}((a,\infty)) \cap f^{-1}(,$
-$\mathscr{B}$ Hence, $f^{-1}(B)$ is measurable for $B \in \mathscr{B}$. 
+Assume that $f$ is measurable. Note that
+\eQb
+\bigcup_{k=1}^{\infty} f^{-1}(E_k) &=& f^{-1}(\bigcup_{k=1}^{\infty} E_k ) \\,
+\bigcap_{k=1}^{\infty} f^{-1}(E_k) &=& f^{-1}(\bigcap_{k=1}^{\infty} E_k ) 
+\eQe
+Hence, $f^{-1}(B)$ is measurable for $B \in \mathscr{B}$. 
 
 
 \end{solution}
