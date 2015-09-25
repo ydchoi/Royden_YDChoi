@@ -122,6 +122,29 @@ of measure, and Lipshitz property of $f$, we obtain
 \eQe
 Since $\epsilon$ is arbitrary, we have $\mathrm{m}(f(E_0)) = 0$. Therefore, we have shown that
 a Lipschitz function maps a set of zero measure on to a set of measure zero. 
+
+\smallskip
+
+Now, let $F$ be a $F-\sigma$ set in $[a,b]$,
+ which we can express as $\bigcup_{k=1}^{\infty} F_k$, where
+$F_k$ are closed sets in $[a,b]$. Consider the image of $F$, $f(\bigcup_{k=1}^{\infty} F_k)$.
+From the definition of a relation, we have $f(\bigcup_{k=1}^{\infty} F_k) = 
+\bigcup_{k=1}^{\infty} f(F_k)$. Now, notice that $F_k$ is compact for all $k$, as it is closed
+and bounded. As Lipschitz property of $f$ implies the continuity of $f$, and continuity preserves
+compactness, we have that each $f(F_k)$ is compact for all $k$. Therefore, $f(F)$ is a countable
+union of closed set. Hence, we have shown that $f$ carries $F-\sigma$ set to a $F-\sigma$ set. 
+
+\smallskip
+
+Now, let $E$ be a measurable set. From the inner approximation of measurable set by $F-\sigma$
+sets, there exists a $F-\sigma$ set $F$ such that $F \subseteq E$ and $m(E \setminus F) = 0$.
+Observe that $f(E) = f(E \setminus F) \cup f(F)$, and we have shown that $f(E \setminus F)$
+and $f(F)$ are measurable, as they are respectively a measure zero set and $F-\sigma$
+set. Since a union of finite collection of measurable sets is measurable, $E$ is measurable.
+Therefore, $f$ carries a measurable set to a measurable set. 
+
+$\qed$
+
 \end{solution}
 
 \bigskip
@@ -146,7 +169,19 @@ Consequently, by the trinagle inequality, we have
 |f(x) - g(x)| &\leq& |f(x) - f(x^{*})| + |g(x) - g(x^{*})| + |f(x^{*}) - g(x^{*})| = \epsilon.
 \eQe
 Since $\epsilon$ was arbitrary, we have shown that for $x \in E_0$, we have $f(x) = g(x)$. Therefore,
-$f=g$ on $[a,b]$ holds. $\qed$
+$f=g$ on $[a,b]$ holds. 
+
+\smallskip
+
+Now, consider the problem with a measurable domain $E$. We claim that the assertion need not hold.
+Consider functions $f$ and $g$ on a common domain $\mathbb{Z}$, defined by
+\eQb
+f(x) = 0 \text{ for } x \in \mathbb{Z},
+g(x) = 0 \text{ for } x \in \mathbb{Z}\setminus \{ 0 \} \text{ and } g(0) = 1.
+\eQe
+Observe that $\mathbb{Z}$ is measurable, $f$, $g$ are continous, and $f=g$ almost everywhere, but
+$f(0) \neq g(0)$. Therefore, the assertion is not true for the case for $E$ measurable. 
+$\qed$
 \end{solution}
 
 \bigskip
@@ -195,12 +230,35 @@ is measurable.
 
 \smallskip
 
-Assume that $f$ is measurable. Note that
+Assume that $f$ is measurable. Let $B$ be a borel set. As $f$ is measurable,
+we have that the collection $\{ f^{-1}((c,\infty)) \}_{c \in \mathbb{R}}$ forms
+a collection of measurable sets. Now, consider the $\sigma$-algebra genreated
+by the above collection, denoted by
 \eQb
-\bigcup_{k=1}^{\infty} f^{-1}(E_k) &=& f^{-1}(\bigcup_{k=1}^{\infty} E_k ) \\
-\bigcap_{k=1}^{\infty} f^{-1}(E_k) &=& f^{-1}(\bigcap_{k=1}^{\infty} E_k ) 
+\sigma(\{ f^{-1}((c,\infty)) \}_{c \in \mathbb{R}}).
 \eQe
-Hence, $f^{-1}(B)$ is measurable for $B \in \mathscr{B}$. 
+As $\sigma$-algebra of measurable collection is a measurable collection itself,
+the above $\sigma$-algebra is  a collection of measurable sets. Notice that 
+the following identities hold: let $A_k \subseteq f(E)$ for all $k$. Then,
+from the definition of a relation, we obtain
+\eQb
+\bigcup_{k=1}^{\infty} f^{-1}(A_k) &=& f^{-1}(\bigcup_{k=1}^{\infty} A_k ), \\
+\bigcap_{k=1}^{\infty} f^{-1}(A_k) &=& f^{-1}(\bigcap_{k=1}^{\infty} A_k ). 
+\eQe
+Therefore, by the above identity, we have
+\eQb
+\sigma(\{ f^{-1}((c,\infty)) \}_{c \in \mathbb{R}}) &=& 
+\bar{f}^{-1}(\sigma(\{(c,\infty)\}_{c \in \mathbb{R}})),
+\eQe
+where $\bar{f}^{-1}$ denotes applying the inverse $f^{-1}$ to each set in the collection
+pointwise. As we know that  
+$\{ \sigma((c, \infty) \}_{c \in \mathbb{R}}) = \mathscr{B}$, we obtain
+\eQb
+\sigma(\{ f^{-1}((c,\infty)) \}_{c \in \mathbb{R}}) &=& 
+\bar{f}^{-1}(\mathscr{B}).
+\eQe
+As we have argued that the collection on the LHS is a collection of measurable sets,
+we have shown that  $f^{-1}(B)$ is measurable for $B \in \mathscr{B}$.  $\qed$
 
 
 \end{solution}
