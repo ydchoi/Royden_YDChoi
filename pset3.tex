@@ -40,7 +40,7 @@
 \usepackage{listings}
 
 \title{Real Variables: \\
-Problem Set II}
+Problem Set III}
 
 
 \author{
@@ -111,9 +111,10 @@ The Egoroff
 \end{question}
 \begin{solution}
 Let $f$ a bounded measurable function on a set of finite measure $E$. Assume $g$ is bounded
-and $f = g$ a.e. on $E$. First, we note that $g$ is measurable. Since both $f$ and $g$
-are bounded measurable functions, we have $\int_{E} f$ and $\int_{E} g$ well-defined.
-Let $\epsilon > 0$, and $E_0 = \{ x \in E \> | \> f(x) \neq g(x) \}$. Note that 
+and $f = g$ a.e. on $E$. First, as $g$ is a function that equals a measurable function a.e.,
+we have that $g$ is measurable. Since both $f$ and $g$
+are bounded measurable functions, we have $\int_{E} f$ and $\int_{E} g$ terms well-defined.
+Let $E_0 = \{ x \in E \> | \> f(x) \neq g(x) \}$. Note that 
 $\mathrm{m}(E_0) = 0$, as $f=g$ a.e. Consequently, $E \setminus E_0$ and $E_0$ are 
 disjoint measurable sets.  Then, by additivity over domain and linearity of integration,
 we have 
@@ -124,15 +125,19 @@ we have
 &=& \left| \int_{E \setminus E_0} f - g + 
 \int_{E_0} f - g \right|.
 \eQe
-As $f = g$ on $E \setminus E_0$, and $\int_{E \setminus E_0} f - g = 0$, and consequently,
+As $f = g$ on $E \setminus E_0$, we have
 \eQb
 \left| \int_{E}f - \int_{E} g \right| &=&  
-\left| \int_{E_0} f - g \right|.
+\left| \int_{E_0} f - g \right| \\
+&\leq& \int_{E_0} \left| f - g \right|.
 \eQe
-ddd,
+As both $f$ and $g$ are bounded, there exists $M$ such that $|f-g| \leq M$ on $E_0$. Hence, we have
 \eQb
-\int_{E}f = \int_{E}g,
+\left| \int_{E}f - \int_{E} g \right|  
+&\leq& M \cdot \mathrm{m}(E_0) \\
+&\leq& 0.
 \eQe 
+Therefore, we have $\int_{E} f = \int_{E} g$ 
 as desired. $\qed$
 \end{solution}
 
@@ -141,28 +146,30 @@ as desired. $\qed$
 \begin{question}[5. Royden 4.23]
 \end{question}
 \begin{solution}
-Let $\{ a_n \}$ be a sequence of nonnegative real numbers. Define the function $f$ on 
-$E = [1,\infty )$ setting $f(x) = a_n$ if $ n \leq x < n+1$. We first show that 
-$f$ is measurable. Let $c \in \mathbb{R}$. Then, we can express the pre-image set of $c$ as
+Let $\{ a_n \}$ be a sequence of non-negative real numbers. Let $f$ be a function on 
+$E = [1,\infty )$, defined by setting $f(x) = a_n$ if $ n \leq x < n+1$. 
+Then, consider the following sequence of functions of 
+nonnegative real numbers $\{ f_n \}$ defined on $E$ such that 
 \eQb
-\{ x \in E \> | \> f(x) = c \} &=& \bigcup_{k \in \lambda}[k,k+1),
+f_n = \sum_{k=1}^{n} a_k \chi_{I_k},
 \eQe
-where $\lambda = \{ k \in \mathbb{N} \> | \> a_k = c \}$. Therefore, $\{ x \in E \> | \> 
-f(x) = c \}$ is measurable, as it is either an empty set or 
-a countable union of collection of intervals of the form $[k,k+1)$, which are measurable. Since 
-$c$ was arbitrary, $f$ is measurable.
-Then, by the additivity over domain of integration property, we have
+where $I_k$ denotes the characteristic function of an interval $[k,k+1)$. 
+Notice that $\{ f_n \}$ is increasing,
+and converges to $f$ pointwise everywhere on $E$. Hence,
+by the Monotone Convergence Theorem, we have
 \eQb
-\int_{E} f &=& \sum_{k=1}^{\infty} \int_{I_k} f,
+\int_{E} f = \underset{n \to \infty}{\lim} \int_{E} f_n.
 \eQe
-where $I_k$ denotes $[k,k+1)$. As $f(I_k) = a_k$ and by the linearity of integration, 
-we obtain
+As the integral on the RHS is a simple function with $n$ values, we have
 \eQb
-\int_{E} f &=& \sum_{k=1}^{\infty} \int_{I_k} a_k \\
-&=& \sum_{k=1}^{\infty} a_k \int_{I_k} 1 \\
-&=& \sum_{k=1}^{\infty} a_k.
+\int_{E} f &=& \underset{n \to \infty}{\lim} \sum_{k=1}^{n} a_k \mathrm{m}(I_k).
 \eQe
-Therefore, we have shown that $\int_{E} f = \sum_{k=1}^{\infty} a_k$. $\qed$
+By noting that $\mathrm{m}(I_k) = 1$ for all $k$ and subsuming the limit into the summation,
+we finally obtain
+\eQb
+\int_{E} f = \sum_{k=1}^{\infty} a_k,
+\eQe
+as desired. $\qed$
 \end{solution}
 
 \bigskip
