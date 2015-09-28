@@ -99,26 +99,42 @@ $x \in A \cap B$. Now, the LHS of the second equation can be written as
 \chi_{A \cup B} &=& \begin{cases} 1 &\mbox{if } x \in A \cup B \\ 
 0 & \mbox{if } x \notin A \cup B. \end{cases} \\
 \eQe
-The LHS of the third equation can be written as
+The RHS of the second equation can be written as 
 \eQb
-\chi_{A^c} &=& \begin{cases} 1 &\mbox{if } x \in A^c \\ 
-0 & \mbox{if } x \notin A^c. \end{cases} \\
+\chi_{A} + \chi_{B} - \chi_{A} \cdot \chi_{B} &=& 
+\begin{cases} 1 + 1 - 1 \cdot 1 = 1 &\mbox{if } x \in A, x \in B \\ 
+1 + 0 - 1 \cdot 0 = 1& \mbox{if } x \in A, x \notin B  \\
+0 + 1 - 0 \cdot 1 = 1& \mbox{if } x \notin A, x \in B  \\
+0 + 0 - 0 \cdot 0 = 0& \mbox{if } x \notin A, x \notin B, \end{cases} \\
 \eQe
-The RHS of the third equation can be written as
+which can be simplified to 
 \eQb
-1-\chi_{A} &=& \begin{cases} 0 &\mbox{if } x \in A \\ 
-1 & \mbox{if } x \notin A, \end{cases} \\
+\chi_{A} + \chi_{B} - \chi_{A} \cdot \chi_{B} &=& 
+\begin{cases} 1 &\mbox{if } x \in A \cup B \\ 
+0 & \mbox{if } x \notin A \cup B \end{cases}, \\
+\eQe
+as desired. The LHS of the third equation can be written as
+\eQb
+\chi_{A^c} &=& \begin{cases} 1 & \mbox{if } x \in A^c \\ 
+0 & \mbox{if } x \notin A^c \end{cases} \\,
+\eQe
+as desired. The RHS of the third equation can be written as
+\eQb
+1-\chi_{A} &=& \begin{cases} 0 & \mbox{if } x \in A \\ 
+1 & \mbox{if } x \notin A \end{cases}, \\
 \eQe
 which is precisely the LHS, as $x \notin A$ is equivalent to $x \in A^c$ by definition.
+Hence, we have shown the three given equalities.
 $\qed$
 \end{solution}
 
-\pagebreak
+\bigskip
 
 \begin{question}[2. Royden 3.21]
 \end{question}
 \begin{solution}
 Let $\{f_n \}$ be a sequence of measurable functions with common domain $E$. Consider the
+
 function $\sup \{ f_n \}$, which we will denote as $s$. Let $c \in \mathbb{R}$. 
 We wish to show that $\{ x \in E \> | \> s(x) > c\}$ is measurable. By the definition of supremum,
 we have that $s(x) > c$ iff there exists $n$ such that $f_n(x) > c$. Hence, it follows that 
