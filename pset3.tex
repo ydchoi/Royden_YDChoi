@@ -144,7 +144,14 @@ be shown analogously. $\qed$
 \begin{question}[3. Royden 3.27]
 \end{question}
 \begin{solution}
-The Egoroff 
+Let $f = 1$ on $[0,\infty)$. Define $f_n = \chi_{[0,n]}$ for all $n$. Then, we have that
+$f_n \to f$ pointwise everywhere. Suppose for sake of contradiction that there exists a 
+closed set $F$ such that $m([0,\infty) \setminus F) < \epsilon$ and $f_n \to f$ uniformly on $F$. 
+$F$ is unbounded, as otherwise $m([0,\infty ) \setminus F) > \infty$, which is a contradiction.
+Since $f_n \to f$ uniformly on $F$, there exists $N$ such that $f_n = f$ on $F$. As $F$ is unbounded,
+there exists $x \in F\setminus [0,N]$. Since $f_N(x) = 0$ and $f(x) = 1$, this is a contradiction
+with $f_n = f$ on $F$. Therefore, we have shown that the conclusion of Egoroff can fail
+without the finiteness assumption on the measure of domain. $\qed$
 \end{solution}
 
 \bigskip
