@@ -92,9 +92,77 @@ This work contains solutions to the problem set IV of Real Variables 2015 at NYU
 
 \bigskip
 
-\begin{question}[3. Royden 4.47]
+\begin{question}[4. Royden 4.52]
 \end{question}
 \begin{solution}
+\textbf{(a)} Consider the following family of functions:
+\eQb
+\mathscr{F} = \{ n\chi_{[0,\frac{1}{n}]} 
+\}_{n=1}^{\infty}. 
+\eQe
+Observe that for each $n$, $n\chi_{[0,\frac{1}{n}]}$ is 
+integrable and $\int_{0}^{1} |n_\chi{[0,\frac{1}{n}]}| = 1$.
+The family $\mathscr{F}$, however, fails to be uniformly integrable.
+Fix $\epsilon = \dfrac{1}{2}$. Then, for any $\delta > 0$, by the 
+Archimedean property of the reals, there exists $n$, such that
+$\dfrac{1}{n} < \delta$. Since the interval $[0,\dfrac{1}{n}]$ 
+is measurable, has a measure smaller than $\delta$, and 
+$\int_{0}^{\frac{1}{n}} n\chi_{[0,\frac{1}{n}]} = 1 > \dfrac{1}{2}$, 
+we have that $\mathscr{F}$ is not uniformly integrable. Hence, by
+a counter example, we have shown that under the given assumptions,
+the family of functions need not be uniformly integrable. 
+
+\smallskip
+
+\textbf{(b)} We claim that $\mathscr{F}$ with the given assumption
+is uniformly integrable. Note that continuity implies integrability.
+Fix $\epsilon > 0$. 
+Let $f \in \mathscr{F}$. 
+Then, for any measurable set $E \subseteq [0,1]$ with
+$mE < \delta$ with, by using the $|f| \leq 1$ bound, we obtain 
+\eQb
+\int_{E} f &\leq& \int_{E} |f| \\
+&\leq& \int_{E} 1 \\
+&=& mE \\
+&\leq& \delta \\
+\eQe
+By letting $\delta = \epsilon$, we have $\int_{E} f \leq \epsilon$.
+Since $\epsilon$ and $f$ were arbitrary, we have shown that
+$\mathscr{F}$ is uniformly integrable. 
+
+\smallskip
+
+\textbf{(c)}
+Let $\mathscr{F}$ be the family of functions $f$ on $[0,1]$, each
+of which is integrable over $[0,1]$ and has $\int_{a}^{b}|f| \leq 
+b-a$ for all $[a,b] \subseteq [0,1]$. We claim that
+$\mathscr{F}$ is uniformly integrable. 
+Fix $\epsilon > 0$ and fix $f \in \mathscr{F}$. 
+Let $A \subseteq [0,1]$ be a measurable set such that
+$mA < \delta$  By the outer approximation
+of measurable set by open sets, there exists an open set $O$ such that
+$A \subseteq O$ and $m(O\setminus A) \leq \dfrac{\epsilon}{2}$. Observe
+that $O$ can be written as a countable union of disjoint open intervals,
+which gives $O = \cup_{i=1}^{\infty} (a_i, b_i)$. 
+From the monotonicity and 
+excision property of measure, and countable additivity over domain property
+of integration, it follows that
+\eQb
+\int_{A} |f| &\leq& \int_{O} |f| \\
+&\leq& \int_{\cup_{i=1}^{\infty}(a_i,b_i)} |f| \\
+&=& \sum_{i=1}^{\infty} \int_{(a_i,b_i)} |f| \\
+&\leq& \sum_{i=1}^{\infty} \int_{[a_i,b_i])} |f| \\
+&\leq& \sum_{i=1}^{\infty} b_i - a_i \\
+&=& mO \\
+&=& m(O\setminus A) + m(A) \\ 
+&\leq& \dfrac{\epsilon}{2} + \delta. 
+\eQe
+Define $\delta = \dfrac{\epsilon}{2}$ then, we have if 
+$A$ is measurable, and $mA <
+\delta$, then $\int_{A} |f| < \epsilon$.
+Since $\epsilon$ and $f$ were arbitrary, we have that $\mathscr{F}$
+is uniformly integrable.  $\qed$
+
 \end{solution}
 
 \end{document}
