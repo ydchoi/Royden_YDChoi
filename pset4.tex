@@ -210,7 +210,56 @@ $\eta$ on $\mathbb{R}$ which has a finite support and $\int_{R} |f - \eta|
 
 \textbf{(ii)}
 From the result of $(i)$, there exists a simple function $\eta$ on $\mathbb{R}$
-with finite support such that $| f- \eta | < \epsilon$.
+with finite support such that $\int_{\mathbb{R}}| f- \eta | < 
+\dfrac{\epsilon}{4}$.
+We denote the support of $\eta$ as $S$. 
+Since $\eta$ is simple, it is 
+measuarble and bounded. Let $M$ be the max of upper bound of $|\eta|$ 
+and $1$.
+Since $mS < \infty$, there exists
+a sufficiently large close bounded interval $I = [-N,N]$, such that
+$m(S \setminus I) < \dfrac{\epsilon}{4M}$. 
+Furthermore, by the result from $3-18$, as $\eta$ is measurable
+and bounded,  there 
+exists a step function $s$ and a measurable subset $F$ of $I$ such that 
+\eQb
+|s - \eta | < \dfrac{\epsilon}{4m(I)M}
+ \text{ on } F \text{ and } m(I\setminus F) < \dfrac{\epsilon}{4m(I)M}.
+\eQe
+It follows that
+\eQb
+\int_{\mathbb{R}} | f- s| &=& \int_{\mathbb{R}} |f -\eta + \eta - s| \\
+&\leq& \int_{\mathbb{R}} |f - \eta| + |\eta - s| \\
+&=& \int_{\mathbb{R}} |f - \eta| + \int_{\mathbb{R}} |\eta - s| \\
+&=& \int_{\mathbb{R}} |f - \eta| + \int_{I} |\eta - s| +
+\int_{S\setminus I} |\eta - s| \\ 
+&=& \int_{\mathbb{R}} |f - \eta| + \int_{I\setminus F} |\eta - s| +
+\int_{F} |\eta -s| + \int_{S\setminus I} |\eta - s|. 
+\eQe
+As $s = 0$ outside of $I$, we have that
+\eQb
+\int_{\mathbb{R}} |f-s| &\leq& 
+\int_{\mathbb{R}} |f - \eta| + \int_{I\setminus F} |\eta - s| +
+\int_{F} |\eta -s| + \int_{S\setminus I} |\eta|. \\
+\eQe
+From constructions, we have the following bounds on each term on the RHS
+of the inequality:
+\eQb
+\int_{\mathbb{R}} |f-s| &\leq& \dfrac{\epsilon}{4} \\
+\int_{I\setminus F} |\eta - s| &\leq& 
+M\dfrac{\epsilon}{4m(I)M} \leq \dfrac{\epsilon}{4} \\
+\int_{F} |\eta - s| &\leq& \int_{I} |\eta -s| \leq 
+\dfrac{\epsilon}{4m(I)M}m(I) \leq \dfrac{\epsilon}{4} \\ 
+\int_{S \setminus I} |\eta| &\leq& \dfrac{\epsilon}{4M}M = 
+\dfrac{\epsilon}{4}. \\
+\eQe
+Hence, it follows that 
+\eQb
+\int_{\mathbb{R}} |f-s| \leq \epsilon,
+\eQe
+as desired. $\qed$
+
+ 
 \smallskip
 
 \textbf{(iii)}
@@ -299,20 +348,17 @@ proven the result for a continous function that vanishes outside of a bounded se
 \eQe
 With the above limit being $0$, it follows that 
 \eQb
-|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)]|  &=& 
-|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)]  - 0 |\\ 
+\lim_{t \to 0} |\int_{\mathbb{R}} g(x)[f(x) - f(x+t)]|  &=& 
+\lim_{t \to 0} |\int_{\mathbb{R}} g(x)[f(x) - f(x+t)]  - 0 |\\ 
 &=& 
-|\lim_{t \to 0}  \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] -
-\lim_{t \to 0} \int_{\mathbb{R}} g(x)[h(x) - h(x+t)] |,
+\lim_{t \to 0}|\int_{\mathbb{R}} g(x)[f(x) - f(x+t)] -
+\int_{\mathbb{R}} g(x)[h(x) - h(x+t)] |,
 \eQe
 provided that the limit exists. The above equality can be simplified via linearity of integration
 as follows:
 \eQb
-|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] | 
-&=& 
-|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] - 
-\lim_{t \to 0} \int_{\mathbb{R}} g(x)[h(x) - h(x+t)]| \\
-&=& | \lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t) - h(x) + h(x+t)]| \\
+\lim_{t \to 0} |\int_{\mathbb{R}} g(x)[f(x) - f(x+t)] | 
+&=&  \lim_{t \to 0} | \int_{\mathbb{R}} g(x)[f(x) - f(x+t) - h(x) + h(x+t)]| \\
 &\leq& \lim_{t \to 0} \int_{\mathbb{R}} |g(x)[f(x) - h(x)] + 
 g(x)[f(x+t) - h(x+t)]| \\ 
 &\leq& \lim_{t \to 0} \int_{\mathbb{R}} |g(x)||[f(x) - h(x)]| + 
@@ -434,12 +480,27 @@ to $f$ pointwise a.e. on $E$, which completes the proof.
 \smallskip
 
 Now, we prove the only if implication. Assume that $f_n \to f$ in measure
-on $E$. Hence, we have that for all $\eta > 0$,
+on $E$. Fix $\eta > 0$ and $\epsilon > 0$.
+Let $\{ f_{n_k} \}$ be a subsequence of $\{ f_n \}$. 
+Then, by the definition of convergence in measure,
+there exists $N$ such that
 \eQb
-\underset{n \to \infty}{\lim} m\{ x \in E 
-\> | \>  f_n(x) - f(x)| > \eta \}
-&\to& 0.
+m\{ x \in E \> | \> |f_n(x) - f(x)| < \eta \} < \epsilon, 
 \eQe
+for $n \geq N$. Note that there exists $K$, such that
+$n_K \geq N$. Since the inequality holds for all $n \geq N$, we have 
+\eQb
+m\{ x \in E \> | \> |f_{n_k}(x) - f(x)| < \eta \} < \epsilon, 
+\eQe
+for $k \geq K$. Since $\eta$ and $\epsilon$ were arbtirary, 
+we have that $f_{n_k}$ converges to $f$ in measure by definition.
+Then, by the Riesz theorem, we have
+that there exists a further subseuqence of $\{ f_{n_k} \}$ that converges
+pointwise a.e. on $E$ to $f$.
+Since the subsequence was arbitrary, we have shown that 
+every subsequence has a further subseuqence that converges to pointwise
+to $f$
+a.e. on $E$. $\qed$
 
 \end{solution}
 
@@ -448,7 +509,17 @@ on $E$. Hence, we have that for all $\eta > 0$,
 \begin{question}[6. 5-13]
 \end{question}
 \begin{solution}
-dd
+Suppose Cauchy in measure. Define $E_j$ given by the hint. 
+Since $E_j$ is summable, by Borel Cantelli, measure of points
+that occur infinitely often is measure zero. Thus, off a set of measure
+zero $f_{n_j}$ is Cauchy by 5-11. By the completness of the reals,
+the $f_{n_j}$ converges to a function a.e.
+This shows that any sequence of functions that is Cauchy in measure
+has a subsequence that converges pointwise a.e. Observe that
+every subsequence of a sequence that is Cauchy in meausre is also
+Cauchy in measure. Thus, we have shown that
+every sequence has a further subsequence that converge pointwise.
+$\qed$ 
 \end{solution}
 
 
