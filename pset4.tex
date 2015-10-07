@@ -209,7 +209,8 @@ $\eta$ on $\mathbb{R}$ which has a finite support and $\int_{R} |f - \eta|
 < \epsilon$. 
 
 \textbf{(ii)}
-
+From the result of $(i)$, there exists a simple function $\eta$ on $\mathbb{R}$
+with finite support such that $| f- \eta | < \epsilon$.
 \smallskip
 
 \textbf{(iii)}
@@ -262,8 +263,69 @@ as desired. $\qed$
 \smallskip
 
 \textbf{(ii)}
-dd
+Fix $\epsilon > 0$.
+Since $g$ is a bounded function, there exists $M$ such that $g \leq M$.
+Assume that $f$ is a continous function that vanishes outside of a bounded set.
+Let $I$ be a sufficiently large closed interval of the form $[-N,N]$ such that
+the bounded set is contained in $I$. 
+Then, as $f$ is continuous on a closed, bounded interval $I$, it is uniformly
+continous on $I$.
+Hence, there exists $\delta > 0$, such that
+\eQb
+|t| < \delta \implies |f(x) - f(x+t)| \dfrac{\epsilon}{Mm(I)}
+\eQe
+It follows that 
+\eQb
+\lim_{t \to 0} \int_{\mathbb{R}} |g(x)[f(x) - f(x+t)]| &=& \lim_{t \to 0}
+|\int_{I} g(x)[f(x) - f(x+t)]| \\
+&\leq& \lim_{t \to 0} \int_{I}|g(x)[f(x) - f(x+t)]| \\
+&=& \lim_{t \to 0} \int_{I} |g(x)||[f(x) - f(x+t)]| \\
+&\leq& \lim_{t \to 0} \int_{I} |g(x)|\dfrac{\epsilon}{Mm(I)} \\
+&\leq& m(I)M \dfrac{\epsilon}{Mm(I)} \\ 
+&=& \epsilon.
+\eQe
+Since $\epsilon$ was arbitrary, we have that
+\eQb
+\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] &=& 0
+\eQe
 
+Now, assume that $f$ is not continous and vanishes outside of a boudned set. 
+As $f$ is integrable over $\mathbb{R}$, from the approximation property $(iii)$ of $4.44$,
+there exists a continous function $h$ on $\mathbb{R}$ such that it vanishes outside
+a bounded set and $\int_{\mathbb{R}} |f - h| < \dfrac{\epsilon}{2M}$. As we have
+proven the result for a continous function that vanishes outside of a bounded set, we obtain
+\eQb
+\lim_{t \to 0} \int_{\mathbb{R}} g(x)[h(x) - h(x+t)] &=& 0.
+\eQe
+With the above limit being $0$, it follows that 
+\eQb
+|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)]|  &=& 
+|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)]  - 0 |\\ 
+&=& 
+|\lim_{t \to 0}  \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] -
+\lim_{t \to 0} \int_{\mathbb{R}} g(x)[h(x) - h(x+t)] |,
+\eQe
+provided that the limit exists. The above equality can be simplified via linearity of integration
+as follows:
+\eQb
+|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] | 
+&=& 
+|\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] - 
+\lim_{t \to 0} \int_{\mathbb{R}} g(x)[h(x) - h(x+t)]| \\
+&=& | \lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t) - h(x) + h(x+t)]| \\
+&\leq& \lim_{t \to 0} \int_{\mathbb{R}} |g(x)[f(x) - h(x)] + 
+g(x)[f(x+t) - h(x+t)]| \\ 
+&\leq& \lim_{t \to 0} \int_{\mathbb{R}} |g(x)||[f(x) - h(x)]| + 
+|g(x)||[f(x+t) - h(x+t)]| \\ 
+&\leq& \lim_{t \to 0} \int_{\mathbb{R}} M\int_{\mathbb{R}} | f(x) - h(x) | 
++ M\int_{\mathbb{R}}|f(x+t) - h(x+t)| \\
+&\leq& 2M\dfrac{\epsilon}{2M} = \epsilon 
+\eQe
+Since $\epsilon$ was arbitrary, we have
+\eQb
+\lim_{t \to 0} \int_{\mathbb{R}} g(x)[f(x) - f(x+t)] &=& 0, 
+\eQe
+as desired. $\qed$
 \end{solution}
 
 
