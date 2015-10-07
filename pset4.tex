@@ -80,6 +80,63 @@ This work contains solutions to the problem set IV of Real Variables 2015 at NYU
 \begin{question}[1. Royden 4.31]
 \end{question}
 \begin{solution}
+Let $f$ be a measurable function on $E$, which can be expressed as
+$f = g + h$ on $E$, where $g$ is finite and integrable over $E$ and
+$h$ is nonnegative. Let $f = g_1 + h_1$ and $f = g_2 + h_2$ satisfying
+the given properties of $g$ and $h$ respectively. We wish to show that
+\eQb
+\int_{E} g_1 + \int_{E} h_1 &=& \int_{E} g_2 + \int_{E} h_2.
+\eQe  
+Assume that $h_1$ and $h_2$ are integrable. Then, by the linearity of
+integration, we have
+\eQb
+\int_{E} g_1 + \int_{E} h_1 &=& \int_{E} g_1 + h_1 \\
+&=& \int_{E} f \\
+&=& \int_{E} g_2 + h_2 \\
+&=& \int_{E} g_2 + \int_{E} h_2, \\
+\eQe
+as desired. Now, consider the remaining case of at least one of $h$
+not being integrable. Without loss of generality, assume that 
+$\int_{E} h_1 = \infty$. Since $g_1 + h_1 = g_2 + h_2$, we have
+\eQb
+h_2 &=& h_1 + g_1 - g_2 \\
+&=& h_1 + (g_1 - g_2)^+ - (g_1 - g_2)^-  \\
+&\geq& h_1 - (g_1 - g_2)^- ,
+\eQe
+with $(g_1 - g_2)^+$ and $(g_1 - g_2)^-$ being properly defined
+by the finiteness assumption on the $g$s.
+Since $h_2$, $h_1$ and $(g_1 - g_2)^-$ are all non-negative 
+measurable functions,
+by the monotonicity and linearity of integration of non-negative 
+measurable functions,
+we have
+\eQb
+\int_{E} h_2 &\geq& \int_{E} h_1 - (g_1 - g_2 )^- \\ 
+&=& \int_{E} h_1 - \int_{E} (g_1 - g_2)^- .
+\eQe
+From the linearity of general integrable functions, we have that
+$g_1 - g_2$ is integrable. Consequently, $(g_1 - g_2)^-$ is integrable 
+as well. It follows that
+\eQb
+\left| \int_{E} (g_1 - g_2)^{-} \right| 
+&\leq&  \int_{E}| (g_1 - g_2)^- | \\
+&< & \infty .
+\eQe
+Therefore, we obtain that 
+\eQb
+\int_{E} h_1 - \int_{E} (g_1 - g_2)^- &=& \infty,
+\eQe
+which combined with the established inequality of 
+$\int_{E} h_2 \geq \int_{E} h_1 - \int_{E} (g_1 - g_2)^-$ yields
+\eQb
+\int_{E} h_2 = \infty. 
+\eQe
+Hence, we have
+\eQb
+\int_{E} g_1 + \int_{E} h_1 &=& \infty \\
+&=&  \int_{E} g_2 + \int_{E} h_2,
+\eQe
+as $g_1$ and $g_2$ are integrable. This completes the proof. $\qed$
 \end{solution}
 
 \bigskip
@@ -87,8 +144,128 @@ This work contains solutions to the problem set IV of Real Variables 2015 at NYU
 \begin{question}[2. Royden 4.44]
 \end{question}
 \begin{solution}
+Let $f$ be integrable over $\mathbb{R}$ and $\epsilon > 0$. \\
+ 
+\textbf{(i)} 
+First, we prove the given property for $f$ nonnegative.
+Assume $f \geq 0$. Since $f$ is integrable, thus measuralbe, by
+the Simple Approximation Theorem, there exists a sequence of 
+increasing simple functions $\{ \phi_n \}$ on $\mathbb{R}$ which
+converges pointwise on $\mathbb{R}$ to $f$, such that
+\eQb
+| \phi_n | &\leq& | f | \text{ on } \mathbb{R},
+\eQe 
+for all $n$. Now, define a new sequence of simple function by
+\eQb
+\psi_n &=& max\{ 0, \phi_n \} \cdot \chi_{[-n,n]}.
+\eQe
+Observe that $\{ \psi_n \}$ is an
+increasing sequence of simple functions on $\mathbb{R}$,
+which has finite support and is non-negative, that converges to $f$
+pointwise. By the Monotone convergnece theorem, there exists $N$ such
+that 
+\eQb
+|\int_{\mathbb{R}} f - \int_{\mathbb{R}} \psi_n | < \epsilon, 
+\eQe
+for $n \geq N$. By the linearity of integration and the fact that 
+$\psi_n \leq f$ for all $n$, we have
+\eQb
+\epsilon &>& |\int_{\mathbb{R}} f - \int_{\mathbb{R}} \psi_n | \\ 
+&=& | \int_{\mathbb{R}} f - \psi_n | \\
+&=& \int_{\mathbb{R}} |f - \psi_n|, \\
+\eQe
+for $n \geq N$. Therefore, we have found a function with the desired 
+property, namely $\psi_n$. 
+ 
+\smallskip
+
+Now, we lift the non-negativity constraint. By the definition of
+integral, we have
+\eQb
+\int_{\mathbb{R}} f &=& \int_{\mathbb{R}} f^+ - \int_{\mathbb{R}} f^- . 
+\eQe
+Since $f$ is integrable, $f^+$ and $f^-$ are integrable and from the
+previous result, we have simple functions $\psi^+$ and $\psi^-$
+with finite support  
+such that
+\eQb
+\int_{\mathbb{R}} |f^+ - \psi^+ | < \dfrac{\epsilon}{2} \\
+\int_{\mathbb{R}} |f^- - \psi^- | < \dfrac{\epsilon}{2}.
+\eQe
+Observe that $\psi^+ - \psi^-$ is simple and has finite support 
+as well. Now, by the triangle inequality and monotonicity of integration,
+it follows that
+\eQb
+\int_{\mathbb{R}} |f - (\psi^+ - \psi^- )|
+&=& \int_{\mathbb{R}} |f^+ - f^- - \psi^+ + \psi^- | \\
+&\leq& \int_{\mathbb{R}} |f^+ - \psi^+| + |f^- - \psi^- | \\
+&=& \int_{\mathbb{R}} |f^+ - \psi^+ | 
++ \int_{\mathbb{R}} |f^- - \psi^-| \\ 
+&<& \epsilon.
+\eQe
+Therefore, $\psi^+ - \psi^-$ is the construction of the function
+with the desired property. We have shown that there is a simple function
+$\eta$ on $\mathbb{R}$ which has a finite support and $\int_{R} |f - \eta|
+< \epsilon$. 
+
+\textbf{(ii)}
+
+\smallskip
+
+\textbf{(iii)}
+
 
 \end{solution}
+
+\bigskip
+
+\begin{question}[2. Royden 4.47]
+\end{question}
+\begin{solution}
+Let $g$ be integrable over $\mathbb{R}$. \\
+\textbf{(i)} Let $k \in \mathbb{R}$.
+Assume that $g$ non-negative. Let $E_n = [-n,n]$ and
+$E_n - k = [-n-k, n-k]$. By the definition of integration of
+non-negative functions, it follows that
+\eQb
+\int_{E_n} g(x) dx  &=& sup \{ \int_{E_n} h(x) dx \> | \> h
+\text{ bounded, measurable, of finite support  and } \\
+&& 0 \leq h(x) \leq g(x) \> \text{ for } \> x \in  E_n \} \\
+&=& sup \{ \int_{E_n-k} h(x+k) dx \> | \> h
+\text{ bounded, measurable, of finite support and } \\
+&& 0 \leq h(x+k) \leq g(x+k) \> \text{for } \> x \in E_n-k \} \\
+&=& \int_{E_n - k} g(x+k) dx.
+\eQe
+Since the general integral is defined as the sum of non-negative integrals,
+for integrable functions,
+the result trivially generalizes to an integrable function. 
+From this point on,
+we drop the non-negativity assumption on $g$ and assume that $g$ is
+integrable. Notice that $\{ E_n \}$ and $\{ E_n - k\}$ form
+ascending countable collection of measurable subsets of $\mathbb{R}$, with
+$\cup_{n=1}^{\infty} E_n = \cup_{n=1}^{\infty} E_n - k = \mathbb{R}$.
+Hence, by the continuity of integration, we obtain
+\eQb
+\int_{\mathbb{R}} g(x) dx &=& \lim_{n \to \infty} 
+\int_{E_n} g(x) dx \\
+\int_{\mathbb{R}} g(x+k) dx &=& \lim_{n \to \infty} 
+\int_{E_n-k} g(x+k) dx. \\
+\eQe 
+Since $\int_{E_n} g(x) dx = \int_{E_n-k} g(x+k) dx$ for all $n$,
+it follow that
+\eQb
+\int_{\mathbb{R}} g(x) dx &=&  
+\int_{\mathbb{R}} g(x+k) dx, \\ 
+\eQe
+as desired. $\qed$
+
+\smallskip
+
+\textbf{(ii)}
+dd
+
+\end{solution}
+
 
 \bigskip
 
@@ -151,7 +328,7 @@ of integration, it follows that
 \int_{A} |f| &\leq& \int_{O} |f| \\
 &\leq& \int_{\cup_{i=1}^{\infty}(a_i,b_i)} |f| \\
 &=& \sum_{i=1}^{\infty} \int_{(a_i,b_i)} |f| \\
-&\leq& \sum_{i=1}^{\infty} \int_{[a_i,b_i])} |f| \\
+&\leq& \sum_{i=1}^{\infty} \int_{[a_i,b_i]} |f| \\
 &\leq& \sum_{i=1}^{\infty} b_i - a_i \\
 &=& mO \\
 &=& m(O\setminus A) + m(A) \\ 
@@ -164,5 +341,56 @@ Since $\epsilon$ and $f$ were arbitrary, we have that $\mathscr{F}$
 is uniformly integrable.  $\qed$
 
 \end{solution}
+
+\smallskip
+
+\begin{question}[5. 5-11]
+\end{question}
+\begin{solution}
+Assume that $E$ has finite measure. Let $\{ f_n \}$ be a sequence of
+measurable functions on $E$ and $f$ a measurable on $E$ for which
+$f$ and each $f_n$ is finite a.e. 
+
+We first show that the if implication holds by proving its
+contrapositive. Assume that $f_n$ does not converge to $f$ in measure. 
+This implies that there exists $\delta > 0$ and $\eta > 0$ such that
+\eQb
+m\{x \in E \> | \> |f_n(x) - f(x)| > \eta \} > \delta,
+\eQe
+infinitely often in the sequence of $f_n$. Choose $\{ f_{n_k} \}$
+such that 
+\eQb
+m\{ x \in E \> | \> |f_{n_k}(x) - f(x) | > \eta \} > \delta ,
+\eQe
+for all $k$. Hence, there is a non measure-zero set, on which
+$|f_{n_k} - f| > \delta$ for all $k$. Hence, 
+any subsequence of $\{ f_{n_k} \}$ cannot 
+converge pointwise a.e. on $E$. Therefore, there exists a subsequence
+of $\{f_n\}$ who does not have a further subsequence that converges
+to $f$ pointwise a.e. on $E$, which completes the proof. 
+
+\smallskip
+
+Now, we prove the only if implication. Assume that $f_n \to f$ in measure
+on $E$. Hence, we have that for all $\eta > 0$,
+\eQb
+\underset{n \to \infty}{\lim} m\{ x \in E 
+\> | \>  f_n(x) - f(x)| > \eta \}
+&\to& 0.
+\eQe
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[6. 5-13]
+\end{question}
+\begin{solution}
+dd
+\end{solution}
+
+
+
+
 
 \end{document}
