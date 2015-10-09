@@ -128,26 +128,27 @@ as desired. $\qed$
 \begin{solution}
 Let $f$ and $g$ be absolutely continuous functions on $[a,b]$. 
 We wish to show that $f+g$ is absolutely continuous. Fix $\epsilon > 0$.
-Let $\{(a_k, b_k) \}_{k=1}^{n}$
-be an arbitrary finite disjoint open intervals
-in $(a,b)$. As $f$ and $g$ are both absolutely continuous, 
-there exist $\delta_f , \delta_g > 0$, such that 
+As $f$ and $g$ are both absolutely continuous, 
+there exist $\delta_f , \delta_g > 0$, such that for any finite disjoint
+open intervals $\{ (a_k, b_k) \}_{k=1}^{n}$ in $(a,b)$, 
 \eQb
 \sum_{k=1}^{n} [b_k - a_k] < \delta_f \implies 
 \sum_{k=1}^{n} |f(b_k) - f(a_k)| < \dfrac{\epsilon}{2} \\
 \sum_{k=1}^{n} [b_k - a_k] < \delta_g \implies
 \sum_{k=1}^{n} |g_(b_k) - g(a_k)| < \dfrac{\epsilon}{2}. \\
 \eQe
-Define $\delta = \min(\delta_f, \delta_g)$, and 
-suppose that $\sum_{k=1}^{n} [b_k - a_k] < \delta$. 
+Define $\delta = \min(\delta_f, \delta_g)$. 
+Let $\{(a_k, b_k) \}_{k=1}^{n}$
+be a finite disjoint open intervals in $(a,b)$,
+such that $\sum_{k=1}^{n} [b_k - a_k] < \delta$. 
 It follows that
 \eQb
 \sum_{k=1}^{n} |f+g(b_k) - f+g(a_k)| 
 &\leq& \sum_{k=1}^{n} |f(b_k) - f(a_k)| + |g(b_k) - g(a_k)| \\
 &<& \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2} = \epsilon .
 \eQe 
-Since $\epsilon$ and $\{(a_k, b_k) \}_{k=1}^{n}$ 
-were arbitrary, we have shown that $f+g$ is absolutely continuous.
+Since $\epsilon$ was arbitrary,
+we have shown that $f+g$ is absolutely continuous.
 
 \bigskip
 
@@ -155,49 +156,53 @@ Let $f$ be an absolutely continuous function on $[a,b]$.
 We show that $cf$, for any $c \in \mathbb{R}$, is absolutely continuous.
 Let $c = 0$. Then $cf = 0$, which can 
 trivially be shown to be absolutely continuous, 
-as $f(c) = 0$ for any $c \in [a,b]$ Suppose $c \neq 0$.
-Fix $\epsilon > 0$. 
-Let $\{ (a_k, b_k ) \}_{k=1}^{n}$ be an arbitrary finite disjoint
-open intervals in $(a,b)$. As $f$ is absolutely continuous, there exists
-$\delta_f > 0$, such that
+as $f(c) = 0$ for any $c \in [a,b]$. Suppose $c \neq 0$.
+As $f$ is absolutely continuous, there exists
+$\delta_f > 0$, such that for any finite disjoint
+open intervals $\{ (a_k, b_k) \}_{k=1}^{n}$ in $(a,b)$, 
 \eQb
+\sum_{k=1}^{n} |b_k - a_k| < \delta_f \implies
 \sum_{k=1}^{n} |f(b_k) - f(a_k)| < \dfrac{\epsilon}{|c|}.
 \eQe 
-Define $\delta = \delta_f$, and suppose that $\sum_{k=1}^{n} [b_k -
-a_k] < \delta$
+Define $\delta = \delta_f$. Let 
+$\{(a_k, b_k) \}_{k=1}^{n}$ be a finite disjoint open intervals in
+$(a,b)$ such that $\sum_{k=1}^{n} [b_k -
+a_k] < \delta$.
 It follows that
 \eQb
 \sum_{k=1}^{n} |cf(b_k) - cf(a_k)|
 &=& |c|\sum_{k=1}^{n} |f(b_k) - f(a_k)| \\
-&\leq& |c|\dfrac{\epsilon}{|c|} = \epsilon.
+&<& |c|\dfrac{\epsilon}{|c|} = \epsilon.
 \eQe
-Since $\epsilon$ and $\{ (a_k, b_k) \}_{k=1}^{n}$ were arbitrary,
-combined with $c=0$ case,
-we have shown that $cf$ is absolutely continuous.
+Since $\epsilon$ was arbitrary,
+combined with the $c=0$ case,
+we have shown that $cf$, for any $c \in \mathbb{R}$, is absolutely continuous.
 
 \bigskip
 
 Let $f$ be an absolutely continuous function on $[a,b]$.
-We first show that $f^2$ is absolutely continuous. As $f$ is absolutely
+We wish to show that $f^2$ is absolutely continuous. As $f$ is absolutely
 continuous, $f$ is continuous on $[a,b]$. Hence, by the Extreme
 Value Theorem, there exists $M$ such that $|f| \leq M  \text{ on} 
 \>\> [a,b]$. Fix $\epsilon > 0$.
-Let $\{ (a_k, b_k ) \}_{k=1}^{n}$ be an arbitrary finite disjoint
-open intervals in $(a,b)$. As $f$ is absolutely continuous, there exists
-$\delta_f > 0$, such that
+As $f$ is absolutely continuous, there exists
+$\delta_f > 0$, such that for any finite disjoint open intervals
+$\{ (a_k, b_k) \}_{k=1}^{n}$ in $(a,b)$, 
 \eQb
+\sum_{k=1}^{n} |b_k - a_k| < \delta_f \implies 
 \sum_{k=1}^{n} |f(b_k) - f(a_k)| < \dfrac{\epsilon}{2M}.
 \eQe 
-Define $\delta = \delta_f$, and suppose that $\sum_{k=1}^{n} [b_k -
-a_k] < \delta$
+Define $\delta = \delta_f$. Let $\{(a_k, b_k)\}_{k=1}^{\infty}$ be a finite
+disjoint open intervals in $(a,b)$ such that $\sum_{k=1}^{n} [b_k -
+a_k] < \delta$.
 It follows that
 \eQb
 \sum_{k=1}^{n} |f^2(b_k) - f^2(a_k)|
 &=& \sum_{k=1}^{n} |f(b_k) - f(a_k)||f(b_k) + f(a_k)| \\
 &\leq& 2M \sum_{k=1}^{n} |f(b_k) - f(a_k)| \\
-&\leq& 2M \dfrac{\epsilon}{2M} = \epsilon.
+&<& 2M \dfrac{\epsilon}{2M} = \epsilon.
 \eQe
-Since $\epsilon$ and $\{ (a_k, b_k) \}_{k=1}^{n}$ were arbitrary,
+Since $\epsilon$ was arbitrary,
 we have shown that $f^2$ is absolutely continuous.
 
 \bigskip
