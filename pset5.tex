@@ -77,7 +77,7 @@ This work contains solutions to the problem set IV of Real Variables 2015 at NYU
 
 \bigskip
 
-\begin{question}[1. Royden 4.31]
+\begin{question}[4. Royden 6.42]
 \end{question}
 \begin{solution}
 Let $f$ and $g$ be absolutely continuous functions on $[a,b]$. 
@@ -100,12 +100,76 @@ It follows that
 &\leq& \sum_{k=1}^{n} |f(b_k) - f(a_k)| + |g(b_k) - g(a_k)| \\
 &<& \dfrac{\epsilon}{2} + \dfrac{\epsilon}{2} = \epsilon .
 \eQe 
-Since $\epsilon$ and $\{(a_k, b_k) \}$ were arbitrary, we have shown that
-$f+g$ is absolutely continuous.
+Since $\epsilon$ and $\{(a_k, b_k) \}_{k=1}^{n}$ 
+were arbitrary, we have shown that $f+g$ is absolutely continuous.
 
-\smallskip
+\bigskip
 
-Let $f$ and $g$ be absolutely continuous functions on $[a,b]$.
+Let $f$ be an absolutely continuous function on $[a,b]$. 
+We show that $cf$, for any $c \in \mathbb{R}$, is absolutely continuous.
+Let $c = 0$. Then $cf = 0$, which can 
+trivially be shown to be absolutely continuous, 
+as $f(c) = 0$ for any $c \in [a,b]$ Suppose $c \neq 0$.
+Fix $\epsilon > 0$. 
+Let $\{ (a_k, b_k ) \}_{k=1}^{n}$ be an arbitrary finite disjoint
+open intervals in $(a,b)$. As $f$ is absolutely continuous, there exists
+$\delta_f > 0$, such that
+\eQb
+\sum_{k=1}^{n} |f(b_k) - f(a_k)| < \dfrac{\epsilon}{|c|}.
+\eQe 
+Define $\delta = \delta_f$, and suppose that $\sum_{k=1}^{n} [b_k -
+a_k] < \delta$
+It follows that
+\eQb
+\sum_{k=1}^{n} |cf(b_k) - cf(a_k)|
+&=& |c|\sum_{k=1}^{n} |f(b_k) - f(a_k)| \\
+&\leq& |c|\dfrac{\epsilon}{|c|} = \epsilon.
+\eQe
+Since $\epsilon$ and $\{ (a_k, b_k) \}_{k=1}^{n}$ were arbitrary,
+combined with $c=0$ case,
+we have shown that $cf$ is absolutely continuous.
+
+\bigskip
+
+Let $f$ be an absolutely continuous function on $[a,b]$.
+We first show that $f^2$ is absolutely continuous. As $f$ is absolutely
+continuous, $f$ is continuous on $[a,b]$. Hence, by the Extreme
+Value Theorem, there exists $M$ such that $|f| \leq M  \text{ on} 
+\>\> [a,b]$. Fix $\epsilon > 0$.
+Let $\{ (a_k, b_k ) \}_{k=1}^{n}$ be an arbitrary finite disjoint
+open intervals in $(a,b)$. As $f$ is absolutely continuous, there exists
+$\delta_f > 0$, such that
+\eQb
+\sum_{k=1}^{n} |f(b_k) - f(a_k)| < \dfrac{\epsilon}{2M}.
+\eQe 
+Define $\delta = \delta_f$, and suppose that $\sum_{k=1}^{n} [b_k -
+a_k] < \delta$
+It follows that
+\eQb
+\sum_{k=1}^{n} |f^2(b_k) - f^2(a_k)|
+&=& \sum_{k=1}^{n} |f(b_k) - f(a_k)||f(b_k) + f(a_k)| \\
+&\leq& 2M \sum_{k=1}^{n} |f(b_k) - f(a_k)| \\
+&\leq& 2M \dfrac{\epsilon}{2M} = \epsilon.
+\eQe
+Since $\epsilon$ and $\{ (a_k, b_k) \}_{k=1}^{n}$ were arbitrary,
+we have shown that $f^2$ is absolutely continuous.
+
+\bigskip
+
+Let $f$ and $g$ be an absolutely continuous function on $[a,b]$.
+We wish to show that $fg$ is absolutely continuous.
+Observe that 
+\eQb
+(f+g)^2 &=& f^2 + g^2 - 2fg,
+\eQe 
+which simplifies to
+\eQb
+fg = -\dfrac{1}{2}((f+g)^2 + (-f^2) + (-g^2)).
+\eQe
+As we have previously shown that a square of an absolutely continuous
+function is absolutely continuous, and a scalar multiple of an
+absolutely continuous function is absolutely continuous, we can deduce
+that $fg$ is absolutely continuous. This completes the proof. $\qed$
 
 \end{solution}
 
