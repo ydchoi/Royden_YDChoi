@@ -40,7 +40,7 @@
 \usepackage{listings}
 
 \title{Real Variables: \\
-Problem Set IV}
+Problem Set V}
 
 
 \author{
@@ -70,7 +70,8 @@ New York University \\
 \maketitle
 
 \begin{abstract}
-This work contains solutions to the problem set IV of Real Variables 2015 at NYU.
+This work contains solutions to the problem set 
+V of Real Variables 2015 at NYU.
 \end{abstract}
 
 \section{Solutions}
@@ -78,7 +79,46 @@ This work contains solutions to the problem set IV of Real Variables 2015 at NYU
 \begin{question}[6.33]
 \end{question}
 \begin{solution}
-dd
+Let $\{ f_n \}$ be a sequence of real-valued functions on $[a,b]$ 
+that converges pointwise on $[a,b]$ to the real-valued function
+$f$. We wish to show that $TV(f) \leq \liminf TV(f_n)$.
+Fix $\epsilon > 0$. 
+Let $P = \{x_0, ..., x_m\}$ be a partition of $[a,b]$. 
+By the triangle inequality, it follows that
+\eQb
+V(f,P) &=& \sum_{k=0}^{m-1} |f(x_{k+1}) - f(x_k)| \\ 
+&=& \sum_{k=0}^{m-1} |f(x_{k+1}) + f_n(x_{k+1}) - f_n(x_{k+1})
+- f(x_k) + f_n(x_k) - f_n(x_k)| \\
+&\leq& \sum_{k=0}^{m-1} |f(x_{k+1}) - f_n(x_{k+1})| + |f_n(x_{k+1})
+- f_n(x_k)| + |f(x_k) - f_n(x_k)| \\ 
+&\leq& V(f_n) + \sum_{k=1}^{m} |f(x_{k}) - f_n(x_{k})| + 
+\sum_{k=0}^{m-1}|f(x_k) - f_n(x_k)|, \\ 
+\eQe
+for any $n$. Define $N = \max(N_0,...,N_k)$, where $N_i (0 \leq i 
+\leq k)$ corresponds
+to the convergence index for $\dfrac{\epsilon}{2m}$ at $x_i$. Then,
+it follows that
+\eQb
+V(f,p) - \epsilon
+&\leq&
+V(f_n,p) 
+\eQe 
+for $n \geq N$. As $p$ was arbitrary, we can take the supremum
+over $p$
+on both sides, and obtain
+\eQb
+TV(f,p) - \epsilon &\leq& TV(f_n,p),
+\eQe
+for $n \geq N$.
+As $\epsilon$ was arbitrary, we obtain that
+\eQb
+TV(f,p) &\leq& \inf_{n \geq N} TV(f_n,p).
+\eQe
+Now as $N \to \infty$, by the linearity of limit,
+\eQb
+TV(f,p) &\leq& \liminf_{N \to \infty} TV(f_n,p),
+\eQe
+as desired. $\qed$
 \end{solution}
 
 \bigskip
@@ -179,12 +219,22 @@ that $fg$ is absolutely continuous. This completes the proof. $\qed$
 
 \end{solution}
 
-\Bigskip
+\bigskip
 
-\begin{question}[6.33]
+\begin{question}[4. 6.45]
 \end{question}
-
 \begin{solution}
+Let $f$ be an absolutely continuous on $\mathbb{R}$, and
+$g$ be an absolutely continuous function, which is strictly monotone
+on $[a,b]$. We wish to show that $f\circ g$ is absolutely continuous. 
+Fix $\epsilon >0$. Let $\{ (a_k, b_k) \}_{k=1}^{n}$ be an arbitrary
+disjoint open intervals in $(a,b)$. As $g$ is absolutely continuous,
+there exists $\delta_g$ such that 
+\eQb
+\sum_{k=1}^{n} [b_k - a_k] < \delta_g \implies
+\sum_{k=1}^{n} |f(b_k) - f(a_k)| < \epsilon .
+\eQe 
+
 \end{solution}
 
 \end{document}
