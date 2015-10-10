@@ -76,6 +76,25 @@ V of Real Variables 2015 at NYU.
 
 \section{Solutions}
 
+\begin{question}[6.10]
+\end{question}
+\begin{solution}
+Let $x_1, x_2 \in (a,b)$, such that $x_1 < x_2$. Then, we have
+\eQb
+f(x_1) &=& \sum_{k=1}^{\infty} l((c_k, d_k) \cap (-\infty, x_1)) \\
+f(x_2) &=& \sum_{k=1}^{\infty} l((c_k, d_k) \cap (-\infty, x_2)).
+\eQe
+As $x_1 < x_2$, by the monotonicity property of the length function
+, we have
+\eQb
+l((c_k, d_k) \cap (-\infty, x_1)) &\leq& 
+l((c_k, d_k) \cap (-\infty, x_2)),
+\eQe
+for all $k \geq 1$. It follows that $f(x_1) \leq f(x_2)$. Hence,
+$f$ is increasing. Now, we show that $f$ fails to be differentiable at
+each point in $E$. Let $x \in E$. Then, 
+\end{solution}
+
 \begin{question}[6.33]
 \end{question}
 \begin{solution}
@@ -99,8 +118,8 @@ for any $n$. Define $N = \max(N_0,...,N_k)$, where $N_i (0 \leq i
 to the convergence index for $\dfrac{\epsilon}{2m}$ at $x_i$. Then,
 it follows that
 \eQb
-V(f,P) &\leq& V(f_n,P) \\
-&\leq& TV(f_n),
+V(f,P) &\leq& V(f_n,P) + \epsilon \\
+&\leq& TV(f_n) + \epsilon,
 \eQe
 for $n \geq N$. Consequently
 \eQb
