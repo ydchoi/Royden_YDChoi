@@ -99,24 +99,15 @@ for any $n$. Define $N = \max(N_0,...,N_k)$, where $N_i (0 \leq i
 to the convergence index for $\dfrac{\epsilon}{2m}$ at $x_i$. Then,
 it follows that
 \eQb
-V(f,P) - \epsilon
-&\leq&
-V(f_n, P) 
-\eQe 
-for $n \geq N$. As $p$ was arbitrary, we can take the supremum
-over $p$
-on both sides, and obtain
-\eQb
-TV(f) - \epsilon &\leq& TV(f_n),
+V(f,P) &\leq TV(f_n),
 \eQe
-for $n \geq N$.
-As $\epsilon$ was arbitrary, we obtain that
+for $n \geq N$. Consequently
 \eQb
-TV(f) &\leq& \inf_{n \geq N} TV(f_n).
+V(f,P) &\leq& \liminf_{n \to \infty} TV(f_n),
 \eQe
-Now as $N \to \infty$, by the linearity of limit,
+Since $P$ was arbitrary, we obtain that 
 \eQb
-TV(f,p) &\leq& \liminf_{N \to \infty} TV(f_n,p),
+TV(f) &\leq& \liminf_{n \to \infty} TV(f_n),
 \eQe
 as desired. $\qed$
 \end{solution}
