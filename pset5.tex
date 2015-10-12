@@ -112,18 +112,24 @@ V(f,P) &=& \sum_{k=0}^{m-1} |f(x_{k+1}) - f(x_k)| \\
 - f_n(x_k)| + |f(x_k) - f_n(x_k)| \\ 
 &\leq& V(f_n,P) + \sum_{k=1}^{m} |f(x_{k}) - f_n(x_{k})| + 
 \sum_{k=0}^{m-1}|f(x_k) - f_n(x_k)|, \\ 
+&\leq& TV(f_n) + \sum_{k=1}^{m} |f(x_{k}) - f_n(x_{k})| + 
+\sum_{k=0}^{m-1}|f(x_k) - f_n(x_k)|, \\ 
 \eQe
 for any $n$. Define $N = \max(N_0,...,N_k)$, where $N_i (0 \leq i 
 \leq k)$ corresponds
 to the convergence index for $\dfrac{\epsilon}{2m}$ at $x_i$. Then,
 it follows that
 \eQb
-V(f,P) &\leq& V(f_n,P) + \epsilon \\
-&\leq& TV(f_n) + \epsilon,
+V(f,P) - \epsilon  
+&\leq& TV(f_n),
 \eQe
-for $n \geq N$. Consequently
+for $n \geq N$. Consequently, we have that
 \eQb
-V(f,P) &\leq& \liminf_{n \to \infty} TV(f_n),
+V(f,P) -\epsilon &\leq& \liminf_{n \to \infty} TV(f_n),
+\eQe
+Since $\epsilon$ was arbitrary, we have
+\eQb
+V(f,P) &\leq& \liminf_{n \to \infty} TV(f_n).
 \eQe
 Since $P$ was arbitrary, we obtain that 
 \eQb
