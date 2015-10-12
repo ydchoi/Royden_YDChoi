@@ -95,43 +95,30 @@ $f$ is increasing. Now, we show that $f$ fails to be differentiable at
 each point in $E$. Let $x \in E$. Then, 
 \end{solution}
 
+\bigskip
+
 \begin{question}[6.33]
 \end{question}
 \begin{solution}
 Let $\{ f_n \}$ be a sequence of real-valued functions on $[a,b]$ 
 that converges pointwise on $[a,b]$ to the real-valued function
 $f$. We wish to show that $TV(f) \leq \liminf TV(f_n)$.
-Fix $\epsilon > 0$. 
-Let $P = \{x_0, ..., x_m\}$ be a partition of $[a,b]$. 
-By the triangle inequality, it follows that
+Fix $P = \{x_0, ..., x_m\}$ be a partition of $[a,b]$. 
+As $f_n \to f$ pointwise, we have
 \eQb
-V(f,P) &=& \sum_{k=0}^{m-1} |f(x_{k+1}) - f(x_k)| \\ 
-&=& \sum_{k=0}^{m-1} |f(x_{k+1}) + f_n(x_{k+1}) - f_n(x_{k+1})
-- f(x_k) + f_n(x_k) - f_n(x_k)| \\
-&\leq& \sum_{k=0}^{m-1} |f(x_{k+1}) - f_n(x_{k+1})| + |f_n(x_{k+1})
-- f_n(x_k)| + |f(x_k) - f_n(x_k)| \\ 
-&\leq& V(f_n,P) + \sum_{k=1}^{m} |f(x_{k}) - f_n(x_{k})| + 
-\sum_{k=0}^{m-1}|f(x_k) - f_n(x_k)|, \\ 
-&\leq& TV(f_n) + \sum_{k=1}^{m} |f(x_{k}) - f_n(x_{k})| + 
-\sum_{k=0}^{m-1}|f(x_k) - f_n(x_k)|, \\ 
+V(f,P) &=& \sum_{k=0}^{m-1} |f(x_{k+1}) - f(x_k)| \\
+&=& \lim_{n \to \infty} \sum_{k=0}^{m-1} |f_n(x_{k+1}) - f_n(x_k)| \\
+&=& \lim_{n \to \infty} V(f_n, P). \\ 
 \eQe
-for any $n$. Define $N = \max(N_0,...,N_k)$, where $N_i (0 \leq i 
-\leq k)$ corresponds
-to the convergence index for $\dfrac{\epsilon}{2m}$ at $x_i$. Then,
-it follows that
+By the definition of total variation, it follows that
 \eQb
-V(f,P) - \epsilon  
-&\leq& TV(f_n),
+V(f_n,P) &\leq& TV(f_n),
 \eQe
-for $n \geq N$. Consequently, we have that
+for all $n$. Consequently, we obtain
 \eQb
-V(f,P) -\epsilon &\leq& \liminf_{n \to \infty} TV(f_n),
+V(f,P) &\leq& \liminf_{n \to \infty} TV(f_n),
 \eQe
-Since $\epsilon$ was arbitrary, we have
-\eQb
-V(f,P) &\leq& \liminf_{n \to \infty} TV(f_n).
-\eQe
-Since $P$ was arbitrary, we obtain that 
+and since $P$ was arbitrary, we finally have that 
 \eQb
 TV(f) &\leq& \liminf_{n \to \infty} TV(f_n),
 \eQe
