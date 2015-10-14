@@ -306,9 +306,76 @@ $[a,b]$. $\qed$
 
 \bigskip
 
-\begin{question}
+\begin{question}[6.56]
 \end{question}
 \begin{solution}
+Let $g$ be strictly increasing an absolutely continuous on $[a,b]$. \\
+
+\smallskip
+
+\textbf{(i)} Let $O$ be an open subset of $(a,b)$. Then, $O$ can be represented as
+a countable union of disjoint intervals in $(a,b)$: 
+\eQb
+O &=& \cup_{k=1}^{\infty} (a_k,b_k),
+\eQe
+and since $g$ is strictly increasing, we have
+$\{(g(a_k),g(b_k))\}_{k=1}^{\infty}$ forms a collection
+of disjoint intervals, and
+\eQb
+g(O) &=& \cup_{k=1}^{\infty} (g(a_k),g(b_k)). \\
+\eQe
+Therefore, by the countable additivity of measure, it follows that
+\eQb
+m(g(O)) &=& \sum_{k=1}^{\infty} g(b_k) - g(a_k).
+\eQe
+On the other hand, by the countable additivity of integration, and as $g$ is absolutely continuous,
+we have
+\eQb
+\int_{O} g'(x)dx &=& \sum_{k=1}^{\infty} \int_{g(a,k)}^{g(b_k)} g'(x)dx \\
+&=& \sum_{k=1}^{\infty} g(b_k) - g(a_k).
+\eQe
+Therefore, $m(g(O)) = \int_{O}g'(x)dx$, as desired.
+
+\smallskip
+
+\textbf{(ii)}
+
+\smallskip
+
+\textbf{(iii)}
+Let $E$ be a meazuer zero set.
+We have previously shown that a continuous map carries a measure zero set to a measure zero set. Hence,
+$g(E)$ has measure zero. Furthermore, we have that an integral over a measure zero set is zero.
+Therfore, we have that $m(g(E)) = 0 = \int_{E} g'(x) dx$ as desired.
+
+\smallskip
+
+\textbf{(iv)}
+Let $A$ be any measurable set of $[a,b]$.
+By the outer approximation of a measurable set via $G-\delta$ set, there exists $G-\delta$ set
+$G$ such that $m(G\setminus A) = 0$ and $A \subseteq G$. Then, by the finite additivity of measure
+we have
+\eQb
+m(g(A)) &=& m(g(G\setminus A \cup A)) \\
+&=& m(g(G\setminus A)) + m(g(A)) \\
+&=& m(A)
+\eQe
+
+\smallskip
+
+\textbf{(v)}
+
+\smallskip
+
+\textbf{(vi)}
+
+\smallskip
+
+\textbf{(vii)}
+
+
+
+
 \end{solution}
 
 
