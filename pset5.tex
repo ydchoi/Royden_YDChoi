@@ -113,9 +113,9 @@ It follows that
 \eQb
 \bar{D}f(x) &=& \lim_{h \to 0} \sup_{0< |t| \leq h} \{ \dfrac{f(x+t) - f(x)}{t} \} \\
 &=& \lim_{h \to 0} \sup_{0 < |t| \leq h} \dfrac{na_n}{a_n} \\
-&\geq& m.
+&\geq& n.
 \eQe
-Since $m$ was arbitrary, we have that 
+Since $n$ was arbitrary, we have that 
 \eQb
 \bar{D}f(x) = \infty,
 \eQe
@@ -306,6 +306,27 @@ $[a,b]$. $\qed$
 
 \bigskip
 
+\begin{question}[6.55]
+\end{question}
+\begin{solution}
+\textbf{(ii)} Assume that $f$ is absolutely continuous. Let $P =
+\{x_0, ..., x_k \}$. Then, by the additivity over domain of integration,
+and the absolute continuity of $f$, we have
+\eQb
+\int_{a}^{b} |f'(x)|dx &\geq& \sum_{i=0}^{k-1} 
+|\int_{x_i}^{x_{i+1}} f'(x) | dx \\
+&=& V(f,P).
+\eQe
+Since $P$ was arbitrary, we have $\int_{a}^{b}|f'| \geq TV(f)$. Hence,
+with $\int_{a}^{b}|f'| \leq TV(f)$, we can conclude that
+\eQb
+\int_{a}^{b}|f'| = TV(f). 
+\eQe
+
+\end{solution}
+
+
+
 \begin{question}[6.56]
 \end{question}
 \begin{solution}
@@ -358,21 +379,76 @@ we have
 \eQb
 m(g(A)) &=& m(g(G\setminus A \cup A)) \\
 &=& m(g(G\setminus A)) + m(g(A)) \\
-&=& m(A)
+&=& m(g(G)).
 \eQe
+On the other hand, by the additivity over domain property
+of integration and the fact that any integral on
+a measure zero set is zero, we have
+\eQb
+\int_{A} g'(x)dx &=& \int_{A} g'(x) dx + \int_{G\setminus A} g'(x)dx \\
+&=& \int_{G} g'(x)dx. 
+\eQe
+By the preceding result with $G-\delta$ sets, $LHS = RHS$. Hence,
+we have $m(g(A)) = \int_{A}g'(x)dx$ for any measurable set of $[a,b]$.
 
 \smallskip
 
 \textbf{(v)}
-
+Let $c = g(a)$ and $d = g(b)$. We can write the simple function $\psi$ as
+\eQb
+\psi &=& \sum_{k=1}^{n} c_k \chi_{E_k}.
+\eQe
+Then, by the countable additivity over domain property of integration,
+we have
+\eQb
+\int_{c}^{d} \psi(y)dy &=& \int_{c}^{d} \sum_{k=1}^{n} c_k \chi_{E_k}(y)dy \\
+&=& \sum_{k=1}^{n} c_k \int_{c}^{d} \chi_{E_k}(y) dy \\
+&=& \sum_{k=1}^{n} c_k m(E_k).
+\eQe
+Similarly, the RHS can be computed to be the same sum as desired.
 \smallskip
 
 \textbf{(vi)}
+Since $f$ is non-negative integrable function on $[c,d]$, there 
+exists a sequence of increasing simple functions $\{\phi_n\}$ such that
+$\phi_n \to f$ pointwise and $|\phi_n| \leq |f|$ on $[c,d]$ for all $n$.
+As $f$ is integrable and dominates $\phi_n$ for all $n$, by the Dominated
+Convergence Theorem, we have 
+\eQb
+\lim_{n \to \infty} \int_{c}^{d} \phi_n(y)dy &=& 
+\int_{c}^{d} f(y)dy.
+\eQe
+As $g$ is strictly increasing and absolutely continuous, we have that
+$g'$ is non-negative and integrable with $\int_{c}^{d}g'(x) dx = g(d) - g(c)
+< \infty$. Therefore, we have that $\phi_{n}(g)g'$ and $f(g)g'$ are
+both integrable and non-negative, and $\phi_{n}(g)g' \to
+f(g)g'$ pointwise and $f(g)g'$ dominates $\phi_{n}(g)g'$ for all $n$. 
+Therefore, by the Dominated Convergence Theorem, we have 
+\eQb
+\lim_{n \to \infty} \int_{c}^{d} \phi_{n}(g(x))g'(x) dx&=& 
+\int_{c}^{d} f(g(x))g'(x) dx. 
+\eQe 
+Since $\int_{c}^{d} \phi_n(y)dy = \int_{c}^{d} \phi_n(g(x))g'(x)dx$
+for all $n$ by the previous result, we have that
+\eQb
+\int_{c}^{d} f(y)dy &=& \int_{c}^{d} f(g(x))g'(x)dx,
+\eQe
+as desired.
 
 \smallskip
 
 \textbf{(vii)}
-
+As we have $(vi)$, by setting $f = \chi_{O}$, we have
+\eQb
+\int_{c}^{d} \chi_{O}(y) dy &=& 
+\int_{a}^{b} \chi_{O}(g(x))g'(x) dx .
+\eQe
+As $\chi_{O}$ is a characteristic function, we have
+\eQb
+\int_{c}^{d} \chi_{O}(y)dy &=& m(O) \\
+\int_{a}^{b} \chi_{O}(g(x)) g'(x) dx &=& \int_{O} g'(x)dx.
+\eQe
+Hence, $(i)$ holds as desired. $\qed$
 
 
 
