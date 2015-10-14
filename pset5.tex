@@ -91,8 +91,37 @@ l((c_k, d_k) \cap (-\infty, x_1)) &\leq&
 l((c_k, d_k) \cap (-\infty, x_2)),
 \eQe
 for all $k \geq 1$. It follows that $f(x_1) \leq f(x_2)$. Hence,
-$f$ is increasing. Now, we show that $f$ fails to be differentiable at
-each point in $E$. Let $x \in E$. Then, 
+$f$ is increasing. 
+We show that $f$ fails to be differentiable at
+each point in $E$, which is a set of measure zero contained in the open interval
+$(a,b)$. Let $x \in E$. Then, by the preceding problem, there exist a countable
+collection of open intervals contained in $(a,b)$, $\{ (c_k, d_k) \}_{k=1}^{\infty}$
+such taht each point in $E$ belongs to infinitely many intervals in the collection
+and $\sum_{k=1}^{\infty} d_k - c_k < \infty$. Let $\{ (c_{k_i}, d_{k_i}) \}_{i=1}^{\infty}$
+be the sub-collection such that $x \in (c_{k_i}, d_{k_i})$ for all $i$. Then, there exist
+a finite sub-cover $\{(c_{k_i}, d_{k_i}) \}_{i=1}^{n}$ that $x$ belongs to. Since, $n$ is finite,
+as intersection of finite open sets is open, there exists $a_n$ such that 
+\eQb
+B(x,a_n) \in \cup_{k=1}^{n} (c_{k_i}, d_{k_i}),
+\eQe
+such that $(B,a_n)$ denotes the ball of radius $a_n$, centered at $x$. Observe that
+\eQb
+f(x + a_n) - f(x) &\geq& \sum_{i=1}^{n} l((c_{k_i}, d_{k_i}) \cap(x, x+a_n)) \\
+&=& na_n.
+\eQe
+It follows that
+\eQb
+\bar{D}f(x) &=& \lim_{h \to 0} \sup_{0< |t| \leq h} \{ \dfrac{f(x+t) - f(x)}{t} \} \\
+&=& \lim_{h \to 0} \sup_{0 < |t| \leq h} \dfrac{na_n}{a_n} \\
+&\geq& m.
+\eQe
+Since $m$ was arbitrary, we have that 
+\eQb
+\bar{D}f(x) = \infty,
+\eQe
+which is not finite, and by definition, $x$ is not differentiable at $x$. Therefore,
+$f$ fails to be differntiable at each point in $E$. $\qed$
+
 \end{solution}
 
 \bigskip
@@ -274,5 +303,13 @@ intervals in $(g(a), g(b))$. Therefore, from $(*)$ it follows that
 Since $\epsilon$ was arbitrary, we have shown that $f\circ g$ is absolutely continuous on
 $[a,b]$. $\qed$
 \end{solution}
+
+\bigskip
+
+\begin{question}
+\end{question}
+\begin{solution}
+\end{solution}
+
 
 \end{document}
