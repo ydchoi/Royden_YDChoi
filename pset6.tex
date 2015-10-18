@@ -191,14 +191,44 @@ $\qed$
 \begin{solution}
 \textbf{(a)}
 Let $\{x_n\}$ be a sequence from $X$, such that $x_n \to x$.
+Fix $\epsilon > 0$. As $x_n \to x$, there exists an index $N$, such that
+$\rho(x_n,x) < \epsilon$ for $n \geq N$. From the triangle inequality,
+it follows that
+\eQb
+|f(x_n) - f(x)| &=& |\text{dist}(x_n,E) - \text{dist}(x,E)| \\
+&=& |\inf\{\rho(x_n,y) \> | \> y \in E\} - 
+\inf\{\rho(x,y) \> | \> y \in E\}|  \\
+&\leq& \rho(x_n,x) \\
+&<& \epsilon,
+\eQe  
+for $n \geq N$.
+Since $\epsilon$ was arbitrary, $f(x_n) \to f(x)$.
+Therefore, by the sequential characterization of continuity,
+ $f$ is continuous. 
 
-Hence, $f(x_n) \to f(x)$. Therefore, $f$ is continuous. 
 
 \smallskip
 
 \textbf{(b)} 
+Let $x \in \overline{E}$. By the definition of closure, there exists
+a sequence $\{ x_n \}$ from $E$ such that $x_n \to x$. 
+Since $\text{dist}$ is continuous, we have
+$ \text{dist}(x_n,E) \to \text{dist}(x,E)$. As 
+$x_n \in E$, it follows that $\text{dist}(x_n,E) = 0$ 
+for all $n$. Therefore, we have $\text{dist}(x,E) = 0$. Hence, we obtain
+\eQb 
+\overline{E} &\subseteq&  \{x \in X \>\> | \>\>  \text{dist}(x,E) = 0\}. 
+\eQe
+Let $x \in \{ x \in X \>\> | \>\> \text{dist}(x,E) = 0\}$. Then, for 
+all $n$, there exists $y \in E$ such that $\rho(x,y) > \dfrac{1}{n}$,
+which we label as $x_n$. Then, $\{x_n \}$ is a sequence from $E$
+such that $x_n \to x$. Hence, $x \in \bar{E}$. Consequently,
+we obtain 
+\eQb 
+ \{x \in X \>\> | \>\>  \text{dist}(x,E) = 0\} &=& \overline{E}, 
+\eQe
+as desired. $\qed$
 
- 
 \end{solution}
 
 \bigskip
@@ -217,7 +247,6 @@ Hence, $f(x_n) \to f(x)$. Therefore, $f$ is continuous.
 Assume $A \cap B \neq \emptyset$. Then, there exists $x \in A \cap B$.
 Since $\rho(x,x) = 0$, we have $\text{dist}(A,B) = 0$. By contrapositive,
 we have shown that if $\text{dist}(A,B) > 0$, then $A \cap B = \emptyset$.
-Assume that $dist 
 \end{solution}
 
 \bigskip
