@@ -111,12 +111,25 @@ p_*(x,y) &=& \sum_{n=1}^{\infty} \dfrac{1}{2^n} \cdot
 \eQe
 
 Let $x,y,z \in X$. By the problem $6$ and the triangle inequality
-of each metric space $X_n$,  we have
+of each metric space $X_n$, which gives $p_n(x_n,z_n) \leq
+p_n(x_n,y_n) + p_n(y_n,z_n)$ for each $n$,  we have
 \eQb
 \dfrac{p_n(x_n,z_n)}{1 + p_n(x_n,z_n)} &\leq& 
 \dfrac{p_n(x_n,y_n)}{1 + p_n(x_n,y_n)} + 
-\dfrac{p_n(y_n,z_n)}{1 + p_n(y_n,z_n)} \\ 
+\dfrac{p_n(y_n,z_n)}{1 + p_n(y_n,z_n)}, \\ 
 \eQe 
+for all $n$. Hence, we have
+\eQb
+\sum_{n=1}^{\infty} \dfrac{p_n(x_n,z_n)}{1 + p_n(x_n,z_n)} &\leq& 
+\sum_{n=1}^{\infty} \dfrac{p_n(x_n,y_n)}{1 + p_n(x_n,y_n)} + 
+\dfrac{p_n(y_n,z_n)}{1 + p_n(y_n,z_n)}, \\ 
+\eQe
+which can be written as
+\eQb
+p_*(x,z) &\leq& p_*(x,y) + p_*(y,z).
+\eQe
+Therefore, we have shown that all required properties of a metric space
+hold for $(X,p_*)$. $(X,p_*)$ is a metric space. $\qed$
 
 \end{solution}
 
@@ -125,6 +138,7 @@ of each metric space $X_n$,  we have
 \begin{question}[9.20]
 \end{question}
 \begin{solution}
+Assume $E$ is open. 
 \end{solution}
 
 \bigskip
