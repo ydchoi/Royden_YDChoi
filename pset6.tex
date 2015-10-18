@@ -79,7 +79,62 @@ VI of Real Variables 2015 at NYU.
 \begin{question}[9.10]
 \end{question}
 \begin{solution}
+Let $\{X_n, \rho_n \}_{n=1}^{\infty}$ be a countable collection
+of metric spaces. We now define 
+$( \prod_{n=1}^{\infty} X_n , p_*) = (X,p_*)$ such that for $x,y \in 
+X$,
+\eQb
+p_*(x,y) &=& \sum_{n=1}^{\infty} \dfrac{1}{2^n} \cdot
+\dfrac{p_n(x_n,y_n)}{1+p_n(x_n,y_n)}. 
+\eQe
+First, we can show that $p_*$ is well-defined via
+comparison test with the series $\sum_{n=1}^{\infty} \dfrac{1}{2^n}$,
+as $0 \leq \dfrac{p_n(x_n,y_n)}{1+p_n(x_n,y_n)} \leq 1$ for all $n$. \\
+
+\smallskip
+
+As $p_n(x_n,y_n) \geq 0$ for all $n$, we have $p_*(x,y) \geq 0$ for all 
+$x,y \in X$. If $p_*(x,y) = 0$, then $p_n(x_n,y_n) = 0$ for all $n$. 
+As each $p_n$ is a metric space $x_n = y_n$ for all $n$. Therefore, 
+$x = y$. If $x = y$, then $x_n = y_n$ for all $n$. As each $p_n$
+is a metirc space, $p_n(x_n,
+y_n) = 0$ for all $n$. Therefore, $p_*(x,y) = 0$. \\
+
+\smallskip
+Since $p_n(x_n,y_n) = p_n(y_n,x_n)$ for all $n$, for $x,y \in X$, we
+\eQb
+p_*(x,y) &=& \sum_{n=1}^{\infty} \dfrac{1}{2^n} \cdot
+\dfrac{p_n(x_n,y_n)}{1+p_n(x_n,y_n)} \\
+&=& \sum_{n=1}^{\infty} \dfrac{1}{2^n} \cdot
+\dfrac{p_n(y_n,x_n)}{1+p_n(y_n,x_n)} \\
+&=& p_*(y,x).
+\eQe
+
+Let $x,y,z \in X$. By the problem $6$ and the triangle inequality
+of each metric space $X_n$,  we have
+\eQb
+\dfrac{p_n(x_n,z_n)}{1 + p_n(x_n,z_n)} \leq  
+\dfrac{p_n(x_n,y_n)}{1 + p_n(x_n,y_n)} + 
+\dfrac{p_n(y_n,z_n)}{1 + p_n(y_n,z_n)} \\ 
+\eQe 
+
 \end{solution}
+
+\bigskip
+
+\begin{question}[9.20]
+\end{question}
+\begin{solution}
+\end{solution}
+
+\bigskip
+
+\begin{question}[9.32]
+\end{question}
+\begin{solution}
+\end{solution}
+
+\bigskip
 
 
 \end{document} 
