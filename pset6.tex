@@ -138,7 +138,50 @@ hold for $(X,p_*)$. $(X,p_*)$ is a metric space. $\qed$
 \begin{question}[9.20]
 \end{question}
 \begin{solution}
-Assume $E$ is open. 
+Let $E$ be a subset of a metric space $X$, and let $\text{int}E$ 
+be the interior
+of $E$. We first show that $\text{int}E \subseteq E$.
+If $x \in X \setminus E$, then every ball of $x$ contains
+a point in $X\setminus E$. Hence, $x \in E$. Therefore, $\text{int}E 
+\subseteq E$. 
+
+Now, we wish to show that $\text{int}E$ is open. For the first case,
+assume that $E = \text{int}E$. 
+Let $ x \in \text{int} E$. Since $x$ is an interior point of 
+$E$, there exists an open ball $B(x,r)$ contained in $E$. 
+Since $E = \text{int}E$, the open ball $B(x,r)$ is contained in 
+$\text{int}E$ as well. Hence, $\text{int}E$ is open in this case.
+For the remaining case, assume that $E \setminus \text{int}E 
+\neq \emptyset$. Let $x \in \text{int}E$. Since $x$ is an interior
+point of $E$, there exists an open ball $B(x,r)$ contained in $E$.
+Suppose that there exists $y \in B(x,r) \cap E \setminus \text{int}E$.
+Then, we have $d(x,y) < r$. Consider $B(y,r - d(x,y))$, which is valid
+since $r - d(x,y) > 0$. 
+By the triangle inequality, for any point 
+$z \in B(y,r-d(x,y))$,
+\eQb
+d(x,z) &\leq& d(x,y) + d(y,z) \\
+&<& r. 
+\eQe
+Hence, $B(y,r-d(x,y))$ is an open ball contained in $B(x,r)$, which is
+again contained $E$, which contradicts
+the fact that $y \in E \setminus \text{int}E$. 
+Hence, $B(x,r)$ is contained in $\text{int}E$. Therefore, $\text{int}E$
+is open. As we covered all cases, $\text{int}E$ for any 
+subset $E$ of a metric space $X$ is open. \\
+
+\smallskip 
+
+Assume $E$ is open. Let $ x \in E$. As $E$ is open,
+there exists an open ball around $x$ contained in $E$. Therefore,
+$x \in \text{int}E$. Hence, $E \subseteq \text{int}E$. As we have
+$\text{int}E \subseteq E$ from above, we have shown that 
+$E = \text{int}E$. 
+
+Assume $E = \text{int}E$. Let $x \in E$. Then, as $E = \text{int}E$,
+$x \in \text{int}E$. By the definition of interior point, there exists
+an open ball around $x$ contained in $E$. Hence, $E$ is open.
+$\qed$
 \end{solution}
 
 \bigskip
@@ -146,9 +189,32 @@ Assume $E$ is open.
 \begin{question}[9.32]
 \end{question}
 \begin{solution}
+
+\end{solution}
+`
+\bigskip
+
+\begin{question}[9.43]
+\end{question}
+\begin{solution}
+
 \end{solution}
 
 \bigskip
+
+\begin{question}[9.72]
+\end{question}
+\begin{solution}
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[9.77]
+\end{question}
+\begin{solution}
+
+\end{solution}
 
 
 \end{document} 
