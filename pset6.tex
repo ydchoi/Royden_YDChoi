@@ -190,22 +190,30 @@ $\qed$
 \end{question}
 \begin{solution}
 \textbf{(a)}
-Let $\{x_n\}$ be a sequence from $X$, such that $x_n \to x$.
-Fix $\epsilon > 0$. As $x_n \to x$, there exists an index $N$, such that
-$\rho(x_n,x) < \epsilon$ for $n \geq N$. From the triangle inequality,
-it follows that
+We claim that $f$ is $1-$Lipschitz. Let $x,y \in \mathbb{R}$. Then, 
+by the triangle inequality, we have
 \eQb
-|f(x_n) - f(x)| &=& |\text{dist}(x_n,E) - \text{dist}(x,E)| \\
-&=& |\inf\{\rho(x_n,y) \> | \> y \in E\} - 
-\inf\{\rho(x,y) \> | \> y \in E\}|  \\
-&\leq& \rho(x_n,x) \\
-&<& \epsilon,
-\eQe  
-for $n \geq N$.
-Since $\epsilon$ was arbitrary, $f(x_n) \to f(x)$.
-Therefore, as $f$ satisfies the sequential characterization of continuity,
-$f$ is continuous. 
-
+\text{dist}(x,E) &\leq& d(x,e) \\
+&\leq& d(x,y) + d(y,e), \\
+\eQe
+for all $e \in E$. By taking the inf over $e \in E$
+on the RHS, we have
+\eQb
+\text{dist}(x,E) &\leq& d(x,y) + \text{dist}(y,E).
+\eQe
+Hence, it follows that 
+\eQb
+\text{dist}(x,E) - \text{dist}(y,E) &\leq& d(x,y).
+\eQe
+By symmetry, we also obtain that
+\eQb
+\text{dist}(y,E) - \text{dist}(x,E) &\leq& d(x,y).
+\eQe
+Hence, it follows that
+\eQb
+| \text{dist}(x,E) - \text{dist}(y,E)| &\leq& d(x,y).
+\eQe
+Therefore, $f$ is $1-$Lipshictz, thus continuous.
 
 \smallskip
 
