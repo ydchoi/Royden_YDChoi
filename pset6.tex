@@ -244,7 +244,26 @@ as desired. $\qed$
 \begin{question}[9.43]
 \end{question}
 \begin{solution}
-
+Let $f:(X,\rho ) \to (Y, \sigma)$,
+and $\{ u_n \}$ and 
+$\{ v_n \}$ be any two sequences in $X$ such that $\lim_{n\to \infty}
+\rho (u_n , v_n) = 0$. Assume that $f$ is uniformly continuous.
+Fix $\epsilon > 0$. Let $\delta > 0$ be the real number, that
+responds to the $\epsilon$-challenge of uniform continuity of $f$.
+Then, there exists an index $N$ such that 
+$\rho(u_n, v_n) < \delta$ for $n \geq N$. 
+By uniform continuity of $f$, it follows that
+\eQb
+\sigma(f(u_n),f(v_n)) &<& \epsilon,
+\eQe
+for $n \geq N$. Since $\epsilon$ was arbitrary, we have
+\eQb
+\underset{n \to \infty}{\lim} \sigma(f(u_n), f(v_n)) \to 0,
+\eQe
+as desired. Conversely, assume that $\lim_{n \to \infty}
+\sigma(f(u_n),f(v_n)) \to 0$. Fix $\epsilon > 0$. Then, there 
+exists an index $N$ such that $\sigma(f(u_n), f(v_n)) < \epsilon$,
+for $n \geq N$. 
 \end{solution}
 
 \bigskip
