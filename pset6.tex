@@ -235,7 +235,8 @@ we obtain
 \eQb 
  \{x \in X \>\> | \>\>  \text{dist}(x,E) = 0\} &=& \overline{E}, 
 \eQe
-as desired. $\qed$
+as desired. \\
+\hfill $\qed$ \\
 
 \end{solution}
 
@@ -258,12 +259,26 @@ By uniform continuity of $f$, it follows that
 \eQe
 for $n \geq N$. Since $\epsilon$ was arbitrary, we have
 \eQb
-\underset{n \to \infty}{\lim} \sigma(f(u_n), f(v_n)) \to 0,
+\underset{n \to \infty}{\lim} \sigma(f(u_n), f(v_n)) = 0,
 \eQe
-as desired. Conversely, assume that $\lim_{n \to \infty}
-\sigma(f(u_n),f(v_n)) \to 0$. Fix $\epsilon > 0$. Then, there 
-exists an index $N$ such that $\sigma(f(u_n), f(v_n)) < \epsilon$,
-for $n \geq N$. 
+as desired. 
+
+\smallskip
+
+Conversely, assume that $\lim_{n \to \infty}
+\sigma(f(u_n),f(v_n)) = 0$ holds for any two sequences 
+$\{u_n\}$ and $\{ v_n \}$ in $X$ such that $\lim_{n \to \infty}
+\rho(u_n,v_n) = 0$. 
+Suppose for sake of contradiction of $f$ is not uniform continuous. 
+Then, there exists $\epsilon > 0$, such that for any $\delta > 0$,
+$\rho(u,v) < \delta$ does not imply  $\sigma(f(u),f(v)) < \epsilon$. 
+Then, we can construct two sequence $\{u_n\}$, $\{v_n\}$, such that 
+$(u_n, v_n) < \dfrac{1}{n}$ and $\sigma(f(u_n),f(v_n)) \geq \epsilon$
+for all $n$. It follows that $\rho(u_n,v_n) \to 0$, but 
+$\sigma(f(u_n),f(v_n)) \nrightarrow 0$. This is a contradiction.
+Hence, $f$ is uniformly continuous. \\ 
+\hfill $\qed$  \\
+
 \end{solution}
 
 \bigskip
@@ -288,13 +303,18 @@ Hence, $\text{dist}(A,B) > 0$. $\qed$
 \begin{question}[9.77]
 \end{question}
 \begin{solution}
-Let $X$ and $Y$ be separable metric spaces. Consider the standard
+Let $(X,d_X)$ and $(Y,d_Y)$ be separable metric spaces. Consider the standard
 product metric on $X \times Y$. Then, there exist 
 a countable dense subset $D_X$ in $X$ and countable dense 
 subset $D_Y$ in $Y$. Observe that $D_X \times D_Y$ is countable. 
 We claim that $D_X \times D_Y$ is a dense
 subset in $X \times Y$. Consider an open nonempty subset $O$ of $X \times Y$.
-$O = O_X \times O_Y$, where $O_X$ and $O_Y$ open subsets of O. 
+Let $(x^*,y^*) \in O$. Since $O$ is open, there exists $\epsilon > 0$, such that
+$B((x^*,y^*),\epsilon) \subseteq O$. Consider the set $B_X$ defined by
+$\{ (x, y^*) | d_X(x,x^*) < \dfrac{\epsilon}{2} \}$. 
+Observe that by triangle inequality, $B_X$ is contained
+in $O$, and by the desnity of $D_X$ in $X$, there exists a point $x^D 
+\in D_X \cap B_X$. 
 Therefore, $X \times Y$ is separable. $\qed$
 \end{solution}
 
