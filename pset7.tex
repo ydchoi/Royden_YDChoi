@@ -1,0 +1,338 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{nips14submit_e,times}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
+
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\def\eQb#1\eQe{\begin{eqnarray*}#1\end{eqnarray*}}
+\def\eQnb#1\eQne{\begin{eqnarray}#1\end{eqnarray}}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\pb}[0]{\pagebreak}
+
+
+\def\Qb#1\Qe{\begin{question}#1\end{question}}
+\def\Sb#1\Se{\begin{solution}#1\end{solution}}
+
+\newenvironment{claim}[1]{\par\noindent\underline{Claim:}\space#1}{}
+\newtheoremstyle{quest}{\topsep}{\topsep}{}{}{\bfseries}{}{ }{\thmname{#1}\thmnote{ #3}.}
+\theoremstyle{quest}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{question}{Question}
+\newtheorem*{preposition}{Preposition}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{challengeproblem}{Challenge Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+\usepackage{verbatimbox}
+\usepackage{listings}
+
+\title{Real Variables: \\
+Problem Set VI}
+
+
+\author{
+Youngduck Choi \\
+Courant Institute of Mathematical Sciences \\
+New York University \\
+\texttt{yc1104@nyu.edu} \\
+}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\nipsfinalcopy % Uncomment for camera-ready version
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+This work contains solutions to the problem set 
+VI of Real Variables 2015 at NYU.
+\end{abstract}
+
+\section{Solutions}
+
+\begin{question}[9.10]
+\end{question}
+\begin{solution}
+Let $\{X_n, \rho_n \}_{n=1}^{\infty}$ be a countable collection
+of metric spaces. We now define 
+$( \prod_{n=1}^{\infty} X_n , p_*) = (X,p_*)$ such that for $x,y \in 
+X$,
+\eQb
+p_*(x,y) &=& \sum_{n=1}^{\infty} \dfrac{1}{2^n} \cdot
+\dfrac{p_n(x_n,y_n)}{1+p_n(x_n,y_n)}. 
+\eQe
+First, we can show that $p_*$ is well-defined via
+comparison test with the series $\sum_{n=1}^{\infty} \dfrac{1}{2^n}$,
+as $0 \leq \dfrac{p_n(x_n,y_n)}{1+p_n(x_n,y_n)} \leq 1$ for all $n$. \\
+
+\smallskip
+
+As $p_n(x_n,y_n) \geq 0$ for all $n$, we have $p_*(x,y) \geq 0$ for all 
+$x,y \in X$. If $p_*(x,y) = 0$, then $p_n(x_n,y_n) = 0$ for all $n$. 
+As each $p_n$ is a metric space $x_n = y_n$ for all $n$. Therefore, 
+$x = y$. If $x = y$, then $x_n = y_n$ for all $n$. As each $p_n$
+is a metirc space, $p_n(x_n,
+y_n) = 0$ for all $n$. Therefore, $p_*(x,y) = 0$. \\
+
+\smallskip
+Since $p_n(x_n,y_n) = p_n(y_n,x_n)$ for all $n$, for $x,y \in X$, we
+\eQb
+p_*(x,y) &=& \sum_{n=1}^{\infty} \dfrac{1}{2^n} \cdot
+\dfrac{p_n(x_n,y_n)}{1+p_n(x_n,y_n)} \\
+&=& \sum_{n=1}^{\infty} \dfrac{1}{2^n} \cdot
+\dfrac{p_n(y_n,x_n)}{1+p_n(y_n,x_n)} \\
+&=& p_*(y,x).
+\eQe
+
+Let $x,y,z \in X$. By the problem $6$ and the triangle inequality
+of each metric space $X_n$, which gives $p_n(x_n,z_n) \leq
+p_n(x_n,y_n) + p_n(y_n,z_n)$ for each $n$,  we have
+\eQb
+\dfrac{p_n(x_n,z_n)}{1 + p_n(x_n,z_n)} &\leq& 
+\dfrac{p_n(x_n,y_n)}{1 + p_n(x_n,y_n)} + 
+\dfrac{p_n(y_n,z_n)}{1 + p_n(y_n,z_n)}, \\ 
+\eQe 
+for all $n$. Hence, we have
+\eQb
+\sum_{n=1}^{\infty} \dfrac{p_n(x_n,z_n)}{1 + p_n(x_n,z_n)} &\leq& 
+\sum_{n=1}^{\infty} \dfrac{p_n(x_n,y_n)}{1 + p_n(x_n,y_n)} + 
+\dfrac{p_n(y_n,z_n)}{1 + p_n(y_n,z_n)}, \\ 
+\eQe
+which can be written as
+\eQb
+p_*(x,z) &\leq& p_*(x,y) + p_*(y,z).
+\eQe
+Therefore, we have shown that all required properties of a metric space
+hold for $(X,p_*)$. $(X,p_*)$ is a metric space. $\qed$
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[9.20]
+\end{question}
+\begin{solution}
+Let $E$ be a subset of a metric space $X$, and let $\text{int}E$ 
+be the interior
+of $E$. We first show that $\text{int}E \subseteq E$.
+If $x \in X \setminus E$, then every ball of $x$ contains
+a point in $X\setminus E$. Hence, $x \in E$. Therefore, $\text{int}E 
+\subseteq E$. 
+
+Now, we wish to show that $\text{int}E$ is open. For the first case,
+assume that $E = \text{int}E$. 
+Let $ x \in \text{int} E$. Since $x$ is an interior point of 
+$E$, there exists an open ball $B(x,r)$ contained in $E$. 
+Since $E = \text{int}E$, the open ball $B(x,r)$ is contained in 
+$\text{int}E$ as well. Hence, $\text{int}E$ is open in this case.
+For the remaining case, assume that $E \setminus \text{int}E 
+\neq \emptyset$. Let $x \in \text{int}E$. Since $x$ is an interior
+point of $E$, there exists an open ball $B(x,r)$ contained in $E$.
+Suppose that there exists $y \in B(x,r) \cap E \setminus \text{int}E$.
+Then, we have $d(x,y) < r$. Consider $B(y,r - d(x,y))$, which is valid
+since $r - d(x,y) > 0$. 
+By the triangle inequality, for any point 
+$z \in B(y,r-d(x,y))$,
+\eQb
+d(x,z) &\leq& d(x,y) + d(y,z) \\
+&<& r. 
+\eQe
+Hence, $B(y,r-d(x,y))$ is an open ball contained in $B(x,r)$, which is
+again contained $E$, which contradicts
+the fact that $y \in E \setminus \text{int}E$. 
+Hence, $B(x,r)$ is contained in $\text{int}E$. Therefore, $\text{int}E$
+is open. As we covered all cases, $\text{int}E$ for any 
+subset $E$ of a metric space $X$ is open. \\
+
+\smallskip 
+
+Assume $E$ is open. Let $ x \in E$. As $E$ is open,
+there exists an open ball around $x$ contained in $E$. Therefore,
+$x \in \text{int}E$. Hence, $E \subseteq \text{int}E$. As we have
+$\text{int}E \subseteq E$ from above, we have shown that 
+$E = \text{int}E$. 
+
+Assume $E = \text{int}E$. Let $x \in E$. Then, as $E = \text{int}E$,
+$x \in \text{int}E$. By the definition of interior point, there exists
+an open ball around $x$ contained in $E$. Hence, $E$ is open.
+$\qed$
+\end{solution}
+
+\bigskip
+
+\begin{question}[9.32]
+\end{question}
+\begin{solution}
+\textbf{(a)}
+We claim that $f$ is $1-$Lipschitz. Let $x,y \in \mathbb{R}$. Then, 
+by the triangle inequality, we have
+\eQb
+\text{dist}(x,E) &\leq& d(x,e) \\
+&\leq& d(x,y) + d(y,e), \\
+\eQe
+for all $e \in E$. By taking the inf over $e \in E$
+on the RHS, we have
+\eQb
+\text{dist}(x,E) &\leq& d(x,y) + \text{dist}(y,E).
+\eQe
+Hence, it follows that 
+\eQb
+\text{dist}(x,E) - \text{dist}(y,E) &\leq& d(x,y).
+\eQe
+By symmetry, we also obtain that
+\eQb
+\text{dist}(y,E) - \text{dist}(x,E) &\leq& d(x,y).
+\eQe
+Hence, it follows that
+\eQb
+| \text{dist}(x,E) - \text{dist}(y,E)| &\leq& d(x,y).
+\eQe
+Therefore, $f$ is $1-$Lipshictz, thus continuous.
+
+\smallskip
+
+\textbf{(b)} 
+Let $x \in \overline{E}$. By the definition of closure, there exists
+a sequence $\{ x_n \}$ from $E$ such that $x_n \to x$. 
+Since $\text{dist}$ is continuous, we have
+$ \text{dist}(x_n,E) \to \text{dist}(x,E)$. As 
+$x_n \in E$, it follows that $\text{dist}(x_n,E) = 0$ 
+for all $n$. Therefore, we have $\text{dist}(x,E) = 0$. Hence, we obtain
+\eQb 
+\overline{E} &\subseteq&  \{x \in X \>\> | \>\>  \text{dist}(x,E) = 0\}. 
+\eQe
+Let $x \in \{ x \in X \>\> | \>\> \text{dist}(x,E) = 0\}$. Then, for 
+all $n$, there exists $y \in E$ such that $\rho(x,y) > \dfrac{1}{n}$,
+which we label as $x_n$. Then, $\{x_n \}$ is a sequence from $E$
+such that $x_n \to x$. Hence, $x \in \bar{E}$. Consequently,
+we obtain 
+\eQb 
+ \{x \in X \>\> | \>\>  \text{dist}(x,E) = 0\} &=& \overline{E}, 
+\eQe
+as desired.
+\hfill $\qed$ \\
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[9.43]
+\end{question}
+\begin{solution}
+Let $f:(X,\rho ) \to (Y, \sigma)$,
+and $\{ u_n \}$ and 
+$\{ v_n \}$ be any two sequences in $X$ such that $\lim_{n\to \infty}
+\rho (u_n , v_n) = 0$. Assume that $f$ is uniformly continuous.
+Fix $\epsilon > 0$. Let $\delta > 0$ be the real number, that
+responds to the $\epsilon$-challenge of uniform continuity of $f$.
+Then, there exists an index $N$ such that 
+$\rho(u_n, v_n) < \delta$ for $n \geq N$. 
+By uniform continuity of $f$, it follows that
+\eQb
+\sigma(f(u_n),f(v_n)) &<& \epsilon,
+\eQe
+for $n \geq N$. Since $\epsilon$ was arbitrary, we have
+\eQb
+\underset{n \to \infty}{\lim} \sigma(f(u_n), f(v_n)) = 0,
+\eQe
+as desired. 
+
+\smallskip
+
+Conversely, assume that $\lim_{n \to \infty}
+\sigma(f(u_n),f(v_n)) = 0$ holds for any two sequences 
+$\{u_n\}$ and $\{ v_n \}$ in $X$ such that $\lim_{n \to \infty}
+\rho(u_n,v_n) = 0$. 
+Suppose for sake of contradiction of $f$ is not uniform continuous. 
+Then, there exists $\epsilon > 0$, such that for any $\delta > 0$,
+$\rho(u,v) < \delta$ does not imply  $\sigma(f(u),f(v)) < \epsilon$. 
+Then, we can construct two sequence $\{u_n\}$, $\{v_n\}$, such that 
+$(u_n, v_n) < \dfrac{1}{n}$ and $\sigma(f(u_n),f(v_n)) \geq \epsilon$
+for all $n$. It follows that $\rho(u_n,v_n) \to 0$, but 
+$\sigma(f(u_n),f(v_n)) \nrightarrow 0$. This is a contradiction.
+Hence, $f$ is uniformly continuous. \hfill $\qed$  \\
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[9.72]
+\end{question}
+\begin{solution}
+Assume $A \cap B \neq \emptyset$. Then, there exists $x \in A \cap B$.
+Since $\rho(x,x) = 0$, we have $\text{dist}(A,B) = 0$. By contrapositive,
+we have shown that if $\text{dist}(A,B) > 0$, then $A \cap B = \emptyset$. \\
+
+\smallskip
+
+Assume $\text{dist}(A,B) = 0$. Then, we can construct two sequences 
+$\{u_n\}$ and $\{v_n\}$ such that  $u_n \in A$
+and $v_n \in B$, and $\rho(u_n, v_n) < \frac{1}{n}$. Since
+$A$ is compact there exists a subsequence $\{u_{n_k}\}$ that converges 
+to a point in $A$.
+We denote the point of convergence as $u$. Then, by construction, 
+it follows that
+$\{ v_{n_k}\} \to u$. Since $B$ is closed, and $u$ is a limit 
+of a sequence from $B$, $u \in B$. Hence, $u \in A \cap B$, and
+$A \cap B \neq \emptyset$. By contrapositive, if $A \cap B = \emptyset$,
+then $\text{dist}(A,B) > 0$. \hfill $\qed$
+
+\end{solution}
+
+\pagebreak
+
+\begin{question}[9.77]
+\end{question}
+\begin{solution}
+Let $(X,d_X)$ and $(Y,d_Y)$ be separable metric spaces. Consider the standard
+product metric on $X \times Y$. Then, there exist 
+a countable dense subset $D_X$ in $X$ and countable dense 
+subset $D_Y$ in $Y$. Observe that $D_X \times D_Y$ is countable. 
+We claim that $D_X \times D_Y$ is a dense
+subset in $X \times Y$. Consider an open nonempty subset $O$ of $X \times Y$.
+Let $(x_0,y_0) \in O$. Since $O$ is open, there exists $\epsilon > 0$, 
+such that
+\eQb
+B((x_0,y_0),\epsilon) &=& 
+\{(x,y) \> | \> (d_X(x,x_0)^2 + d_Y(x,x_0)^2)^{\frac{1}{2}} \} \subseteq O. 
+\eQe
+Since $D_X$ is dense in $X$ and $D_Y$ is dense in $Y$, there exist 
+$x^* \in D_X$ and $y^* \in D_Y$, such that
+\eQb
+d_X(x^*, x_0) < \dfrac{\epsilon}{\sqrt{2}} \\
+d_Y(y^*, y_0) < \dfrac{\epsilon}{\sqrt{2}}. \\ 
+\eQe
+By substitution, we see that $(x^*,y^*) \in B((x_0,y_0),\epsilon)$
+and subsequently in $O$. As, $O$ was an arbitrary open subset of $X \times Y$,
+we have shown that $X \times Y$ is separable. 
+\hfill $\qed$
+\end{solution}
+
+
+\end{document} 
