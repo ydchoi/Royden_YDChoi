@@ -84,30 +84,62 @@ VIII of Real Variables 2015 at NYU.
 \end{figure}
 \end{question}
 \begin{solution}
+Assume (i). Let $E$ be a subset of $X$. 
+Assume that $E$ is open in $X$. As $f^{-1}$ is continuous, $f(E)$
+is open. Conversely, assume that $f(E)$ is open. as $f$ is continuous,
+$E$ is open in $X$. Therefore, (ii) holds.
+Assume that (ii) holds. Then, for
+any open set $O$ in $X$, $f(O)$ is open. As $f = {f^{-1}}^{-1}$,
+$f^{-1}$ is continuous. 
+Let $O$ be an open set in $Y$. As $f$ is surjective, there exists 
+a subset $E$ of $X$ that $f(E) = O$. By (ii), $E$ is open. Hence,
+$f^{-1}(O)$ is open. Hence $f$ is continuous. $f$ is a homeomorphism. 
+Therefore, (i) and (ii) are equivalent.  
+
+\bigskip
+
+Assume (ii), and let $E$ be a subset of $X$. $E$ being closed is 
+equivalent to $X \setminus E$ being open. Since $f$ is bijective
+$f(X) = Y$, and by (ii), $X \setminus E$ being open is equivalent
+to $f(X \setminus E)$, which equals, $Y \setminus E$, being open. 
+This is again equivalent to $E$ being closed. Hence (ii) and (iii)
+are equivalent. 
+ 
+\bigskip
+
+So far, we have shown that (i), (ii), and (iii) are equivalent. We now 
+show that (i) implies (iv) and (iv) implies (iii). 
 Assume (i). We claim that $f(\bar{A}) \subseteq \overline{f(A)}$. Let
-$y \in f(\bar{A})$. Then, there exists $x \in \bar{A}$, such that
+$y \in f(\bar{A})$. Then, as $f$ is bijective, there exists 
+an unique $x \in \bar{A}$, such that
 $f(x) = y$. Since $f$ is homeomorphic, it is continuous. 
 By continuity of $f$ at $x$, for any neighborhood $O$
 of $y$, there exists a neighborhood $U$ of $x$, such that $f(U) \subseteq 
 O$. As $x \in \bar{A}$, $U \cap A \neq \emptyset$, and $f(U) \cap f(A) 
 \neq \emptyset$. Since $f(U) \subseteq O$, $f(A) \cap O \neq \emptyset$. 
 Hence, $y \in \overline{f(A)}$. We now claim that
-$\overline{f(A)} \subseteq f(\bar{A})$. Let $y \in \overline{f(A)}$.  
-
-
-\smallskip
-
-Assume $(ii)$, and let $E$ be a closed subset of $X$. We have $X \setminus E$
-is open. By $(ii)$, $f(X\setminus E)$ is open. As $f$ is surjective, 
-we have $f(X) = Y$. It follows that
-\eQb
-f(X\setminus E) &=& f(X) \setminus f(E) \\
-&=& Y \setminus f(E). 
-\eQe
-Since $Y \setminus f(E)$ is open, $f(E)$ is closed. 
+$\overline{f(A)} \subseteq f(\bar{A})$. Let $x \in \overline{f(A)}$.
+As $f^{-1}$ is bijective, there exists an unique $y \in X$ such that
+$y = f^{-1}(x)$ By the continuity of $f^{-1}$ at $x$, for any neighborhood 
+O of $y$, there exists a neighborhood $U$ of $x$ such that $f^{-1}(U)
+\subseteq O$. As $x \in \overline{f(A)}$, $U \cap f(A) \neq \emptyset$,
+and $f^{-1}(U) \cap A \neq \emptyset$. Since $f^{-1}(U) \subseteq
+O$, we have $O \cap A \neq \emptyset$. Hence, $y \in \overline{A}$. 
+Hence, $x \in f(\overline{A})$. Therefore, we have shown that
+$f(\bar{A}) = \overline{f(A)}$. 
 
 \smallskip
 
+Assume (iv). Let $E$ be a subset of $X$. Assume that $E$ is closed in $X$.
+Then, $E = \overline{E}$. Consequently, by (iv), it follows that $f(E) = f(
+\overline{E}) = \overline{f(E)}$. Since, $f(E) = \overline{f(E)}$, 
+$f(E)$ is closed.  Now, assume that $f(E)$ is closed. Then, by (iv), 
+it follows that $f(E) = \overline{f(E)} = f(\overline{E})$. Since $f$
+is injective, $E = \overline{E}$ holds. Therefore, (iv) implies (iii). 
+
+\bigskip
+
+We have shown that all four statements are equivalent. \hfill $\qed$
 \end{solution}
 
 \newpage
