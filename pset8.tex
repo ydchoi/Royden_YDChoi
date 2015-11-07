@@ -240,12 +240,36 @@ which is a contradiction. Hence, $(X,\mathscr{T}_2)$ is not compact.
 Fix $\epsilon > 0$.
 Define $X_n$ by
 \eQb
-$X_n &=& \{ x \in X \> | \> 
-f_n(x) < \epsilon \},
+X_n &=& \{ x \in X \> | \> 
+f_n(x) < \epsilon \} ,
 \eQe
-for all $n \in \mathbb{N}$. As $\{f_n(x)\}$ decreases to 0 monotonically,
-$\cup_{n=1}^{\infty} X_n = X$. 
-
+for all $n \in \mathbb{N}$. As $\{f_n(x)\}$ decreases to 0 monotonically
+for all $x \in X$,
+we have $\bigcup_{n=1}^{\infty} X_n = X$ and $\{ X_n \}$ is ascending.
+Re-writing $X_n$s in terms of pre-images gives  
+\eQb
+X &=& \bigcup_{n=1}^{\infty} {f_n}^{-1}(B(0,\epsilon )). \\
+\eQe
+As $f_n$ is continuous for all $n$, each $f_{n}^{-1}(B(0,\epsilon ))$
+is open. Therefore, $\{ f_n^{-1}(B(0,\epsilon )) \}$ 
+is a countable open cover of $X$. As $X$ is countably compact and, 
+there exists a finite subcover of the open cover, yielding
+\eQb
+X &=& \bigcup_{i=1}^{K} \{{f_{n_i}}^{-1}(B(0,\epsilon )). \\ 
+\eQe
+Since the pre-images form an ascending collection, we have
+\eQb
+X &=& f_{n_K}^{-1}(B(0,\epsilon )) \\
+&=& \{ x \in X \> | \> f_{n_K}(x) < \epsilon \}. \\
+\eQe
+Again as $\{f_n(x) \}$ decreases $0$ monotonically for all $x \in X$,
+it follows that
+\eQb
+X &=& \{ x \in X \> | \> f_{j}(x) < \epsilon \> \text{ for } j \geq n_K \}.
+\eQe 
+Since $\epsilon$ was arbitrary, $\{f_n\}$ converges to $O$ uniformly. 
+\hfill $\qed$
+ 
 
 \end{solution}
 
