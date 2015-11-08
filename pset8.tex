@@ -203,10 +203,14 @@ be a topology for $X$, that is strictly weaker than $\mathscr{T}$. It follows
 that there exists a subset $E$ of $X$ such that it is open in 
 $(X,\mathscr{T})$, but not open in $(X,\mathscr{T}_1)$. Furthermore, 
 $X \setminus E$ is closed in $(X,\mathscr{T})$, but not closed in
-$(X\mathscr{T}_1)$. As $(X,\mathscr{T})$ is compact, $X \setminus E$
-is compact as a subspace.
-Since $\mathscr{T}_1$ is weaker than $\mathscr{T}$, 
-$X\setminus E$ is compact. 
+$(X\mathscr{T}_1)$. As $(X,\mathscr{T})$ is compact and $X \setminus E$
+is closed in $(X,\mathscr{T})$, $(X\setminus E, \mathscr{T}_{X\setminus E})$,
+where $\mathscr{T}_{X\setminus E}$ denotes the standard subspace topology 
+with respect to $X \setminus E$, is compact. Since for any arbitrary set
+$A,B$ and $C$, if $A \subseteq B$ then $A \cap C \subseteq B \ca C$,
+the subspace topology $(X\setminus E, \mathscr{T_1}_{X \setminus E})$ 
+is weaker than $(X\setmimus E \mathscr{T}_{X \setminus E})$. Therefore,
+by (i), $(X \setminus E \mathscr{T_1}_{X \setminus E}$ is compact. 
 Suppose for sake of contradiction that $(X,\mathscr{T}_1)$
 is Hausdorff. It implies that $X \setminus E$ is closed in
 $(X,\mathscr{T})$, which is a contradiction. Hence, $(X,\mathscr{T}_1)$
@@ -245,7 +249,7 @@ f_n(x) < \epsilon \} ,
 \eQe
 for all $n \in \mathbb{N}$. As $\{f_n(x)\}$ decreases to 0 monotonically
 for all $x \in X$,
-we have $\bigcup_{n=1}^{\infty} X_n = X$ and $\{ X_n \}$ is ascending.
+we have $\bigcup_{n=1}^{\infty} X_n = X$, and $\{ X_n \}$ is ascending.
 Re-writing $X_n$s in terms of pre-images gives  
 \eQb
 X &=& \bigcup_{n=1}^{\infty} {f_n}^{-1}(B(0,\epsilon )). \\
@@ -267,7 +271,7 @@ it follows that
 \eQb
 X &=& \{ x \in X \> | \> f_{j}(x) < \epsilon \> \text{ for } j \geq n_K \}.
 \eQe 
-Since $\epsilon$ was arbitrary, $\{f_n\}$ converges to $O$ uniformly. 
+Since $\epsilon$ was arbitrary, $\{f_n\}$ converges to $0$ uniformly. 
 \hfill $\qed$
  
 
@@ -295,6 +299,11 @@ Since $\epsilon$ was arbitrary, $\{f_n\}$ converges to $O$ uniformly.
 \end{figure}
 \end{question}
 \begin{solution}
+Let $X$ be a compact topological space, and $I$ be a closed, bounded
+interval. Consider $X \times I$, which can be written as $X \times [a,b]$.
+Let $\mathscr{U}$ be the open cover of $X \times [a,b]$. Let $t \in [a,b]$
+be the smallest value such that $X \times [a,t']$ for any $t' \in
+[a,t)$ can be covered by a finite number of sets in $\mathscr{U}$. 
 \end{solution}
 
 
