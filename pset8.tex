@@ -152,10 +152,17 @@ We have shown that all four statements are equivalent. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution}
-Let $Y$ be a topological space that is homeomorphic to $X$, and
-$\phi:X \to Y$ be a bijective map such that $\phi^{-1}$ is continuous.
-Let $g$ be a continuous real-valued function, defined on $Y$. Consider
-$g(Y)$. We wish to show that $\inf_{y \in Y} g(y) \in g(Y)$.  
+Let $Y$ be a topological space that is homeomorphic to $X$. 
+Let $g$ be a continuous real-valued function, defined on $Y$.
+As $X$ and $Y$ are homeomorhpic, there exists a continuous bijection
+from $X$ to $Y$, which we denote as $\phi$. Observe that 
+$g \circ \phi$ is a real-valued function, defined on $X$. Since $\phi$
+and $g$ are continuous, and composition of continuous map is continuous,
+we have $g \circ \phi$ is continuous on $X$. Therefore, by the given, 
+$g \circ \phi(X)$ attains a minimum value. Since $\phi(X) = Y$, we have
+$g \circ \phi(X) = g(Y)$. Hence, $g(Y)$ attains a minimum value. $g$
+was considered to be an arbitrary, continuous function. Therefore,
+all continuous function on $Y$ attains a minimum value. \hfill $\qed$ 
 
 \end{solution}
 
@@ -311,6 +318,22 @@ Since $\epsilon$ was arbitrary, $\{f_n\}$ converges to $0$ uniformly.
 \end{figure}
 \end{question}
 \begin{solution}
+Let $\mathscr{T}_n$ be the topology on $X_n$, induced by 
+the metric $p_n$ on $X_n$. Note that by the problem 15, the
+metric ${p_n}^{*}$ on $X_n$,
+which is defined by ${p_n}^{*}(x,y) = \dfrac{p(x,y)}{1+p(x,y)}$,
+also induce $\mathscr{T}_n$ as well. Let $\mathscr{T}$ be the
+product topology defined on $\{ (X_n, T_n )\}$. Let $(X,\mathscr{S})$
+be the topological space, induced by the metric space $(X,p)$, which
+we have shown indeed to be a metric space in the previous problem set.
+We claim that $\mathscr{T} = \mathscr{S}$.
+\\
+\smallskip
+\\
+Let $U \in \mathscr{T}$. Then,  
+
+
+ 
 \end{solution}
 
 \pagebreak
@@ -325,7 +348,19 @@ Since $\epsilon$ was arbitrary, $\{f_n\}$ converges to $0$ uniformly.
 \begin{solution}
 Let $X$ be a compact topological space, and $I$ be a closed, bounded
 interval. Consider $X \times I$, which can be written as $X \times [a,b]$.
-Let $\mathscr{U}$ be the open cover of $X \times [a,b]$. Let $t \in [a,b]$
+Let $\mathscr{U}$ be the open cover of $X \times [a,b]$. Define a set $S$
+by 
+\eQb
+S = \{ t \in [a,b] \> | \> X \times [a,t] \> \text{ can be covered 
+a finite number of the sets of } \> \mathscr{U} \}. 
+\eQe
+We first show that $a \in S$, and $S$ is nonempty. Consider $t = a$,
+which corresponds to $X \times \{ a \}$. Since $S$ is nonempty, and 
+is bounded above by $b$, by the completness of $\mathbb{R}$, E has 
+a supremum. Let $c = \sup E$. Since $\mathscr{U}$ is an open 
+cover of $X \times [a,b]$, and $c \in [a,b]$ there exists $O$
+su
+ 
 be the smallest value such that $X \times [a,t']$ for any $t' \in
 [a,t)$ can be covered by a finite number of sets in $\mathscr{U}$. 
 \end{solution}
