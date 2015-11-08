@@ -169,6 +169,27 @@ $g(Y)$. We wish to show that $\inf_{y \in Y} g(y) \in g(Y)$.
 \end{figure}
 \end{question}
 \begin{solution} 
+Before preceeding to the main problem, we state the following preposition: \\ 
+Let $(X,\mathscr{T})$ be a topological space, and $(X,\mathscr{T}_1)$ be
+a topological space such that $\mathscr{T}_1$ is weaker or stronger
+than $\mathscr{T}$.
+Let $E$ be a subset of $X$. Then, the subspace topology of
+$\mathscr{T}_1$ on $E$ is still weaker or stronger 
+than the subspace topology of $\mathscr{T}$ on $E$. \\
+ 
+By definition of subspace topology, we have
+\eQb
+\mathscr{T}_{E} = \{ E \cap U \> | \> U \in \mathscr{T} \} \\
+{\mathscr{T}_{1}}_{E} = \{ E \cap U \> | \> U \in \mathscr{T}_1 \}. \\
+\eQe 
+Let $A \in {\mathscr{T}_{1}}_{E}$. Then, $A = E \cap U$ for some $U \in
+\mathscr{T}_1$. As $\mathscr{T}_1 \subseteq \mathscr{T}$, $A = E \cap U$,
+and $U \in \mathscr{T}$. Hence, $A \in \mathscr{T}_E$. the subpsace topology
+of $\mathscr{T}_1$ on $E$ is still weaker than the subspace toplogy 
+of $\mathscr{T}_1$ on $E$. The result for stronger relation can be proven
+in the same way. 
+
+
 \textbf{(i)} 
 Let $\mathscr{T}_1$ be a topology for $X$, that is weaker than $\mathscr{T}$.
 It follows that $\mathscr{T}_1 \subseteq \mathscr{T}$. Let $E$ be
@@ -206,12 +227,11 @@ $X \setminus E$ is closed in $(X,\mathscr{T})$, but not closed in
 $(X\mathscr{T}_1)$. As $(X,\mathscr{T})$ is compact and $X \setminus E$
 is closed in $(X,\mathscr{T})$, $(X\setminus E, \mathscr{T}_{X\setminus E})$,
 where $\mathscr{T}_{X\setminus E}$ denotes the standard subspace topology 
-with respect to $X \setminus E$, is compact. Since for any arbitrary set
-$A,B$ and $C$, if $A \subseteq B$ then $A \cap C \subseteq B \ca C$,
-the subspace topology $(X\setminus E, \mathscr{T_1}_{X \setminus E})$ 
-is weaker than $(X\setmimus E \mathscr{T}_{X \setminus E})$. Therefore,
-by (i), $(X \setminus E \mathscr{T_1}_{X \setminus E}$ is compact. 
-Suppose for sake of contradiction that $(X,\mathscr{T}_1)$
+with respect to $X \setminus E$, is compact. By the stated preposition
+on the top, $(X \setminus E , \mathscr{T}_{X \setminus E}$  
+is weaker than $(X\setminus E , {\mathscr{T}_1}_{X \setminus E})$. Therefore,
+by (i), $(X \setminus E, \mathscr{T_1}_{X \setminus E})$ is compact. 
+Suppose for sake of contradiction that $(X, \mathscr{T}_1)$
 is Hausdorff. It implies that $X \setminus E$ is closed in
 $(X,\mathscr{T})$, which is a contradiction. Hence, $(X,\mathscr{T}_1)$
 is not Hausdorff. \hfill $\qed$
@@ -223,10 +243,14 @@ $\mathscr{T}$. It follows that there exists a subset $E$ of $X$ such that
 it is open in $(X,\mathscr{T}_2)$, but not open in $(X,\mathscr{T})$. 
 Furthermore, $X\setminus E$ is closed in $(X,\mathscr{T}_2)$, but not
 closed in $(X,\mathscr{T})$. Suppose for sake of contradiction that 
-$(X,\mathscr{T}_2)$ is compact. Then, as $X \setminus E$ is closed in $(X,
-\mathscr{T}_2)$ is compact. As $\mathscr{T}$ is weaker than 
-$\mathscr{T}_2$, $X \setminus E$ is compact in $(X,\mathscr{T})$. As
-$(X\mathscr{T})$ is Hausdorff, $X\setminus E$ is closed in $(X,\mathscr{T})$,
+$(X,\mathscr{T}_2)$ is compact. Then, as $X \setminus E$ is closed in
+$\mathscr{T}_2$,  
+$X\setminus E$ is compact as a subspace topology of $\mathscr{T}_2$ on 
+$X \setminus E$. 
+As $\mathscr{T}$ is weaker than $\mathscr{T}_2$, by the stated preposition 
+on the top, $X \setminus E$ is compact in $(X,\mathscr{T})$. As
+$(X\mathscr{T})$ is Hausdorff and compact now, 
+$X\setminus E$ is closed in $(X,\mathscr{T})$,
 which is a contradiction. Hence, $(X,\mathscr{T}_2)$ is not compact. 
 \hfill $\qed$ 
 \end{solution}
