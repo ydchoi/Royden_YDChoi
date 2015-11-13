@@ -76,7 +76,25 @@ IX of Real Variables 2015 at NYU.
 
 \section{Solutions}
 
-\begin{question}[1. Royden 12-6]
+\begin{question}[1. Royden 12-5]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{12-5.png}
+\end{figure}
+\end{question}
+\begin{solution}
+Consider
+\eQb
+\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
+\text{ is open in} \mathbb{R} \}.
+\eQe
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[2. Royden 12-6]
 \hfill
 \begin{figure}[h!]
   \centering
@@ -93,5 +111,116 @@ Consider
 \end{solution}
 
 \bigskip
+
+\begin{question}[3. Royden 12-27]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{12-37}
+\end{figure}
+\end{question}
+\begin{solution}
+Consider
+\eQb
+\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
+\text{ is open in} \mathbb{R} \}.
+\eQe
+
+\end{solution}
+
+\newpage
+
+\begin{question}[4. Royden 12-35]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{12-35}
+\end{figure}
+\end{question}
+\begin{solution}
+Consider
+\eQb
+\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
+\text{ is open in} \mathbb{R} \}.
+\eQe
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[5. Royden 13-8]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{13-8}
+\end{figure}
+\end{question}
+\begin{solution}
+We show that the relation is reflexive, symmetric, and transitive.
+
+\smallskip
+
+Let $x \in X$. It follows that
+\eQb
+\lVert x - x \rVert = \lVert \theta \rVert,
+\eQe
+where $\theta$ is the identity element of the linear space $X$. By definition of linear space,
+we have $\alpha \cdot \theta = \theta$ for all $\alpha$. Hence, for some $\alpha > 1$, we have 
+\eQb
+\lVert \theta \rVert &=& \lVert \alpha \cdot \theta \rVert \\
+&=& | \alpha | \lVert \theta \rVert. \\
+\eQe
+As $|a| > 0$, we have  $|\theta | = 0$. Consequently, $\lVert x - x \rVert = 0$. It follows that
+for all $x \in X$, $x \equiv x$. The relation is reflexive. 
+
+\smallskip
+
+Let $x,y \in X$ and $x \equiv y$. Observe that
+\eQb
+\lVert x - y \rVert &=& \lVert -1\cdot (y - x) \rVert \\
+&=& |-1|\lVert y - x \rVert \\
+&=& \lVert y - x \rVert. \\
+\eQe
+As $x \equiv y$, which gives $\lVert x - y \rVert = 0$, it follows that
+$\lVert y - x \rVert = 0$ and $y \equiv x$. Hence, the relation is symmetric. 
+
+\smallskip
+
+Let $x,y,z \in X$ and $x \equiv y$ and $y \equiv z$. By triangle inequality, it follows that
+\eQb
+\lVert y - z \rVert &=& \lVert (x-y) + (y-z) \rVert \\
+&\leq& \lVert x -y \rVert + \lVert y - z \rVert = 0 + 0 = 0.
+\eQe
+Hence, $\lVert y - z\rVert = 0$, and it follows that $x \equiv z$. 
+Hence, the relation is symmetric. 
+
+\smallskip 
+
+We show that $X\/_{\equiv}$ is a normed vector space. Firstly, we check that the defined norm
+is well defined. Let $x,y \in X$, such that $x \equiv y$. It follows that $\lVert x - y \rVert = 0$.
+Hence, $\lVert x \rVert = \lVert y \rVert$, and it follows that $\lVert [x] \rVert = \lVert [y] \rVert$.
+The norm is well-defined. 
+
+
+
+\end{solution}
+
+\bigskip
+
+\begin{question}[6. Royden 13-33]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{13-33}
+\end{figure}
+\end{question}
+\begin{solution}
+Consider
+\eQb
+\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
+\text{ is open in} \mathbb{R} \}.
+\eQe
+
+\end{solution}
 
 \end{document}

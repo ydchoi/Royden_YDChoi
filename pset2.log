@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  20 SEP 2015 17:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  27 OCT 2015 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,20 +564,20 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
  [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
  (./pset2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
 Package rerunfilecheck Info: File `pset2.out' has not changed.
 (rerunfilecheck)             Checksum: 646E3CE5D91FAC70451723075CB62DCB;44.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 237.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
  ) 
 Here is how much of TeX's memory you used:
  10650 strings out of 493315
@@ -586,7 +586,7 @@ Here is how much of TeX's memory you used:
  13947 multiletter control sequences out of 15000+600000
  15391 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,11n,39p,251b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,39p,251b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -596,14 +596,15 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
 13/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2013/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/f
-onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
-/urw/times/utmr8a.pfb>
-Output written on pset2.pdf (3 pages, 117661 bytes).
+013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb>
+Output written on pset2.pdf (3 pages, 124286 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
