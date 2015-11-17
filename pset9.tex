@@ -84,10 +84,20 @@ IX of Real Variables 2015 at NYU.
 \end{figure}
 \end{question}
 \begin{solution}
-Assume that $X$ is Tychonoff, and let $A$ and $B$ be non-empty disjoint closed subsets of 
-$X$. Therefore, $U_A$ is a neighborhood of $A$ and $U_B$ is a neigborhood of $B$, such that
-$A \cap B = \emptyset$. Hence, $X$ is normal.
-
+Assume that $X$ is Tychonoff, and let $A$ and $B$ 
+be non-empty disjoint closed subsets of 
+$X$. Let $g:A \cup B \to [a,b]$ such that  
+such that $g(A) = a$ and $g(B) = b$. Observe that $g$ is a real-valued
+function, that is continuous, bounded, on a closed subset of $X$. 
+Therefore, by the given, there exists a continuous extension to 
+all of $X$, which we denote as $g':X \to [a,b]$. Observe that
+as $[a,\dfrac{a+b}{2})$ is open in $[a,b]$, by the continuity of $g'$
+we have $g'^{-1}([a,\dfrac{a+b}{2}))$ is open in $X$, which contains 
+$A$. Likewise, $g'^{-1}((\dfrac{a+b}{2},b])$ is open in $X$, which contains
+$B$. Notice that as $g'$ is a function those two open sets are disjoint.
+Therefore, we have shown that $A$ and $B$ have neighborhoods that are 
+disjoint. Since $X$ is Tychonoff as well, $X$ is normal. 
+\hfill $\qed$
 \end{solution}
 
 \bigskip
@@ -100,15 +110,32 @@ $A \cap B = \emptyset$. Hence, $X$ is normal.
 \end{figure}
 \end{question}
 \begin{solution}
-Consider
-\eQb
-\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
-\text{ is open in} \mathbb{R} \}.
-\eQe
+Let $x \in X$. Consider a neighborhood $U_x \in \mathscr{T}$. It follows
+that $X \setminus U_x$ is closed in $\mathscr{T}$. As normal topological 
+spaces are Tychnoff, and single points are closed in Tychnoff spaces, we have
+$\{ x\}$ is closed in $\mathscr{T}$. Then, by the Urysohn's lemma, 
+we have a continuous real-valued function
+$f:X \to [a,b]$ such that $f(\{x\} ) = a$ and
+$f(X\setminus U_x ) = b$. Note that $f \in \mathscr{F}$.
+Then, for a fixed $\epsilon$ 
+such that $b -a > \epsilon > 0$,
+as $[a,a+\epsilon)$ is a basic open set in $[a,b]$,
+we have $f^{-1}([a,a+\epsilon))$ is a basic open set of the weak-topology,
+as $f$ is continuous and it's a finite intersection of the inverse
+image of an open set.
+Observe that as $f(X \setminus U_x) = b$, we have  
+$f^{-1}[a,a+\epsilon)) \cap X \setminus  U_x = \emptyset$. Hence
+$f^{-1}[a,a+\epsilon)) \subseteq U_x$. Therefore, we have found a basic 
+open set of $x$ in the weak topology contained in $U_x$. Hence, this shows
+that the strong topology is a subset of the weak topology. As the
+weak topology is always a subset of the strong topology, we have shown
+that $\mathscr{T}$ is the weak topology induced by $\mathscr{F}$. 
+\hfill $\qed$
+
 
 \end{solution}
 
-\bigskip
+\newpage
 
 \begin{question}[3. Royden 12-27]
 \hfill
@@ -118,11 +145,7 @@ Consider
 \end{figure}
 \end{question}
 \begin{solution}
-Consider
-\eQb
-\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
-\text{ is open in} \mathbb{R} \}.
-\eQe
+Assume that $f = g$. Then by 
 
 \end{solution}
 
