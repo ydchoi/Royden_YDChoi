@@ -91,9 +91,12 @@ such that $g(A) = a$ and $g(B) = b$. Observe that $g$ is a real-valued
 function, that is continuous, bounded, on a closed subset of $X$. 
 Therefore, by the given, there exists a continuous extension to 
 all of $X$, which we denote as $g':X \to \mathbb{R}$. Observe that
-as $[a,\dfrac{a+b}{2})$ is open in $[a,b]$, by the continuity of $g'$
-we have $g'^{-1}([a,\dfrac{a+b}{2}))$ is open in $X$, which contains 
-$A$. Likewise, $g'^{-1}((\dfrac{a+b}{2},b])$ is open in $X$, which contains
+as $(a-\dfrac{a+b}{2},\dfrac{a+b}{2})$ is open in $\mathbb{R}$, 
+by the continuity of $g'$
+we have $g'^{-1}((a-\dfrac{a+b}{2},\dfrac{a+b}{2}))$ is open in $X$, 
+which contains 
+$A$. Likewise, $g'^{-1}((\dfrac{a+b}{2},b+\dfrac{a+b}{2}))$ 
+is open in $X$, which contains
 $B$. Notice that as $g'$ is a function those two open sets are disjoint.
 Therefore, we have shown that $A$ and $B$ have neighborhoods that are 
 disjoint. Since $X$ is Tychonoff as well, $X$ is normal. 
@@ -141,7 +144,7 @@ weak-topology induced by $\mathscr{F}$.
 
 \end{solution}
 
-\newpage
+\bigskip
 
 \begin{question}[3. Royden 12-27]
 \hfill
@@ -151,8 +154,62 @@ weak-topology induced by $\mathscr{F}$.
 \end{figure}
 \end{question}
 \begin{solution}
-Assume that $f = g$. As $f,g \in C[0,1]$, we have $f$ and $g$  
+Assume that $f = g$. Fix $n$. 
+As $f,g \in C[a,b]$, $x^n \in C[a,b]$.
+ and multiplication of continuous
+function is continuous, we have that $x^n f$ and $x^ng$ are continuous.
+As continuous functions on compact domain is integrable, by 
+the linearity of integration, we have
+\eQb
+\int_{a}^{b} x^nf(x)dx - \int_{a}^{b} x^n g(x) dx 
+&=& \int_{a}^{b} x^n(f-g)(x) dx \\.
+\eQe
+As $f = g$, $f-g(x) = 0$ for all $x \in [a,b]$. It follows that
+\eQb
+\int_{a}^{b} x^nf(x)dx - \int_{a}^{b} x^n g(x) dx &=& 0, 
+\eQe
+from which we obtain
+\eQb
+\int_{a}^{b} x^nf(x)dx &=& \int_{a}^{b} x^n g(x) dx. 
+\eQe
+Since $n$ was arbitrary, we have that the above equality holds for all $n$.
+Conversely, assume that 
+$ \int_{a}^{b} x^nf(x)dx = \int_{a}^{b} x^n g(x) dx$ for all $n$. By 
+appealing to the linearity of integration, we see that
+\eQb
+\int_{a}^{b} p(f-g)(x) dx = 0, 
+\eQe 
+for any polynomial $p$ defined on $[a,b]$. We claim that
+\eQb
+\int_{a}^{b} (f-g)^2(x) dx = 0, 
+\eQe 
+which will imply that $f = g$ almost everywhere immediately.  
+By Weiestrass Approximation theorem, we can choose a sequence of polynomials
+$p_n$ such that
+\eQb
+|p_n - (f-g)| < \dfrac{1}{n}. 
+\eQe
+It follows that $\{ p_n (f-g) \}$ converges to $(f-g)^2$ pointwise 
+everywhere on $[a,b]$. As $|p_n - (f-g) | < 1$ for all $n$ on $[a,b]$. 
+As $f-g$ is a continuous function defined on a compact subset of $\mathbb{R}$,
+by the extreme value theorem, there exists $M > 0$ such that 
+$|f-g| < M$ on $[a,b]$. It follows that $g(x) = M(M+1)$ on $[a,b]$ is 
+integrable and dominates $\{ p_n (f-g)\}$. Hence, by the Dominated
+Convergence theorem, we have
+\eQb
+\int_{a}^{b} (f-g)^2(x) dx &=& \lim_{n \to \infty}
+\int_{a}^{b} p_n(f-g)(x) dx.
+\eQe 
+Since $\int_{a}^{b} p_n(f-g)(x) dx = 0$ for all $n$, it follows that
+\eQb
+\int_{a}^{b} (f-g)^2(x) dx &=& 0.
+\eQe
+Hence, we conclude that $ f = g$ almost everywehre. As $f,g \in C[0,1]$,
+and $f=g$ almost everywhere, it follows that $f = g$ everywhere.
+\hfill $\qed$
 
+
+ 
 \end{solution}
 
 \newpage
@@ -183,7 +240,8 @@ Consider
 \end{figure}
 \end{question}
 \begin{solution}
-We show that the relation is reflexive, symmetric, and transitive.
+We show that the pseudo-norm relation is 
+reflexive, symmetric, and transitive.
 
 \smallskip
 
@@ -219,7 +277,10 @@ Let $x,y,z \in X$ and $x \equiv y$ and $y \equiv z$. By triangle inequality, it 
 &\leq& \lVert x -y \rVert + \lVert y - z \rVert = 0 + 0 = 0.
 \eQe
 Hence, $\lVert y - z\rVert = 0$, and it follows that $x \equiv z$. 
-Hence, the relation is symmetric. 
+Hence, the relation is symmetric. It follows that the pseudo-norm relation
+is an equivalence relation on the linear space $X$.
+
+\hfill $\qed$ 
 
 \smallskip 
 
