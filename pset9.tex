@@ -222,11 +222,6 @@ and $f=g$ almost everywhere, it follows that $f = g$ everywhere.
 \end{figure}
 \end{question}
 \begin{solution}
-Consider
-\eQb
-\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
-\text{ is open in} \mathbb{R} \}.
-\eQe
 
 \end{solution}
 
@@ -284,30 +279,64 @@ is an equivalence relation on the linear space $X$.
 
 \smallskip 
 
-We show that $X\/_{\equiv}$ is a normed vector space. Firstly, we check that the defined norm
-is well defined. Let $x,y \in X$, such that $x \equiv y$. It follows that $\lVert x - y \rVert = 0$.
-Hence, $\lVert x \rVert = \lVert y \rVert$, and it follows that $\lVert [x] \rVert = \lVert [y] \rVert$.
-The norm is well-defined. 
-
+We show that $X\/_{\equiv}$ is a normed vector space. 
+The fact that given space is a vector space arises from the fact
+that $X$ is a vector space and we define addition and scalar multiplication
+in terms of the corresponding operations on $X$. This can be trivially
+checked. We show that the defined relation is indeed a norm.
+Firstly, we check that the defined norm
+is well defined. Let $x,y \in X$, such that $x \equiv y$. 
+It follows that $\lVert x - y \rVert = \lVert y - x \rVert = 0$.
+By triangle inequality, it
+follows that
+\eQb
+\lVert x \rVert &=& \lVert y + (x - y) \rVert \\
+&\leq& \lVert y \rVert + \lVert x - y \rVert \\
+&=& \lVert y \rVert, \\ 
+\lVert y \rVert &=& \lVert x + (y - x) \rVert \\
+&\leq& \lVert x \rVert + \lVert y - x \rVert \\
+&=& \lVert x \rVert, \\ 
+\eQe
+Hence, $\lVert x \rVert = \lVert y \rVert$, and it follows that 
+$\lVert [x] \rVert = \lVert [y] \rVert$. The norm is well-defined.
+Now, observe that the non-negativity is satisfied, as the pseudo-norm
+is non-negative. By definition, it follows that $\lVert
+\alpha[x] \rVert = \lVert [\alpha x] \rVert =  \lVert \alpha x \rVert
+= |\alpha| \lVert x \rVert = |\alpha| \lVert [x] \rVert$. Hence,
+homogeneity is satisfied. Again, by definition and the triangle inequality
+from the pseudo-norm, we have
+\eQb
+\lVert [x] + [y] \rVert &=& \lVert [x+y] \rVert \\
+&=& \lVert x + y \rVert \\
+&\leq& \lVert x \rVert + \lVert y \rVert \\
+&=& \lVert [x] \rVert + \lVert [y] \rVert.
+\eQe 
+Hence, the triangle inequality is satisfied. We also have $\lVert [\theta] 
+\rVert = \lVert \theta \rVert = 0$. Assume that $\lVert [x] \rVert = 0$.
+Suppose for sake of contradiction that $[x] = \neq [\theta]$. It follows
+that $0 \neq \lVert x - \theta  \rVert = \lVert [x - \theta] \rVert 
+= \lVert [x] \rVert$, which is a contradiction to $\lVert [x] \rVert = 0$.
+Therefore, $X\/_{\equiv}$ is a normed vector space.
+\hfill $\qed$  
 
 
 \end{solution}
 
 \bigskip
 
-\begin{question}[6. Royden 13-33]
+\begin{question}[6. Royden 13-34]
 \hfill
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=1\textwidth]{13-33}
+    \includegraphics[width=1\textwidth]{13-34}
 \end{figure}
 \end{question}
 \begin{solution}
-Consider
-\eQb
-\mathscr{S} &=& \{ f^{-1}(O) \> | \> f \text{ is continuous, and } O
-\text{ is open in} \mathbb{R} \}.
-\eQe
+Assume that $T$ is continuous. Observe that $\{ \theta \}$, where $\theta$
+is the identity element of the normed linear space $Y$, is closed, as
+a single point in a metric space is closed. Since $T$ is continuous, we have
+$T^{-1}(\{\theta\}) = \ker T$ is closed. 
+We now show that  
 
 \end{solution}
 
