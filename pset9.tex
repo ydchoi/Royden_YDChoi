@@ -222,6 +222,49 @@ and $f=g$ almost everywhere, it follows that $f = g$ everywhere.
 \end{figure}
 \end{question}
 \begin{solution}
+Firstly, we show that if there exists $x_0 \in X$ such that 
+$f(x_0) = 0$ for all $f \in A$, then $\bar{A} = \{ f \in C(X) \> | \> 
+f(x) = 0 \}$. Let $f \in \bar{A}$.
+Then, there exists $\{ f_n \}$ be a sequence of functions, chosen
+from $A$, such that it converges uniformly to $f$. Note that
+uniform convergence of functions preserve continuity. Therefore, 
+$f \in C(x)$. As $f_n(x_0) = 0$
+for all $n$, it follows that $f(x_0) = 0$. Hence, $\bar{A} \subseteq
+\{ f \in C(x) \> | \> f(x) = 0\}$. Now, let $f \in C(X)$ such that
+$f(x_0) = 0$. We show that there exists a sequence $\{ f_n \}$ from $A$,
+such that $f_n \to f$ uniformly.  
+
+\smallskip
+
+Now, assume that for all $x \in X$, there exists $f \in A$, such that
+$f(x) \neq 0$. Consider a family of functions $\{ f_x\}_{x \in X}$
+such that each $f_x$ satisfies $f_x(x) \neq 0$. Observe that as $f_x$
+are continuous, there exists $B(x,\delta_x )$ such that $f_x(B(x,\delta_x))$
+is nonzero. Observe that $\{ B(x,\delta_x) \}_{x\in X}$ is an open 
+cover of $X$. As $X$ is compact, there exists a finite sub-cover 
+that covers $X$, we label that sub-cover as 
+$\{ B(x_n),\delta_{x_n} \}_{n=1}^{N}$. Consider a function $g$ defined 
+on $X$ such that 
+\eQb
+g = \sum_{n=1}^{N} f_n^2. 
+\eQe
+Observe that $g$ is stritly positive and in $A$, as it is a finite sum
+of squares of functions from $A$. By the extreme value theorem, 
+there exists $M$ such that $g < M$ on $X$. Let $l = \dfrac{1}{M}g$, which
+is still in $A$. Then, we have that $0 < l < 1$ on $A$. Consider a 
+sequence of functions $h_n$ on $X$ defined by 
+\eQb
+h_n &=& \sum_{i=1}^{n} (-l^n)^i,
+\eQe 
+Observe that $h_n$ converges uniformly to $\dfrac{1}{1+l^n}$. Furthermore,
+$l^n$ converges uniformly to $0$ as $0 < l < 1$. Hence, we have that
+$h_n$ converges uniformly to $1$ and $1 \in \bar{A}$. Therefore,
+$\bar{A}$ is an algebra of continuous real-valued functions on $X$
+that separates points in $X$ and contains the constant functions. Therefore,
+by Stone-Weierstrauss, 
+$\bar{A}$ is dense in $C(X)$.  
+Hence $\bar{A} = C(X)$. \hfill $\qed$ 
+
 
 \end{solution}
 
