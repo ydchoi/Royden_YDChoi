@@ -336,7 +336,15 @@ Assume that $T$ is continuous. Observe that $\{ \theta \}$, where $\theta$
 is the identity element of the normed linear space $Y$, is closed, as
 a single point in a metric space is closed. Since $T$ is continuous, we have
 $T^{-1}(\{\theta\}) = \ker T$ is closed. 
-We now show that  
+We now show that $\ker T$ is a subspace of $X$. Let $x,y \in \ker T$.
+By linearity it follows that
+\eQb
+T(x + y) &=& T(x) + T(y) = 0 + 0 = 0 \\
+T(\alpha x) &=& \alpha T(x) = \alpha 0 = 0. \\
+\eQe
+Hence, we have shown that $\ker T$ is a closed subspace of $X$.
+
+\hfill $\qed$ 
 
 \end{solution}
 
