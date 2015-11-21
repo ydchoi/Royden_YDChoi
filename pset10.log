@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 NOV 2015 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 NOV 2015 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**pset9.tex
-(./pset9.tex
+**pset10.tex
+(./pset10.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -449,8 +449,8 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(./pset9.aux)
-\openout1 = `pset9.aux'.
+No file pset10.aux.
+\openout1 = `pset10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -467,7 +467,7 @@ LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 67.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box36
@@ -498,10 +498,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
-
-(./pset9.out) (./pset9.out)
 \@outlinefile=\write3
-\openout3 = `pset9.out'.
+\openout3 = `pset10.out'.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -550,13 +548,13 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 
-<12-5.png, id=8, 673.51625pt x 75.28125pt>
+<12-5.png, id=4, 673.51625pt x 75.28125pt>
 File: 12-5.png Graphic file (type png)
  <use 12-5.png>
 Package pdftex.def Info: 12-5.png used on input line 83.
 (pdftex.def)             Requested size: 397.48499pt x 44.42818pt.
 
-<12-6.png, id=9, 495.8525pt x 37.13875pt>
+<12-6.png, id=5, 495.8525pt x 37.13875pt>
 File: 12-6.png Graphic file (type png)
  <use 12-6.png>
 Package pdftex.def Info: 12-6.png used on input line 112.
@@ -565,25 +563,25 @@ Package pdftex.def Info: 12-6.png used on input line 112.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./12-5.
 png> <./12-6.png>]
-<12-37.png, id=30, 462.72874pt x 27.10126pt>
+<12-37.png, id=27, 462.72874pt x 27.10126pt>
 File: 12-37.png Graphic file (type png)
  <use 12-37.png>
 Package pdftex.def Info: 12-37.png used on input line 153.
 (pdftex.def)             Requested size: 397.48499pt x 23.28015pt.
  [2 <./12-37.png>]
-<12-35.png, id=37, 500.87125pt x 74.2775pt>
+<12-35.png, id=34, 500.87125pt x 74.2775pt>
 File: 12-35.png Graphic file (type png)
  <use 12-35.png>
 Package pdftex.def Info: 12-35.png used on input line 221.
 (pdftex.def)             Requested size: 397.48499pt x 58.94832pt.
  [3 <./12-35.png>]
-<13-8.png, id=44, 741.77126pt x 154.5775pt>
+<13-8.png, id=41, 741.77126pt x 154.5775pt>
 File: 13-8.png Graphic file (type png)
  <use 13-8.png>
 Package pdftex.def Info: 13-8.png used on input line 277.
 (pdftex.def)             Requested size: 397.48499pt x 82.83376pt.
  [4 <./13-8.png>]
-<13-34.png, id=50, 502.87875pt x 44.165pt>
+<13-34.png, id=47, 502.87875pt x 44.165pt>
 File: 13-34.png Graphic file (type png)
  <use 13-34.png>
 Package pdftex.def Info: 13-34.png used on input line 374.
@@ -592,21 +590,28 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
  [5 <./13-34.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
 
-(./pset9.aux)
+(./pset10.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
-Package rerunfilecheck Info: File `pset9.out' has not changed.
-(rerunfilecheck)             Checksum: 646E3CE5D91FAC70451723075CB62DCB;44.
+
+
+Package rerunfilecheck Warning: File `pset10.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `pset10.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  646E3CE5D91FAC70451723075CB62DCB;44.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
  ) 
 Here is how much of TeX's memory you used:
- 10262 strings out of 493089
- 152935 string characters out of 6134842
- 252745 words of memory out of 5000000
- 13574 multiletter control sequences out of 15000+600000
+ 10254 strings out of 493089
+ 152869 string characters out of 6134842
+ 252650 words of memory out of 5000000
+ 13572 multiletter control sequences out of 15000+600000
  14377 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,251b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,252b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -621,10 +626,10 @@ xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
 dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb>
-Output written on pset9.pdf (5 pages, 286831 bytes).
+Output written on pset10.pdf (5 pages, 286744 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  13 named destinations out of 1000 (max. 500000)
- 39 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
