@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 NOV 2015 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 NOV 2015 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,7 +449,7 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-No file pset10.aux.
+(./pset10.aux)
 \openout1 = `pset10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -467,7 +467,7 @@ LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 67.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box36
@@ -498,6 +498,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
+
+(./pset10.out) (./pset10.out)
 \@outlinefile=\write3
 \openout3 = `pset10.out'.
 
@@ -548,88 +550,62 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 
-<12-5.png, id=4, 673.51625pt x 75.28125pt>
-File: 12-5.png Graphic file (type png)
- <use 12-5.png>
-Package pdftex.def Info: 12-5.png used on input line 83.
-(pdftex.def)             Requested size: 397.48499pt x 44.42818pt.
+<13-41.png, id=8, 565.11125pt x 76.285pt>
+File: 13-41.png Graphic file (type png)
+ <use 13-41.png>
+Package pdftex.def Info: 13-41.png used on input line 83.
+(pdftex.def)             Requested size: 397.48499pt x 53.65753pt.
 
-<12-6.png, id=5, 495.8525pt x 37.13875pt>
-File: 12-6.png Graphic file (type png)
- <use 12-6.png>
-Package pdftex.def Info: 12-6.png used on input line 112.
-(pdftex.def)             Requested size: 397.48499pt x 29.7711pt.
- [1
+<14-18.png, id=10, 563.10374pt x 65.24374pt>
+File: 14-18.png Graphic file (type png)
+ <use 14-18.png>
+Package pdftex.def Info: 14-18.png used on input line 95.
+(pdftex.def)             Requested size: 397.48499pt x 46.05458pt.
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./12-5.
-png> <./12-6.png>]
-<12-37.png, id=27, 462.72874pt x 27.10126pt>
-File: 12-37.png Graphic file (type png)
- <use 12-37.png>
-Package pdftex.def Info: 12-37.png used on input line 153.
-(pdftex.def)             Requested size: 397.48499pt x 23.28015pt.
- [2 <./12-37.png>]
-<12-35.png, id=34, 500.87125pt x 74.2775pt>
-File: 12-35.png Graphic file (type png)
- <use 12-35.png>
-Package pdftex.def Info: 12-35.png used on input line 221.
-(pdftex.def)             Requested size: 397.48499pt x 58.94832pt.
- [3 <./12-35.png>]
-<13-8.png, id=41, 741.77126pt x 154.5775pt>
-File: 13-8.png Graphic file (type png)
- <use 13-8.png>
-Package pdftex.def Info: 13-8.png used on input line 277.
-(pdftex.def)             Requested size: 397.48499pt x 82.83376pt.
- [4 <./13-8.png>]
-<13-34.png, id=47, 502.87875pt x 44.165pt>
-File: 13-34.png Graphic file (type png)
- <use 13-34.png>
-Package pdftex.def Info: 13-34.png used on input line 374.
-(pdftex.def)             Requested size: 397.48499pt x 34.90881pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
- [5 <./13-34.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
+<14-23.png, id=11, 819.06pt x 103.38625pt>
+File: 14-23.png Graphic file (type png)
+ <use 14-23.png>
+Package pdftex.def Info: 14-23.png used on input line 107.
+(pdftex.def)             Requested size: 397.48499pt x 50.17381pt.
 
-(./pset10.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
+<15-12.png, id=12, 856.19875pt x 152.57pt>
+File: 15-12.png Graphic file (type png)
+ <use 15-12.png>
+Package pdftex.def Info: 15-12.png used on input line 119.
+(pdftex.def)             Requested size: 397.48499pt x 70.83023pt.
 
 
-Package rerunfilecheck Warning: File `pset10.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package rerunfilecheck Info: Checksums for `pset10.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  646E3CE5D91FAC70451723075CB62DCB;44.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./13-41
+.png> <./14-18.png> <./14-23.png>] [2 <./15-12.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+ (./pset10.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package rerunfilecheck Info: File `pset10.out' has not changed.
+(rerunfilecheck)             Checksum: 646E3CE5D91FAC70451723075CB62DCB;44.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 10254 strings out of 493089
- 152869 string characters out of 6134842
- 252650 words of memory out of 5000000
- 13572 multiletter control sequences out of 15000+600000
+ 10247 strings out of 493089
+ 152785 string characters out of 6134842
+ 246748 words of memory out of 5000000
+ 13566 multiletter control sequences out of 15000+600000
  14377 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,252b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,252b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb>
-Output written on pset10.pdf (5 pages, 286744 bytes).
+exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on pset10.pdf (2 pages, 202458 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 50 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
