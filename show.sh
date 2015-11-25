@@ -1,2 +1,2 @@
-pdflatex pset10.tex && open pset10.pdf
+pdflatex pset11.tex && open pset11.pdf
 
