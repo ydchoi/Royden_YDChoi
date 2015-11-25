@@ -40,7 +40,7 @@
 \usepackage{listings}
 
 \title{Real Variables: \\
-Problem Set X}
+Problem Set XI}
 
 
 \author{
@@ -71,7 +71,7 @@ New York University \\
 
 \begin{abstract}
 This work contains solutions to the problem set 
-X of Real Variables 2015 at NYU.
+XI of Real Variables 2015 at NYU.
 \end{abstract}
 
 \section{Solutions}
@@ -83,9 +83,38 @@ X of Real Variables 2015 at NYU.
     \includegraphics[width=1\textwidth]{rv-17-6.png}
 \end{figure}
 \end{question}
-\begin{solution} We first show that $\lVert \> \rVert:X \to \mathbb{R}$
-given is a norm on $X$. First of all, 
-\ 
+\begin{solution} 
+We first show that $(X_0, \mathscr{M}_0)$ is a measurable space. To this
+end, we must show that $\mathscr{M}_0$ is a $\sigma$-algebra of $X_0$.
+As $\emptyset$ and $X_0$ belong to $\mathscr{M}$, are subsets of $X_0$,
+it follows that $\emptyset$ and $X_0$ belong to $\mathscr{M}_0$. Let 
+$\{A_n\}_{n=1}^{\infty}$ be a countable collections of sets in $\mathscr{M}_0$.
+As $A_n \subseteq X_0$ for all $n$, we have $\bigcup_{n=1}^{\infty} A_n
+\subseteq X_0$. Furthermore, as $\mathscr{M}$ is a $\sigma$-algebra, 
+and $A_n \in \mathscr{M}$ for all $n$, we 
+also have $\bigcup_{n=1}^{\infty} A_n \in \mathscr{M}$. Hence, it follows
+that $\bigcup_{n=1}^{\infty} A_n \in \mathscr{M}_0$. Now, let $A$ be a 
+set, belonging to $\mathscr{M}_0$. Then, 
+as $X_0 \setminus A$ is a subset of
+$X_0$, and $X_0$ and $A$ belong to $M$, which gives $X_0 \setminus A 
+\in \mathscr{M}$, we have $X_0 \setminus A$ belongs to $\mathscr{M}_0$.
+Hence, we have shown that $\mathscr{M}_0$ is a $\sigma$-algebra, and
+$(X_0, \mathscr{M}_0)$ is a measurable space. Now, it remains to be
+shown that the restricted map $\mu_0$ has the properties of a measure.
+First, observe that $\emptyset \in \mathscr{M}_0$ and $\mu_0(\emptyset)
+= \mu(\emptyset) = 0$. Now, let $\{A_n\}$ be a countable disjoint sets 
+from $\mathscr{M}_0$. Since $A_n \in \mathscr{M}$ for all $n$,
+by the countable additivity of $\mu$ and the fact that $\mathscr{M}_0$
+is a $\sigma$-algebra,
+it follows that 
+\eQb
+\sum_{n=1}^{\infty} \mu_0 (A_n) &=& \sum_{n=1}^{\infty} \mu(A_n) \\
+&=& \mu(\bigcup_{n=1}^{\infty} A_n ) \\
+&=& \mu_0(\bigcup_{n=1}^{\infty} A_n). \\
+\eQe
+Therefore, we have shown that $(X_0, \mathscr{M}_0, \mu_0)$ is
+a measure space. \hfill $\qed$
+ 
 \end{solution}
 
 \newpage
