@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 NOV 2015 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 NOV 2015 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,39 +564,39 @@ File: rv-17-15.png Graphic file (type png)
  <use rv-17-15.png>
 Package pdftex.def Info: rv-17-15.png used on input line 126.
 (pdftex.def)             Requested size: 397.48499pt x 67.86612pt.
- [2 <./rv-17-15.png>] <rv-17-17.png, id=35, 583.17876pt x 149.55875pt>
+ [2 <./rv-17-15.png>] <rv-17-17.png, id=36, 583.17876pt x 149.55875pt>
 File: rv-17-17.png Graphic file (type png)
  <use rv-17-17.png>
-Package pdftex.def Info: rv-17-17.png used on input line 138.
+Package pdftex.def Info: rv-17-17.png used on input line 146.
 (pdftex.def)             Requested size: 397.48499pt x 101.93822pt.
 
-[3 <./rv-17-17.png>] <rv-18-50.png, id=42, 474.77374pt x 26.0975pt>
+[3 <./rv-17-17.png>] <rv-18-50.png, id=43, 474.77374pt x 26.0975pt>
 File: rv-18-50.png Graphic file (type png)
 
 <use rv-18-50.png>
-Package pdftex.def Info: rv-18-50.png used on input line 150.
+Package pdftex.def Info: rv-18-50.png used on input line 158.
 (pdftex.def)             Requested size: 397.48499pt x 21.85005pt.
  [4 <./rv-18-50.png>]
-<rv-18-54.png, id=49, 580.1675pt x 245.91875pt>
+<rv-18-54.png, id=50, 580.1675pt x 245.91875pt>
 File: rv-18-54.png Graphic file (type png)
  <use rv-18-54.png>
-Package pdftex.def Info: rv-18-54.png used on input line 162.
+Package pdftex.def Info: rv-18-54.png used on input line 170.
 (pdftex.def)             Requested size: 397.48499pt x 168.48334pt.
- [5 <./rv-18-54.png>] <rv-18-55.png, id=56, 571.13374pt x 154.5775pt>
+ [5 <./rv-18-54.png>] <rv-18-55.png, id=57, 571.13374pt x 154.5775pt>
 File: rv-18-55.png Graphic file (type png)
  <use rv-18-55.png>
-Package pdftex.def Info: rv-18-55.png used on input line 173.
+Package pdftex.def Info: rv-18-55.png used on input line 181.
 (pdftex.def)             Requested size: 397.48499pt x 107.57845pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
 
 [6 <./rv-18-55.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
  (./pset11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
 Package rerunfilecheck Info: File `pset11.out' has not changed.
 (rerunfilecheck)             Checksum: 646E3CE5D91FAC70451723075CB62DCB;44.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
  ) 
 Here is how much of TeX's memory you used:
  10263 strings out of 493089
@@ -614,14 +614,15 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb>
-Output written on pset11.pdf (6 pages, 398054 bytes).
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb>
+Output written on pset11.pdf (6 pages, 402125 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
  39 words of extra memory for PDF output out of 10000 (max. 10000000)
 
