@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 NOV 2015 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 NOV 2015 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,48 +565,103 @@ File: 14-18.png Graphic file (type png)
 Package pdftex.def Info: 14-18.png used on input line 97.
 (pdftex.def)             Requested size: 397.48499pt x 46.05458pt.
  [2 <./14-18.png>]
-<14-23.png, id=31, 819.06pt x 103.38625pt>
+<14-23.png, id=33, 819.06pt x 103.38625pt>
 File: 14-23.png Graphic file (type png)
  <use 14-23.png>
-Package pdftex.def Info: 14-23.png used on input line 109.
+Package pdftex.def Info: 14-23.png used on input line 131.
 (pdftex.def)             Requested size: 397.48499pt x 50.17381pt.
  [3 <./14-23.png>]
-<15-12.png, id=38, 856.19875pt x 152.57pt>
+<15-12.png, id=41, 856.19875pt x 152.57pt>
 File: 15-12.png Graphic file (type png)
  <use 15-12.png>
-Package pdftex.def Info: 15-12.png used on input line 121.
+Package pdftex.def Info: 15-12.png used on input line 187.
 (pdftex.def)             Requested size: 397.48499pt x 70.83023pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
- [4 <./15-12.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
 
-(./pset10.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
+[4 <./15-12.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
+ (./pset10.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
 Package rerunfilecheck Info: File `pset10.out' has not changed.
 (rerunfilecheck)             Checksum: 646E3CE5D91FAC70451723075CB62DCB;44.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
  ) 
 Here is how much of TeX's memory you used:
- 10249 strings out of 493089
- 152797 string characters out of 6134842
- 245748 words of memory out of 5000000
- 13566 multiletter control sequences out of 15000+600000
- 14377 words of font info for 38 fonts, out of 8000000 for 9000
+ 10254 strings out of 493089
+ 152852 string characters out of 6134842
+ 250748 words of memory out of 5000000
+ 13569 multiletter control sequences out of 15000+600000
+ 17075 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,252b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,17n,39p,679b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on pset10.pdf (4 pages, 231275 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on pset10.pdf (4 pages, 297729 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  10 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
