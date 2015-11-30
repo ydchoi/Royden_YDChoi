@@ -113,7 +113,31 @@ Hence, we have shown that $\lVert \> \rVert$ given is a norm.
 
 \smallskip
 
-
+Now, we first show that each operator $\psi_n$ is bounded, thus continuous.
+Observe that we can represent an arbitrary polynomial $p$ uniquely as ,
+for some $k$, 
+$p = \sum_{i=0}^{\infty} c_i x^i$, where $c_i = 0$ for $i \geq k$. 
+Fix $\psi_n$.
+Observe that for any $p$, we have $|c_n| \leq \lVert p \rVert$. 
+It follows that 
+\eQb
+|\psi_n(p) | &=& |n! \cdot c_n | \\
+&=& |n!| |c_n| \\
+&\leq& |n!| \lVert p \rVert \\ 
+\eQe 
+Hence, $\psi_n$ is bounded, thus continuous for any $n$. Note that 
+by taking $p = x^n$, we obtain $n! \leq M$ for any bound $M$ for $\psi_n$.
+Hence, it follows that $\lVert \psi_n \rVert = n!$.
+Again, for any polynomial $p$, observe that $\psi_n(p) = 0$ for $n > k$,
+where $k$ denotes the degree of the polynomial $p$. Consequently, we 
+have 
+\eQb
+\lim_{n \to \infty} \psi_n(p) &=& 0,
+\eQe
+for any $p$. Therefore, if $X$ is Banach, the conditions of 
+the Banach-Saks-Steinhaus theorem is satisfied. However, as $\lVert \psi_n
+\rVert = n!$, $\{ \psi_n\}$ cannot be uniformly bounded. This is a 
+contradiction. $X$ is not Banach.
 
  
 \end{solution}

@@ -157,6 +157,7 @@ as $v_1$ and $v_2$ are signed measures.
 \end{figure}
 \end{question}
 \begin{solution}
+
 \end{solution}
 
 \newpage
@@ -169,10 +170,28 @@ as $v_1$ and $v_2$ are signed measures.
 \end{figure}
 \end{question}
 \begin{solution}
+Let $\mathcal{A}$ be an algebra of continuous real-valued functions on a compact Hausdorf space $X$ that separates points. Show that either $\bar {\mathcal{A}}=C(X)$ or there is a point $x_0 \in X$ for which $\bar{\mathcal{A}}=\{f \in C(X)|f(x_0)=0\}$. 
+
+To solve this problem, it suffices to prove that $\bar{A}=C(X)$ assuming $\bar{\mathcal{A}}\neq \{f \in C(X)|f(x_0)=0\}$, i.e.,  $\forall x \in X, \exists f_x\in C(X)$, s.t.  $f_x(x) =y_x\neq 0$. Then, the open interval $I_x=(y_x-\delta, y_x+ \delta)$ where $0<\delta<|y_x|$, is mapped to an open interval $O_x=f_x^{-1}(I_x) \subset X$ where $x \in O_x$.   Therefore, $X\subseteq \cup_{x \in X}O_x$. Since the foregoing is an open cover of a compact space $X$,  it contains a finite subcover      $\cup_{i=1}^nO_{x_i}$.  By construction, $0 \notin f_{x_i}(O_{x_i})$. Thus $g=\sum_{i=1}^n f^2_{x_i}$ is in $A$ and takes strictly positive values on $X$.  \\ 
+
+Define $h:K\cup\{0\}\rightarrow R_+$ as follows\\
+$$h(x)=\begin{cases}
+1/x & \text{ if } x \in K\\
+0 & \text{ if } x =0\\
+\end{cases}$$\\  
+
+By Proposition 20, since $X$ is compact and $g$ is a continuous mapping, the range of $g$, $K=g(X)$, is compact, which in the case of a real-valued range means that it is closed and bounded. Furthermore, since $K$ is closed and $0\notin K$, it is not possible to have a  sequence in $K$ converging to $0$. Therefore, $0 \notin \bar{K}=K$, which implies that  $h(x)$ is continuous on $D=K\cup\{0\}$\\
+
+Now, since $h\in C(K)$, by Stone-Weierstrass, given  $\epsilon >0$, there exists $p_{n}$, a polynomial, s.t.\\
+
+$$|h(x)-p_{n}(x)|<\epsilon /2 $$\\
+
+for all $x \in K$. Since the above implies that $|p_n(0)|< \epsilon/2$  \\
+ 
+$$|h(x)-(p_{n}(x)-p_n(0))|\leq |h(x)-p_{n}(x)|+|p_n(0))|<\epsilon $$\\
+
+where $p^*_n(x)=p_{n}(x)-p_n(0)$ (and thus $p^*_n(0)=0$, which trivially guarantees the uniform convergence on $K\cup\{0\}$). Therefore, $p^*_n$ is continuos on $D$, and $p^*_n \circ g \in A$. Since $p^*_n$ converges uniformly to $h$ and $g$ is continuous and bounded (and consequently uniformly continuous on a compact set, $p^*_n\circ g \rightarrow 1/g$ uniformly. Therefore, $1/g \in \bar {A}$, which together with the fact that $g \in A$, implies that $1 \in \bar {A}$. This generates the family of constant functions in $A$.  By the Stone-Weierstrass Approximation, $\bar {A}$ is dense in $C(X)$. Since $\bar{A}$ is closed, this implies that $\bar {A}=C(X)$. \\
 \end{solution}
-
-\newpage
-
 \begin{question}[Royden 18-54]
 \hfill
 \begin{figure}[h!]
