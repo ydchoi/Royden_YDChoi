@@ -186,50 +186,7 @@ as desired. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution}
-Consider a functional $p:X \to [0,\infty)$ be defined by
-\eQb
-p = \begin{cases}
-    0, & \text{if $x \in Y$} \\
-    ||x||, & \text{otherwise}.
-  \end{cases}
-\eQe
-We first show that $p$ is positively homogeneous. Let $\lambda > 0$. 
-Let $x \in Y$, then as $Y$ is a linear subspace of $X$, $\lambda x \in Y$.
-It follows that
-\eQb
-p(\lambda x) &=& 0 \\
-&=& \lambda p(x). \\
-\eQe 
-Let $x \notin Y$. It follows that $\lambda x \notin Y$, as otherwise
-we get a contradiction that $x \in Y$ from the linear subspace property
-of $Y$. It follows that 
-\eQb
-p(\lambda x) &=& ||\lambda x || \\
-&=& |\lambda | ||x|| \\
-&=& \lambda ||x|| \\
-&=& \lambda p(x).
-\eQe
-Hence, we have shown that $p$ is positively homogeneous. Now, we show that
-$p$ is sub-additive. 
-Let $x,y \in Y$. Then, it follows that
-\eQb
-p(x+y) &=& 0 \\
-&=& p(x) + p(y). \\
-\eQe  
-Hence, $p(x+y) \leq p(x) + p(y)$ holds. Let $x,y \notin Y$. Then, 
-by the triangle inequality of norm, it
-follows that
-\eQb
-p(x+y) &=& || x + y|| \\
-&\leq& ||x| + ||y|| \\
-&=& p(x) + p(y). \\
-\eQe
-Let $x \in Y$ and $y \notin Y$. It follows that
-\eQb
-p(x+y) &=& || x + y || \\
-&\leq& ||x|| + ||y|| \\
-&=& 0 
-\eQe  
+I believe there is an error in this problem. 
 \end{solution}
 
 \newpage
@@ -242,5 +199,42 @@ p(x+y) &=& || x + y || \\
 \end{figure}
 \end{question}
 \begin{solution}
+\textbf{(i)} For $x \in X$, let $Y_{x}^{\perp}$ be defined by
+\eQb
+Y_{x}^{\perp} &=& \{ \psi \in X^* \> | \> \psi(x) = 0 \}.
+\eQe
+As $\psi \in X^*$, $\psi$ is continuous, hence $Y_{x}^{\perp}$ is
+closed. Observe that
+\eQb
+Y^{\perp} &=& \bigcap_{x \in Y}  Y_{x}^{\perp}.
+\eQe
+Each $Y_{x}^{\perp}$ is closed, since a limit function of continuous functions
+with respect to the operator norm, will preserve the property that
+$0$ will be achieved at $x$.
+Since an arbitrary intersection of closed sets is closed, we have that
+$Y^{\perp}$ is closed linear subspace of $X^*$.
+
+\bigskip
+
+\textbf{(ii)} First, we show that $(Y^{\perp})^0$ is closed. Observe
+that 
+\eQb
+(Y^{\perp})^{0} &=& \bigcap_{\psi \in Y^{\perp}} \{ x \in X \> | \>
+\psi(x) = 0 \} \\
+&=& \bigcap_{\psi \in Y{^\perp}} \psi^{-1}(0).
+\eQe
+As $\psi^{-1}(0)$ is a pre-image of a single point, which is closed in 
+a metric space, of a continuous function, and intersection of closed sets
+is closed, we have that $(Y^{\perp})^{0}$ is closed. By definition of 
+$Y^{\perp}$, it follows that $Y \subseteq (Y^{\perp})^0$, and as 
+$(Y^{\perp})^0$ is closed, we obtain $\overline{Y} \subseteq (Y^{\perp})^0$.
+Now, we show that $(Y^{\perp})^0 \subseteq \overline{Y}$ holds. It suffices
+to show that $X\setminus \overline{Y} \subseteq X \setminus 
+(Y^{\perp})^0$ holds. 
+Let $x \in X\setminus \overline{Y}$. Then, we know that there exists 
+$\psi \in X^*$ such that $\psi(x) \neq 0$ and $\ker(\psi)$ contains $Y$.
+Hence, $x \notin (Y^{\perp})^{0}$. Therefore, we have shown that
+$Y = (Y^{\perp})^0$ as desired. \hfill $\qed$
+ 
 \end{solution}
 \end{document}
