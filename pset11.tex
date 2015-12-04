@@ -240,7 +240,14 @@ have shown that $u$ and $v$ are mutually singular.
 Now, assume that $u$ and $v$ are mutually singular measures. 
 Hence, there exists a disjoint measurable set $A$ and $B$ such that
 $A \cup B = X$ and $u(A) = 0$ and $v(B) = 0$. Let $E \in \mathscr{M}$.
-Then, it follows that 
+Then, it follows that
+\eQb
+u\wedge v(E) &=& u \wedge v (E \cap A) + u \wedge v (E \cap B) \\
+&=&  \dfrac{1}{2}(u + v - |u-v|)(E \cap A) + 
+\dfrac{1}{2}(u + v - |u-v|)(E \cap B) \\ 
+&=& 0 + 0,
+\eQe 
+by the monotonicity property. 
  
 
 \hfill $\qed$ 
@@ -272,7 +279,18 @@ measures, we obtain that
 for all $E \in \mathscr{M}$. Now, we prove that if $\int_{E} f du = 0$
 for every measurable subset $E$ of $X$, then $f = 0$ a.e. on $X$. We 
 prove the case for $f$ non-negative and the result can be extended through
-the $f^+$ and $f^-$ decomposition.   
+an argument with $f^+$ and $f^-$ decomposition. Define $A_n = \{ x \in X \>
+| \> f(x) \geq \dfrac{1}{n} \}$. we have $\cup_{n} A_n = \{ x \in X \> |
+\> f(x) > 0\}$. Now, observe that by the assumption, $ \int_{A_n}f du
+= 0$ for all $n$ and $\dfrac{1}{n} u(A_n) \leq 
+\int_{A_n} f du = 0$, which gives $u(A_n) = 0$ for all $n$. Therefore,
+by the countable additivity,
+we obtain that $u(\cup_{n} A_n) = 0$. Hence, we have shown that
+$f = 0$ a.e. Therefore, we have that $f -g$ from the Radon-Nikodym theorem,
+must be $0$ a.e. on $X$. Hence, we have shown the uniqueness of Radon-Nikodym
+theorem.
+\hfill $\qed$
+ 
 
 \end{solution}
 
