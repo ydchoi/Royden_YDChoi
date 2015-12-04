@@ -40,7 +40,7 @@
 \usepackage{listings}
 
 \title{Real Variables: \\
-Problem Set X}
+Problem Set XII}
 
 
 \author{
@@ -71,30 +71,29 @@ New York University \\
 
 \begin{abstract}
 This work contains solutions to the problem set 
-X of Real Variables 2015 at NYU.
+XII of Real Variables 2015 at NYU.
 \end{abstract}
 
 \section{Solutions}
 
-\begin{question}[1. Royden 13-41]
+\begin{question}[1. Royden 7-10]
 \hfill
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=1\textwidth]{13-41.png}
+    \includegraphics[width=1\textwidth]{7-10.png}
 \end{figure}
 \end{question}
-\begin{solution} We first show that $\lVert \> \rVert:X \to \mathbb{R}$
-given is a norm on $X$. First of all, 
-\ 
+\begin{solution}
+
 \end{solution}
 
 \newpage
 
-\begin{question}[2. Royden 14-18]
+\begin{question}[2. Royden 7-26]
 \hfill
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=1\textwidth]{14-18.png}
+    \includegraphics[width=1\textwidth]{7-26.png}
 \end{figure}
 \end{question}
 \begin{solution}
@@ -102,11 +101,11 @@ given is a norm on $X$. First of all,
 
 \newpage
 
-\begin{question}[3. Royden 14-23]
+\begin{question}[3. Royden 19-5]
 \hfill
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=1\textwidth]{14-23.png}
+    \includegraphics[width=1\textwidth]{19-5.png}
 \end{figure}
 \end{question}
 \begin{solution}
@@ -114,13 +113,93 @@ given is a norm on $X$. First of all,
 
 \newpage
 
-\begin{question}[4. Royden 15-12]
+\begin{question}[4. Royden 17-19]
 \hfill
 \begin{figure}[h!]
   \centering
-    \includegraphics[width=1\textwidth]{15-12.png}
+    \includegraphics[width=1\textwidth]{17-19.png}
 \end{figure}
 \end{question}
 \begin{solution}
+Let $u^*:2^X \to [0,\infty]$ be an outer-measure, and let
+$(X,\mathscr{M},u)$ be a measure space induced by $u^*$. Let $E \in 
+\mathscr{M}$ and $u(E) = 0$. Let $S \subseteq E$, and $A \in \mathscr{M}$.
+Then, by finite monotonicity of $u^*$, we have $u^*(S) = 0$ and $u^*(S 
+\cap A) = 0$. Again, using the finite 
+monotonicity of $u^*$, we see that
+\eQb
+u^*(A) &\geq& u^*(A \cap S^c) + 0 \\
+&=& u^*(A \cap S^c) + u^*(A \cap S).
+\eQe 
+Hence, $S \in \mathscr{M}$. We have shown that $u$ is complete.
+ \hfill $\qed$
 \end{solution}
+
+\newpage
+
+\begin{question}[5. Royden 17-29]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{17-29.png}
+\end{figure}
+\end{question}
+\begin{solution}
+Let $(X,\mathscr{M})$ be a measurable space. Let $u:\mathscr{M} \to 
+[0,\infty]$ be a measure. By definition of measure we have, $u(\emptyset)
+= 0$. $u$ is finitely additive and countably monotone, 
+as any measure has finite additivity and countable monotonicity properties.
+Conversely, assume that $u$ is a pre-measure. As $u$ is a pre-measure and 
+$\emptyset \in \mathscr{M})$, we have $u(\emptyset) = 0$. Now, let 
+$\{E_k \}_{k=1}^{\infty}$ be a countable disjoint collections chosen from
+$\mathscr{M}$. By finite additivity, and 
+countable monotonicity of $u$, it follows that
+\eQb
+\sum_{k=1}^{n} u(E_k) &=& u(\bigcup_{k=1}^{n} E_k) \\ 
+&\leq& u(\bigcup_{k=1}^{\infty} E_k), \\
+\eQe
+for all $n$. Hence, by linearity of limits, we obtain
+\eQb
+\sum_{k=1}^{\infty} u(E_k) &\leq& 
+u(\bigcup_{k=1}^{\infty} E_k).
+\eQe 
+By finite additivity of $u$ and the fact that
+ $u(E_k) \geq 0$ for all $k$, we have 
+\eQb
+\sum_{k=1}^{\infty} u(E_k) &\geq& \sum_{k=1}^{n} u(E_k) \\
+&=& u(\bigcup_{k=1}^{n} E_k),
+\eQe
+for all $n$. Again, by linearity of limits, we obtain that
+\eQb
+\sum_{k=1}^{\infty} u(E_k) &\geq& u(\bigcup_{k=1}^{\infty}E_k). 
+\eQe 
+Therefore, we have shown that 
+\eQb
+\sum_{k=1}^{\infty} u(E_k) &=& u(\bigcup_{k=1}^{\infty}E_k), 
+\eQe 
+which shows that $u$ is countably additive. Hence, $u$ is a measure.
+The claim is true.
+\hfill $\qed$
+
+ 
+\end{solution}
+
+\newpage
+
+\begin{question}[6. Royden 17-36]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{17-36.png}
+\end{figure}
+\end{question}
+\begin{solution}
+Let $u^*:2^X \to [0,\infty]$ be an outer-measure, and let
+$(X,\mathscr{M},u)$ be a measure space induced by $u^*$. Let $E \in 
+\mathscr{M}$ and $u(E) = 0$. 
+
+\end{solution}
+
+
+
 \end{document}
