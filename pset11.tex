@@ -128,9 +128,9 @@ a measure space. \hfill $\qed$
 \end{question}
 \begin{solution}
 Let $(X,\mathscr{M})$ be a measurable space. 
-Let $v_1$ and $v_2$ be two finite signed measures. Consider a 
-set function $\alpha v_1 + \beta v_2$ on $\mathscr{M}$, for $\alpha , 
-\beta \in \mathbb{R}$,
+Let $v_1$ and $v_2$ be two finite signed measures on $(X,\mathscr{M})$.
+Consider a set function $\alpha v_1 + \beta v_2$ on $\mathscr{M}$,
+ for $\alpha , \beta \in \mathbb{R}$,
 which is defined by
 \eQb
 \alpha v_1 + \beta v_2(E) &=& \alpha v_1(E) + \beta v_2(E), 
@@ -144,7 +144,37 @@ that
 \beta v_2(\emptyset) \\
 &=& 0 + 0 = 0,  
 \eQe
-as $v_1$ and $v_2$ are signed measures. 
+as $v_1$ and $v_2$ are signed measures. Furthermore, the countable 
+additivity property holds, as for any countable disjoint collection
+$\{ E_k\}$ from $\mathscr{M}$, by linearity of limit, and countable
+additivity of $v_1$ and $v_2$, it follows that
+\eQb
+\alpha v_1 + \beta v_2(\bigcup_{k=1}^{\infty} E_k) &=& 
+\alpha v_1(\bigcup_{k=1}^{\infty} E_k) + \beta v_2(\bigcup_{k=1}^{\infty}
+E_k) \\
+&=& \alpha \sum_{k=1}^{\infty} v_1(E_k) + \beta \sum_{k=1}^{\infty} 
+v_2(E_k) \\
+&=& \sum_{k=1}^{\infty} \alpha v_1(E_k) + \beta v_2(E_k) \\
+&=& \sum_{k=1}^{\infty} \alpha v_1 + \beta v_2(E_k).
+\eQe  
+Hence $\alpha v_1 + \beta v_2$ is a finite measure. 
+
+\smallskip
+
+Let $(X,\mathscr{M})$ be a measurable space and $v$ be a finite 
+measure on the space. Consider $|\alpha v|$. It follows that
+for $E \in \mathscr{M}$, we have
+\eQb
+|\alpha v(E)| &=& |\alpha||v(E)|.
+\eQe  
+Hence, $|\alpha v| = |\alpha| |v|$. Now, let $v_1$ and $v_2$ be 
+finite signed measures on $(X,\mathscr{M})$. By the triangle
+inequality of reals, it follows that for any $E \in \mathscr{M}$,
+\eQb
+|v_1 + v_2(E)| &=& |v_1(E) + v_2(E)| \\
+&\leq& |v_1(E)| + |v_2(E)| . 
+\eQe 
+Hence, $|v_1 + v_2| \leq |v_1| + |v_2|$. \hfill $\qed$
 \end{solution}
 
 \newpage
@@ -157,7 +187,64 @@ as $v_1$ and $v_2$ are signed measures.
 \end{figure}
 \end{question}
 \begin{solution}
-There is an error in this problem. 
+\textbf{(i)} Let $u$ and $v$ be finite signed measures on $(X,\mathscr{M})$.
+We wish to show that $u \wedge v \leq u$. By writing out $u \wedge v$
+term, multiplying by $2$, and re-arranging the terms trivially, we see that
+$u \wedge v \leq u$ is equivalent to $u - v \leq |u-v|$. As an absolute
+value of a real number is larger than the number itself, we see that
+$u \wedge v \leq u$ holds. By symmetry, we also see that $u \wedge v 
+\leq v$ as well.  
+
+\smallskip
+
+Now, let $t$ be a signed measure such that $t \leq u$ and $t \leq v$.
+It follows that $t \leq \min(u,v)$. Assume without loss of generality that
+$\min(u,v) = u$. It follows that
+\eQb
+\dfrac{1}{2}(u + v |u-v|) &=& \dfrac{1}{2}(2u) \\
+&=& u. 
+\eQe
+Therefore, $\min(u,v) = \dfrac{1}{2}(u + v - |u - v|)$. 
+Hence, $t \leq u \wedge v $.
+
+\smallskip
+
+\textbf{(ii)} Let $u$ and $v$ be finite signed measures on $(X,
+\mathscr{M})$. In the above
+solution, we have shown that $u \wedge v = \min(u,v)$. Hence, it follows
+that $u + v - u \wedge v = \max(u,v)$. Therefore, we obtain that 
+$u \lor v \geq u$ and $u \lor v \geq v$. Again, as for any $t$ such that
+$t \geq u$ and $t \geq v$, it follows that $t \geq \max(u,v) = u \lor v$. 
+ 
+\smallskip
+ 
+\textbf{(iii)} Let that $u$ and $v$ are finite measures, and 
+assume that $u \wedge v  = \dfrac{1}{2}(u+v - |u-v|) =  0$. 
+For any $E \in \mathscr{M}$, it follows that
+\eQb
+u(E) + v(E) = |u(E) - v(E)| \\
+\eQe
+Suppose that $u(E)$ and $v(E)$ are both strictly positive. It follows that
+$u(E) + v(E) > \max(u(E), v(E))$ and $|u(E) - v(E) < \max(u(E),v(E))$,
+which yields a contradiction with the above equality. Hence, we have that
+at least one of $u(E)$ or $v(E)$ is 0. Assume without loss of generality that
+$u(E) = 0$. Now, with the same argument with respect to $E^c$, it follows 
+that either $u(E^c)$ and $v(E^c)$ is $0$. If $v(E^c) = 0$, then $u$ and $v$
+are mutually singular. Now, consider the remaining case of $u(E^c) = 0$. 
+By the additivity property of a signed measure, we have that 
+$u(X) = 0$. Hence, $u(X) = 0$ and $v(\emptyset) = 0$. Therefore, we 
+have shown that $u$ and $v$ are mutually singular. 
+
+\smallskip
+
+Now, assume that $u$ and $v$ are mutually singular measures. 
+Hence, there exists a disjoint measurable set $A$ and $B$ such that
+$A \cup B = X$ and $u(A) = 0$ and $v(B) = 0$. Let $E \in \mathscr{M}$.
+Then, it follows that 
+ 
+
+\hfill $\qed$ 
+
 \end{solution}
 
 \newpage
@@ -170,28 +257,27 @@ There is an error in this problem.
 \end{figure}
 \end{question}
 \begin{solution}
-Let $\mathcal{A}$ be an algebra of continuous real-valued functions on a compact Hausdorf space $X$ that separates points. Show that either $\bar {\mathcal{A}}=C(X)$ or there is a point $x_0 \in X$ for which $\bar{\mathcal{A}}=\{f \in C(X)|f(x_0)=0\}$. 
+Let $(X,\mathscr{M})$ be a measurable space, and $u$, $v$ be $\sigma$-finite
+measures on the space with $v << u$.
+Let $f$ and $g$ be the non-negative measurable functions for which,
+\eQb
+v(E) &=& \int_{E} f du \\
+&=& \int_{E} g du,
+\eQe
+for all $E \in \mathscr{M}$. By the linearity of integration for non-negative
+measures, we obtain that
+\eQb
+\int_{E} f - g du &=& 0,
+\eQe
+for all $E \in \mathscr{M}$. Now, we prove that if $\int_{E} f du = 0$
+for every measurable subset $E$ of $X$, then $f = 0$ a.e. on $X$. We 
+prove the case for $f$ non-negative and the result can be extended through
+the $f^+$ and $f^-$ decomposition.   
 
-To solve this problem, it suffices to prove that $\bar{A}=C(X)$ assuming $\bar{\mathcal{A}}\neq \{f \in C(X)|f(x_0)=0\}$, i.e.,  $\forall x \in X, \exists f_x\in C(X)$, s.t.  $f_x(x) =y_x\neq 0$. Then, the open interval $I_x=(y_x-\delta, y_x+ \delta)$ where $0<\delta<|y_x|$, is mapped to an open interval $O_x=f_x^{-1}(I_x) \subset X$ where $x \in O_x$.   Therefore, $X\subseteq \cup_{x \in X}O_x$. Since the foregoing is an open cover of a compact space $X$,  it contains a finite subcover      $\cup_{i=1}^nO_{x_i}$.  By construction, $0 \notin f_{x_i}(O_{x_i})$. Thus $g=\sum_{i=1}^n f^2_{x_i}$ is in $A$ and takes strictly positive values on $X$.  \\ 
-
-Define $h:K\cup\{0\}\rightarrow R_+$ as follows\\
-$$h(x)=\begin{cases}
-1/x & \text{ if } x \in K\\
-0 & \text{ if } x =0\\
-\end{cases}$$\\  
-
-By Proposition 20, since $X$ is compact and $g$ is a continuous mapping, the range of $g$, $K=g(X)$, is compact, which in the case of a real-valued range means that it is closed and bounded. Furthermore, since $K$ is closed and $0\notin K$, it is not possible to have a  sequence in $K$ converging to $0$. Therefore, $0 \notin \bar{K}=K$, which implies that  $h(x)$ is continuous on $D=K\cup\{0\}$\\
-
-Now, since $h\in C(K)$, by Stone-Weierstrass, given  $\epsilon >0$, there exists $p_{n}$, a polynomial, s.t.\\
-
-$$|h(x)-p_{n}(x)|<\epsilon /2 $$\\
-
-for all $x \in K$. Since the above implies that $|p_n(0)|< \epsilon/2$  \\
- 
-$$|h(x)-(p_{n}(x)-p_n(0))|\leq |h(x)-p_{n}(x)|+|p_n(0))|<\epsilon $$\\
-
-where $p^*_n(x)=p_{n}(x)-p_n(0)$ (and thus $p^*_n(0)=0$, which trivially guarantees the uniform convergence on $K\cup\{0\}$). Therefore, $p^*_n$ is continuos on $D$, and $p^*_n \circ g \in A$. Since $p^*_n$ converges uniformly to $h$ and $g$ is continuous and bounded (and consequently uniformly continuous on a compact set, $p^*_n\circ g \rightarrow 1/g$ uniformly. Therefore, $1/g \in \bar {A}$, which together with the fact that $g \in A$, implies that $1 \in \bar {A}$. This generates the family of constant functions in $A$.  By the Stone-Weierstrass Approximation, $\bar {A}$ is dense in $C(X)$. Since $\bar{A}$ is closed, this implies that $\bar {A}=C(X)$. \\
 \end{solution}
+
+\newpage
+
 \begin{question}[Royden 18-54]
 \hfill
 \begin{figure}[h!]
@@ -200,6 +286,7 @@ where $p^*_n(x)=p_{n}(x)-p_n(0)$ (and thus $p^*_n(0)=0$, which trivially guarant
 \end{figure}
 \end{question}
 \begin{solution}
+
 \end{solution}
 \newpage
 
@@ -211,6 +298,55 @@ where $p^*_n(x)=p_{n}(x)-p_n(0)$ (and thus $p^*_n(0)=0$, which trivially guarant
 \end{figure}
 \end{question}
 \begin{solution}
+\textbf{(i)} Assume $v \perp u$, and $ v << u$. It follows that
+there exists a pair of measurable sets $A$ and $B$ such that 
+$u(A) = 0$ and $v(B) = 0$. By the absolute continuity of $v$ with respect
+to $u$, it follows that $v(A) = 0$. By finite additivity of measure, we
+obtain that $v(X) = 0$. In other words, $v$ is a zero measure.
+
+\smallskip
+
+\textbf{(ii)} 
+Assume $u \perp v$. We show that $u \perp \alpha v$, for $\alpha \geq 0$
+holds as well.
+As $u \perp v$, there exists $A$ and $B$ from $\mathscr{M}$ such that
+$u(A) = 0$ and $v(B) = 0$ and $A \cup B = X$. Observe that
+$\alpha v(B) = 0$ as well. Hence, $u \perp \alpha v$. Now, assume
+$u \perp v_1$ and $u \perp v_2$. We show that $u \perp v_1 + v_2$.
+Let $(A_1, B_1)$ and $(A_2,B_2)$ be the pairs of sets that grant
+the mutual singularities. Then, observe that by finite additivity of 
+measure, we have $u(A_1 \cup A_2) = 0$. Furthermore, observe that
+by monotonicity of measure, $v_1 + v_2(B_1 \cap B_2) = 0$. Since
+$A_1 \cup A_2 \cup (B_1 \cap B_2) = (A_1 \cup A_2 \cup B_1) \cap
+(A_1 \cup A_2 \cup B_2) = X \cap X = X$, we have that $u$ and $v_1 + v_2$
+are mutually singular. Hence, the claim is proven. 
+
+\smallskip
+
+\textbf{(iii)} 
+Assume $v << u$. Then, for any $E \in \mathscr{M}$ such that
+$u(E) = 0$, we have $v(E) = 0$. Since $v(E) = 0
+$, we also have $\alpha v(E) = 0$. Hence, $\alpha v << u$. Now, 
+assume $v_1 << u$ and $v_2 << u$. It follows that for any 
+$E \in \mathscr{M}$ such that $u(E) = 0$, we have $v_1(E) = 0$ and
+$v_2(E) = 0$. Therefore, $v_1+v_2(E) = 0$. Hence, the claim is proven.
+
+\bigskip
+
+\textbf{(iv)} Let $v_0$ and $v_1$ be the Lebesque decomposition measures,
+where $v_0$ is mutually singular and $v_1$ is absolutely continuous with
+respect to $v_1$. Consider $v^{'}_0$ and $v^{'}_1$ with the same set-up.
+We have that $v_0 + v_1 = v^{'}_0 + v^{'}_1$. It follows that
+\eQb
+v_0 - v^{'}_0 &=& v_1 - v^{'}_1.
+\eQe  
+Observe that $v_0 - v^{'}_0$ and $v_1 - v^{'}_1$ are singular and
+absolutely continuous with respect to $u$ from $(ii)$ and $(iii)$. 
+Hence, by $(i)$, we have that $v_0 = v^{'}_0$ and $v_1 = v^{'}_0$.
+Therefore, we have shown that uniqueness of the decomposition. 
+\hfill $\qed$
+ 
+
 \end{solution}
 
 \end{document}
