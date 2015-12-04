@@ -304,7 +304,48 @@ theorem.
 \end{figure}
 \end{question}
 \begin{solution}
+\textbf{(i)}
+By simple approximation theorem, we have $\{\psi_n\}$ simple that
+converges pointwise to $f$, by monotonoe convergence theorem, we have
+\eQb
+\int_{X} fdv &=& \lim_{n \to \infty} \int_{X} \psi_n dv \\
+\int_{X} f[\dfrac{dv}{du}] du &=& \lim_{n \to \infty} \psi_n 
+[\dfrac{dv}{du}]du.
+\eQe
+By explicitly writing out the integration formula for simple functions,
+we can show that $\int_{X} \psi_n dv = \int_{X} \psi_n\dfrac{dv}{du} du$
+for all $n$. Hence, we have shown the claim.
 
+\smallskip 
+
+\textbf{(ii)} As $v << u$ and $\lambda << u$, we have
+\eQb
+v(E) &=& \int_{E} [\dfrac{d v}{du}] du \\
+\lambda(E) &=& \int_{E} [\dfrac{d \lambda}{du}] du.
+\eQe
+how in the 18-55 that $v + \lambda << u$ as well. It follows that
+\eQb
+v+\lambda(E) &=& \int_{E} [\dfrac{d(v + \lambda)}{du}]du.
+\eQe
+Combining with the above equality, we get
+\eQb 
+\int_{E} [\dfrac{dv}{du} + \dfrac{d\lambda}{du}] 
+&=& \int_{E} [\dfrac{d(v + \lambda)}{du}]du.
+\eQe
+By the lemma proven in the previous problem, we have that
+\eQb
+[\dfrac{dv}{du} + \dfrac{d\lambda}{du}]
+&=& [\dfrac{d(v + \lambda)}{du}],
+\eQe
+a.e. 
+
+\smallskip
+
+\textbf{(iii)}
+This result directly follows from substitution to $(i)$ and using the lemma
+from the previous problem like above.
+
+\hfill $\qed$
 \end{solution}
 \newpage
 
