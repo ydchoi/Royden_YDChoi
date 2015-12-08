@@ -97,6 +97,36 @@ XII of Real Variables 2015 at NYU.
 \end{figure}
 \end{question}
 \begin{solution}
+First, we denote the set at which $\{f_n \}$ converges to $f$ pointwise
+as $E_0$. 
+Then, notice that for any $x \in E_0$ such that $|f_n(x)| \leq g(x)$, 
+by the linearity of limit, and the continuity of absolute value,
+ we obtain that $|f(x)| \leq g(x)$.
+Hence,
+we see that $|f| \leq g$ on $E_0$. It follows that
+\eQb
+|f - f_n| &\leq& |f| + |f_n| \\
+&\leq& 2g,
+\eQe
+on $E_0$. Raising both sides by $p$, we obtain
+\eQb
+|f - f_n|^p &\leq& 2^p g^p, 
+\eQe 
+on $E_0$. As sum and product of measurable functions is measurable, 
+$\{ f - f_n\}$ is a sequence of measurable functions that converge to
+$0$ pointwise, and dominated by $2^p g^p$ everywhere on $E_0$. 
+As $g \in L^{P}(E)$, we have that $2^p g^p$ is integrable. With 
+the fact that $m(E\setminus E_0) = 0$, by
+the Lebesque dominated convergence theorem, we have 
+\eQb
+\lim_{n \to \infty} \int_{E} |f - f_n|^p &=&
+\lim_{n \to \infty} \int_{E_0} |f - f_n|^p \\ 
+&=& \int_{E_0} 0 \\
+&=& 0.
+\eQe 
+Hence, $\{ f_n\}$ is convergent to $f$ in $L^P(E)$.
+\hfill $\qed$ 
+ 
 \end{solution}
 
 \newpage
@@ -109,6 +139,9 @@ XII of Real Variables 2015 at NYU.
 \end{figure}
 \end{question}
 \begin{solution}
+Let $\{ f_k \}$ be a Cauchy sequence in $L^{\infty}(X,u)$. Hence, there
+exists $k_n$ such that $|| f_i - f_j ||_{\infty} < \dfrac{1}{n}$ for
+$i,j \geq k_n$. 
 \end{solution}
 
 \newpage
@@ -194,9 +227,7 @@ The claim is true.
 \end{figure}
 \end{question}
 \begin{solution}
-Let $u^*:2^X \to [0,\infty]$ be an outer-measure, and let
-$(X,\mathscr{M},u)$ be a measure space induced by $u^*$. Let $E \in 
-\mathscr{M}$ and $u(E) = 0$. 
+
 
 \end{solution}
 
