@@ -227,7 +227,40 @@ The claim is true.
 \end{figure}
 \end{question}
 \begin{solution}
+By the definition of set measurability by Caretheodory, $E$ being
+$u^*$ measurable is equivalent to $E^c$ being $u^*$ measurable. From Royden,
+we have that $E$ is $u^*$ measurable iff for any $\epsilon > 0$,
+there exists $A \in S_{\sigma}$ 
+such that $A \subseteq S_{\sigma}$, and $u^{*}(E\setminus A) < \epsilon $.
 
+\smallskip
+ 
+We begin the main part of the proof.
+Assume $E$ is $u^*$ measurable. Fix $\epsilon > 0$.
+Then, by the established equivalence above,
+it follows that $E^c$ is $u^*$ measurable, and there exists $A \in S_{\sigma}$
+such that $E^c \subseteq A$, and $u^{*}(A \setminus E^c) < \epsilon $.
+We claim that $A^c$ is the set with the desired property. As $A \in S_{\sigma}$
+there exists $\{ O_n \}_{n=1}^{\infty}$ such that $A = \cup_{n=1}^{\infty}
+O_n$. By DeMorgan's law, we have $A^c = \cap_{n=1}^{\infty} {O_n}^{c}$. As,
+$S$ is an algebra, ${O_n}^c$ is also in $S$, and it follows that $A^c \in 
+S_{\delta}$. Furthermore, as $E^c \subseteq A$, it follows that $A^c \subseteq
+E$. Lastly, as $A \setminus E^c = E \setminus A^c$, we have $u^{*}(
+E \setminus A^c) < \epsilon$. Since $\epsilon$ was arbitrary, we have shown
+the forward implication. 
+
+Now, we prove the reverse implication. Assume that $E$ from $2^X$ has the
+given property.  
+Fix $\epsilon > 0$. Then, there exists $A \in S_{\delta}$ such that $A \subseteq
+E$, and $u^{*}(E\setminus A) < \epsilon$. Then, by taking the argument
+above in reverse, we obtain that $A^c \in S_{\sigma}$ such that 
+$E^c \subseteq A^c$ and $u^{*}(A^c \setminus E^c) < \epsilon$. Since $\epsilon$
+was arbitrary, we have shown that for any $\epsilon > 0$, there is a set
+$A \in S_{\sigma}$ such that $E \subseteq A$, such that $u^{*}(A\setminus E)
+<\epsilon$. By the established equivalence above, this implies that $E^c$ 
+is $u^*$ measurable and subsequently $E$ is $u^*$ measurable.
+\hfill $\qed$
+ 
 
 \end{solution}
 
