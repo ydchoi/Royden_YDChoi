@@ -139,9 +139,54 @@ Hence, $\{ f_n\}$ is convergent to $f$ in $L^P(E)$.
 \end{figure}
 \end{question}
 \begin{solution}
-Let $\{ f_k \}$ be a Cauchy sequence in $L^{\infty}(X,u)$. Hence, there
-exists $k_n$ such that $|| f_i - f_j ||_{\infty} < \dfrac{1}{n}$ for
-$i,j \geq k_n$. 
+Let $\{ f_n \}$ be a Cauchy sequence in $L^{\infty}(X,u)$. Then, for all
+$k \in \mathbb{N}$, there exists $N_k$ such that 
+\eQb
+|f_i - f_j| < \dfrac{1}{k} \> \text{ on } \>
+X_{n,m} \> \text{ such that } \> u(X\sim X_{n,m}) = 0,
+\eQe 
+for $n,m \geq N_k$. Consider the following set:
+\eQb
+X_0 &=& \bigcap_{k=1}^{\infty} \bigcup_{n,m \geq N_k} X_{n,m}. 
+\eQe 
+By the DeMorgan's law, it follows that
+\eQb
+X\sim X_0 &=& X \sim \bigcap_{k=1}^{\infty} \bigcup_{n,m \geq N_k} X_{n,m} \\
+&=& \bigcup_{k=1}^{\infty} X \sim \bigcup_{n,m \geq N_k} X_{n,m} \\
+&=& \bigcup_{k=1}^{\infty} \bigcap_{n,m \geq N_k} X \sim X_{n,m}. 
+\eQe
+By monotonicity of measure, we have
+\eQb
+u(X \sim X_0) &\leq& u(\bigcup_{k=1}^{\infty} X \sim X_{N_k,N_k}). 
+\eQe
+By countable subadditivity of measure, we further get 
+\eQb
+u(X \sim X_0) &\leq& \sum_{k=1}^{\infty}
+u( X \sim X_{N_k,N_k}) \\
+&=& 0 . 
+\eQe
+Now, fix $\epsilon > 0$. By Archemedian property of reals, there exists $k
+\in \mathbb{N}$ such that $\dfrac{1}{k} < \epsilon$. Observe that
+\eQb
+X_0 \subseteq \bigcup_{n,m \geq N_k} X_{n,m}.
+\eQe 
+It follows that ,
+for $x \in X_0$, $\{ f_n(x) \}$ is Cauchy. By the completeness of reals,
+$\{ f_n(x) \}$ is convergent. Define $f(x) = \lim_{n\to \infty} f_n(x)$ for
+$x \in X_0$. Again, fix $\epsilon > 0$. There exists $N_k$ such that
+\eQb
+|f_n - f_m | < \epsilon , 
+\eQe
+for $n,m \geq N_k$. Observe that for $x \in X_0$, 
+\eQb
+\lim_{m \to \infty} |f_n(x) - f_m(x)| &=& |f_n(x) - f(x)|.
+\eQe 
+By linearity of limit, it follows that
+\eQb
+|f_n(x) - f(x) | < \epsilon,
+\eQe
+for $n \geq N_k$. Since $\epsilon$ and $x$ was arbitrary we have.
+ 
 \end{solution}
 
 \newpage
